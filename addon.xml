@@ -1,0 +1,17 @@
+<addon id="skin.quartz.ce.krypton" version="5.4" name="Quartz 5 CE" provider-name="nonJon">
+  <requires>
+    <import addon="xbmc.gui" version="5.12.0"/>
+    <import addon="script.favourites" version="4.0.4"/>
+  </requires>
+  
+  <extension
+    point="xbmc.gui.skin" debugging="false">
+    <res width="1920" height="1080" aspect="16:9" default="true" folder="_xml_" />
+  </extension>
+      
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Quartz 5 Classic Edition</summary>
+    <description lang="en">Easy to use, fast and flexible user interface.  Original skin graphics by CloudDweller and Pecinko.</description>
+  </extension>
+</addon>

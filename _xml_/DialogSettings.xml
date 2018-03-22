@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">5</defaultcontrol>
+	<coordinates>
+		<left>0</left>
+		<top>0</top>
+	</coordinates>
+	<controls>
+		<include>FullBackground</include>
+		<control type="label" id="2">
+			<left>336</left>
+			<top>105</top>
+			<width>1242</width>
+			<height>38</height>
+			<align>center</align>
+			<font>size25</font>
+			<textcolor>HL</textcolor>
+		</control>
+		<control type="grouplist" id="5">
+			<left>366</left>
+			<top>189</top>
+			<width>1182</width>
+			<height>675</height>
+			<pagecontrol>60</pagecontrol>
+			<onleft>noop</onleft>
+			<onright>60</onright>
+			<onup>noop</onup>
+			<ondown>9000</ondown>
+		</control>
+		<control type="button" id="7">
+			<height>75</height>
+			<font>size23</font>
+		</control>
+		<control type="radiobutton" id="8">
+			<height>75</height>
+			<font>size23</font>
+		</control>
+		<control type="spincontrolex" id="9">
+			<height>75</height>
+			<font>size23</font>
+		</control>
+		<!--
+		<control type="image" id="11">
+			<height>6</height>
+			<texture>separator.png</texture>
+		</control>  -->
+		<control type="edit" id="12">
+			<height>75</height>
+			<font>size23</font>
+		</control>
+		<control type="sliderex" id="13">
+			<height>75</height>
+			<font>size23</font>
+		</control>
+		<control type="label" id="14">
+			<height>75</height>
+			<font>size23</font>
+			<textoffsetx>27</textoffsetx>
+		</control>
+		<control type="scrollbar" id="60">
+			<left>1558</left>
+			<top>186</top>
+			<width>20</width>
+			<height>675</height>
+			<onright>5</onright>
+			<animation condition="!Control.HasFocus(60) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+			<visible>$EXP[isEnabledScrollbar]</visible>
+		</control>
+		<control type="group">
+			<control type="image">
+				<left>945</left>
+				<top>159</top>
+				<height>24</height>
+				<width>24</width>
+				<texture>scroll-up.png</texture>
+				<visible>Container(5).HasPrevious</visible>
+			</control>
+			<control type="image">
+				<left>945</left>
+				<top>867</top>
+				<height>24</height>
+				<width>24</width>
+				<texture>scroll-down.png</texture>
+				<visible>Container(5).HasNext</visible>
+			</control>
+		</control>
+		<control type="grouplist" id="9000">
+			<left>372</left>
+			<top>900</top>
+			<width>1170</width>
+			<height>75</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<itemgap>0</itemgap>
+			<onup>5</onup>
+			<ondown>5</ondown>
+			<control type="button" id="28">
+				<width>390</width>
+				<height>75</height>
+				<align>center</align>
+				<font>size23</font>
+				<onleft>noop</onleft>
+				<onright>29</onright>
+				<onup>5</onup>
+			</control>
+			<control type="button" id="29">
+				<width>390</width>
+				<height>75</height>
+				<align>center</align>
+				<font>size23</font>
+				<onleft>28</onleft>
+				<onright>30</onright>
+				<onup>5</onup>
+			</control>
+			<control type="button" id="30">
+				<width>390</width>
+				<height>75</height>
+				<align>center</align>
+				<font>size23</font>
+				<onleft>29</onleft>
+				<onright>noop</onright>
+				<onup>5</onup>
+			</control>
+		</control>
+	</controls>
+</window>
