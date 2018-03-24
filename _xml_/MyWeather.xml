@@ -323,13 +323,6 @@
         </control>
       </control>
     </control>
-    <control type="group" id="51">
-      <include condition="StringCompare(Weather.Plugin,weather.weatherplus)">Weather+10DayForcast</include>
-      <include condition="StringCompare(Weather.Plugin,weather.weatherplus)">Weather+36HourForcast</include>
-      <include condition="StringCompare(Weather.Plugin,weather.weatherplus)">Weather+WeekendForcast</include>
-      <include condition="StringCompare(Weather.Plugin,weather.weatherplus)">Weather+HourlyForcast</include>
-      <include condition="StringCompare(Weather.Plugin,weather.weatherplus)">Weather+MapsVideo</include>
-    </control>
     <control type="group" description="9000">
       <visible>!Skin.HasSetting(ViewOptions_Hide)</visible>
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
@@ -340,7 +333,7 @@
         <width>1182</width>
         <height>500</height>
         <aspectratio>stretch</aspectratio>
-        <texture border="128">img/DialogPanel.png</texture><colordiffuse>Overlay</colordiffuse>
+        <!--<texture border="128">img/DialogPanel.png</texture><colordiffuse>Overlay</colordiffuse>-->
       </control>
       <control type="grouplist" id="9000">
         <posx>600</posx>
@@ -358,85 +351,12 @@
           <width>720</width>
           <textoffsetx>60</textoffsetx>
           <height>162</height>
-          <!--<align>right</align>
-					<aligny>center</aligny>-->
           <font>size24</font>
           <disabledcolor>Grey</disabledcolor>
           <texturenofocus>-</texturenofocus>
           <alttexturenofocus>-</alttexturenofocus>
-          <texturefocus border="110,0,110,0">img/Slider4.png</texturefocus>
-          <alttexturefocus border="110,0,110,0">img/Slider4.png</alttexturefocus>
           <label>-</label>
         </control>
-        <control type="button" id="302">
-          <description>10 day forcast button</description>
-          <textwidth>352</textwidth>
-          <include>9000Buttons</include>
-          <label>31904</label>
-          <onclick>ClearProperty(Weather.CurrentView)</onclick>
-          <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
-        </control>
-        <control type="button" id="303">
-          <description>36 hour forcast button</description>
-          <textwidth>352</textwidth>
-          <include>9000Buttons</include>
-          <label>31901</label>
-          <onclick>SetProperty(Weather.CurrentView,36hour)</onclick>
-          <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
-        </control>
-        <control type="button" id="304">
-          <description>Weekend forcast button</description>
-          <textwidth>352</textwidth>
-          <include>9000Buttons</include>
-          <label>31903</label>
-          <onclick>SetProperty(Weather.CurrentView,weekend)</onclick>
-          <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
-        </control>
-        <control type="button" id="305">
-          <description>Hourly forcast button</description>
-          <textwidth>352</textwidth>
-          <include>9000Buttons</include>
-          <label>31902</label>
-          <onclick>SetProperty(Weather.CurrentView,hourly)</onclick>
-          <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
-        </control>
-        <control type="button" id="306">
-          <description>Hourly forcast button</description>
-          <textwidth>352</textwidth>
-          <include>9000Buttons</include>
-          <label>31906</label>
-          <onclick>SetProperty(Weather.CurrentView,maps)</onclick>
-          <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
-        </control>
-        <control type="button" id="2" description="Refresh">
-          <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
-          <include>9000Buttons</include>
-          <label>-</label>
-        </control>
-      </control>
-    </control>
-    <control type="group">
-      <visible>StringCompare(Weather.Plugin,weather.weatherplus)</visible>
-      <control type="label" description="Footer label">
-        <posx>480</posx>
-        <posy>1026</posy>
-        <width>900</width>
-        <height>30</height>
-        <textcolor>Silver</textcolor>
-        <font>size22</font>
-        <align>center</align>
-        <aligny>center</aligny>
-        <label>$VAR[WeatherFooter]</label>
-      </control>
-      <control type="scrollbar" id="60">
-        <visible>Control.IsVisible(50)</visible>
-        <posx>60r</posx>
-        <posy>432</posy>
-        <height>552</height>
-        <onleft>50</onleft>
-        <onright>noop</onright>
-        <showonepage>false</showonepage>
-        <orientation>vertical</orientation>
       </control>
     </control>
   </controls>
