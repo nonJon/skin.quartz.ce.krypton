@@ -11,11 +11,12 @@
       <include>DialogOpenClose</include>
       <control type="image">
         <posx>50</posx>
-        <posy>30</posy>
+        <posy>45</posy>
         <width>1122</width>
-        <height>930</height>
+        <height>900</height>
         <aspectratio>stretch</aspectratio>
-        <texture border="21">img/DialogNew.png</texture><colordiffuse>Overlay</colordiffuse>
+        <texture border="128">img/DialogPanel.png</texture>
+		<!--<colordiffuse>Overlay</colordiffuse> -->
       </control>
       <control type="fixedlist" id="11">
         <posx>240</posx>
@@ -30,7 +31,7 @@
         <scrolltime>200</scrolltime>
         <focusposition>2</focusposition>
         <movement>2</movement>
-        <itemlayout height="105" width="750">
+        <itemlayout height="105" width="750">  <!--
           <control type="progress">
             <posx>0</posx>
             <posy>3</posy>
@@ -39,7 +40,7 @@
             <texturebg>img/ItemBG.png</texturebg>
             <midtexture>img/ItemBG2.png</midtexture>
             <info>ListItem.Progress</info>
-          </control>
+          </control>  -->
           <control type="label">
             <posx>45</posx>
             <posy>0</posy>
@@ -51,7 +52,7 @@
             <align>center</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.ChannelNumber]</label>
-          </control>
+          </control> <!--
           <control type="image">
             <posx>90</posx>
             <posy>0</posy>
@@ -69,7 +70,7 @@
             <texture>OverlayTimer.png</texture>
             <aspectratio>keep</aspectratio>
             <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-          </control>
+          </control> -->
           <control type="label">
             <visible>!String.IsEmpty(ListItem.Icon)</visible>
             <posx>150</posx>
@@ -119,7 +120,7 @@
             <aspectratio>keep</aspectratio>
           </control>
         </itemlayout>
-        <focusedlayout height="105" width="750">
+        <focusedlayout height="105" width="750">  <!--
           <control type="progress">
             <posx>0</posx>
             <posy>3</posy>
@@ -128,7 +129,7 @@
             <texturebg>img/ItemBG.png</texturebg>
             <midtexture>img/ItemBG2.png</midtexture>
             <info>ListItem.Progress</info>
-          </control>
+          </control>  -->
           <control type="label">
             <posx>45</posx>
             <posy>0</posy>
@@ -140,7 +141,7 @@
             <align>center</align>
             <aligny>center</aligny>
             <label>$INFO[ListItem.ChannelNumber]</label>
-          </control>
+          </control> <!--
           <control type="image">
             <posx>90</posx>
             <posy>0</posy>
@@ -158,7 +159,7 @@
             <texture>OverlayTimer.png</texture>
             <aspectratio>keep</aspectratio>
             <visible>ListItem.HasTimer + !ListItem.IsRecording</visible>
-          </control>
+          </control>  -->
           <control type="label">
             <visible>!String.IsEmpty(ListItem.Icon)</visible>
             <posx>150</posx>
@@ -214,7 +215,7 @@
         <posy>435</posy>
         <width>750</width>
         <height>105</height>
-        <texture border="5">img/ButtonFO2.png</texture>
+        <texture border="5">img/MediaButton2.png</texture>
         <animation condition="Container(11).Position(0)" effect="slide" start="0,0" end="0,-210" time="180" easing="inout" reversible="true">Conditional</animation>
         <animation condition="Container(11).Position(1)" effect="slide" start="0,0" end="0,-105" time="180" easing="inout" reversible="true">Conditional</animation>
         <animation condition="Container(11).Position(2)" effect="slide" start="0,0" end="0,0" time="180" easing="inout" reversible="true">Conditional</animation>
