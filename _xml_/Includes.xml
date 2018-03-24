@@ -54,6 +54,17 @@
   <include file="Includes_Home.xml" />
   <include file="Includes_Shelf.xml" />
   <include file="Includes_Shelf_Items.xml" />
+  <include name="DiffuseBG">
+    <control type="image" description="BG">
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>100%</width>
+      <height>100%</height>
+      <aspectratio>stretch</aspectratio>
+      <texture fallback="img/BGOverlay4.png">img/BGOverlay$INFO[Skin.String(test)].png</texture>
+      <colordiffuse>Overlay</colordiffuse>
+    </control>
+  </include> 
   <include name="FullBackground">
     <control type="image" description="Fanart">
       <visible>Window.IsActive(MyPics.xml) + !Container.Content(addons)</visible>
@@ -76,15 +87,7 @@
       <fadetime>400</fadetime>
       <texture background="true" fallback="img/BlackDot.png">$INFO[ListItem.Art(fanart)]</texture>
     </control>
-    <control type="image" description="BG">
-      <posx>0</posx>
-      <posy>0</posy>
-      <width>100%</width>
-      <height>100%</height>
-      <aspectratio>stretch</aspectratio>
-      <texture fallback="img/BGOverlay4.png">img/BGOverlay$INFO[Skin.String(test)].png</texture>
-      <colordiffuse>Overlay</colordiffuse>
-    </control>
+	<include>DiffuseBG</include>
   </include>
   <include name="MiniBackground">
     <control type="image" description="Default BG">
@@ -95,6 +98,7 @@
       <texture>img/BlackDot.png</texture>
     </control>
   </include>
+  
   <include name="DimBG">
     <control type="image" description="Default BG">
       <posx>0</posx>
@@ -407,6 +411,7 @@
       <include>ArtworkConstants</include>
       <imagepath fallback="special://skin/backgrounds/Weather.jpg" background="true">$INFO[Skin.String(Weather_Background)]</imagepath>
     </control>
+	<include>DiffuseBG</include>
   </include>
   <include name="VideosBackground">
     <control type="image" description="Fanart">
@@ -421,16 +426,7 @@
       <include>ArtworkConstants</include>
       <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
     </control>
-	<control type="image" description="BG">
-      <posx>0</posx>
-      <posy>0</posy>
-      <width>100%</width>
-      <height>100%</height>
-      <aspectratio>stretch</aspectratio>
-      <texture fallback="img/BGOverlay4.png">img/BGOverlay$INFO[Skin.String(test)].png</texture>
-      <colordiffuse>Overlay</colordiffuse>
-    </control>
-	
+	<include>DiffuseBG</include>
   </include>
   <include name="AddonsBackground">
     <control type="image" description="Fanart">
