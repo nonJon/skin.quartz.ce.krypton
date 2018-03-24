@@ -195,7 +195,7 @@
 		  
      	  <item id="6" description="Unched">
             <visible>!Skin.HasSetting(HideFanart)</visible>
-			<label>Fanart background brightness     [1 - 10]</label>
+			<label>Fanart background brightness  [1 - 10]</label>
             <label2>$INFO[Skin.String(test)]</label2>
             <onclick>Skin.SetNumeric(test,207)</onclick>  
           </item>

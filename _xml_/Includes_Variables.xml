@@ -12,6 +12,31 @@
     <value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
     <value>$INFO[ListItem.Thumb]</value>
   </variable>
+  	<variable name="MediaRating">
+		<value condition="String.Contains(ListItem.UserRating,10)">rating10.png</value>
+		<value condition="String.Contains(ListItem.UserRating,9)">rating9.png</value>
+		<value condition="String.Contains(ListItem.UserRating,8)">rating8.png</value>
+		<value condition="String.Contains(ListItem.UserRating,7)">rating7.png</value>
+		<value condition="String.Contains(ListItem.UserRating,6)">rating6.png</value>
+		<value condition="String.Contains(ListItem.UserRating,5)">rating5.png</value>
+		<value condition="String.Contains(ListItem.UserRating,4)">rating4.png</value>
+		<value condition="String.Contains(ListItem.UserRating,3)">rating3.png</value>
+		<value condition="String.Contains(ListItem.UserRating,2)">rating2.png</value>
+		<value condition="String.Contains(ListItem.UserRating,1)">rating1.png</value>
+		<value condition="String.Contains(ListItem.UserRating,0)">rating0.png</value>
+		<value condition="String.Contains(ListItem.Rating,10)">rating10.png</value>
+		<value condition="String.Contains(ListItem.Rating,9)">rating9.png</value>
+		<value condition="String.Contains(ListItem.Rating,8)">rating8.png</value>
+		<value condition="String.Contains(ListItem.Rating,7)">rating7.png</value>
+		<value condition="String.Contains(ListItem.Rating,6)">rating6.png</value>
+		<value condition="String.Contains(ListItem.Rating,5)">rating5.png</value>
+		<value condition="String.Contains(ListItem.Rating,4)">rating4.png</value>
+		<value condition="String.Contains(ListItem.Rating,3)">rating3.png</value>
+		<value condition="String.Contains(ListItem.Rating,2)">rating2.png</value>
+		<value condition="String.Contains(ListItem.Rating,1)">rating1.png</value>
+		<value condition="String.Contains(ListItem.Rating,0)">rating0.png</value>
+		<value>rating0.png</value>
+	</variable>
   <variable name="ShelfIcon" description="Shelf custom and fallback image">
     <value condition="Control.HasFocus(301) + !Control.IsVisible(311) + Skin.HasSetting(MoviesShelf_Image)">$INFO[Skin.String(MoviesShelf_Icon)]</value>
     <value condition="Control.HasFocus(302) + !Control.IsVisible(312) + Skin.HasSetting(TVShelf_Image)">$INFO[Skin.String(TVShelf_Icon)]</value>
@@ -68,9 +93,9 @@
     <value condition="Window.IsActive(MyVideoPlaylist.xml)">$LOCALIZE[20012]</value>
     <value condition="Window.IsActive(MyMusicPlaylist.xml)">$LOCALIZE[20011]</value>
     <value condition="Window.IsActive(DialogVideoInfo.xml)">$LOCALIZE[20159]</value>
-    <value condition="Window.IsActive(DialogAlbumInfo.xml) + container.content(albums)">$LOCALIZE[13351]</value>
-    <value condition="Window.IsActive(DialogAlbumInfo.xml) + container.content(artists)">$LOCALIZE[21891]</value>
-    <value condition="Window.IsActive(DialogSongInfo.xml) + container.content(songs)">$LOCALIZE[658]</value>
+    <value condition="Window.IsActive(DialogMusicInfo.xml) + container.content(albums)">$LOCALIZE[13351]</value>
+    <value condition="Window.IsActive(DialogMusicInfo.xml) + container.content(artists)">$LOCALIZE[21891]</value>
+    <value condition="Window.IsActive(DialogMusicInfo.xml) + container.content(songs)">$LOCALIZE[658]</value>
     <value condition="Window.IsActive(DialogAddonInfo.xml)">$LOCALIZE[24003]</value>
     <value condition="Container.content(movies) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20342]</value>
     <value condition="Container.content(tvshows) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20343]</value>

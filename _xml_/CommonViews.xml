@@ -250,7 +250,7 @@
           <width>150</width>
           <colordiffuse>HL</colordiffuse>
           <aspectratio align="left">keep</aspectratio>
-          <texture>badges/$INFO[ListItem.UserRating]</texture>
+		  <texture>badges/$VAR[MediaRating]</texture>
         </control>
         <control type="image" description="Separator">
           <posx>0</posx>
