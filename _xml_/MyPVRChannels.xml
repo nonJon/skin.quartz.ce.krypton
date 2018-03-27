@@ -187,10 +187,12 @@
                     <label>[COLOR=Grey] [/COLOR]$INFO[Container(50).ListItem.StartTime]</label>
                 </control>
                 <control type="progress">
-                    <left>110</left>
-                    <top>215</top>
-                    <width>640</width>
-                    <height>10</height>
+                    <left>142</left>
+                    <top>213</top>
+                    <width>600</width>
+                    <height>12</height>
+					                    <align>center</align>
+
                     <visible>ListItem.HasEpg</visible>
                     <info>ListItem.Progress</info>
                 </control>
