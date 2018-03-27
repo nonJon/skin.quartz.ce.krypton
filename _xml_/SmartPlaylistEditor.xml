@@ -44,6 +44,7 @@
           <onleft>12</onleft>
           <onright>12</onright>
           <ondown>10</ondown>
+		  <align>left</align>
         </control>
         <control type="label">
           <description>Find items where</description>
@@ -134,7 +135,7 @@
               <posy>521</posy>
               <width>255</width>
               <height>63</height>
-							<label>21435</label>
+			  <label>21435</label>
               <onup>14</onup>
               <onleft>10</onleft>
               <onright>10</onright>

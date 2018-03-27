@@ -114,12 +114,12 @@
     <animation effect="fade" time="200">Hidden</animation>
   </include>
   <include name="OpenClose">
-    <animation effect="fade" time="240">WindowOpen</animation>
-    <animation effect="fade" time="240">WindowClose</animation>
+    <animation effect="fade" time="160">WindowOpen</animation>
+    <animation effect="fade" time="160">WindowClose</animation>
   </include>
   <include name="DialogOpenClose">
     <animation type="WindowOpen">
-      <effect type="fade" end="100" time="220" />
+      <effect type="fade" end="100" time="160" />
     </animation>
     <animation type="WindowClose">
       <effect type="fade" end="0" time="120" />

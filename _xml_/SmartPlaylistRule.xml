@@ -82,8 +82,9 @@
         <onleft>20</onleft>
         <onright>20</onright>
         <ondown>9000</ondown>
+		<align>left</align>
         <texturenofocus border="8">img/SettingsButtonNF.png</texturenofocus>
-        <texturefocus flipy="true" border="8">img/SettingsButtonFO.png</texturefocus>
+        <!--<texturefocus flipy="true" border="8">img/SettingsButtonFO.png</texturefocus>-->
       </control>
       <control type="button" id="20">
         <description>Browse Button</description>
