@@ -2,6 +2,7 @@
 <window>
   <defaultcontrol always="true">29</defaultcontrol>
   <controls>
+    <include>FullBackground</include>
     <control type="group">
       <visible>!Window.IsVisible(FileBrowser)</visible>
       <animation effect="slide" start="1725,0" end="0,0" time="400" tween="quadratic" easing="out">WindowOpen</animation>

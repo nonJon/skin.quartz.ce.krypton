@@ -7,7 +7,6 @@
 	</coordinates>
 	<controls>
 		<control type="image">
-			<!-- Dialog background image -->
 			<left>368</left>
 			<top>230</top>
 			<width>1185</width>
@@ -15,19 +14,26 @@
         <texture border="128">img/DialogPanel.png</texture>
 		</control>
 		<control type="label" id="1">
-			<!-- Dialog heading -->
-			<left>500</left>
+			<left>480</left>
 			<top>351</top>
 			<width>920</width>
 			<height>45</height>
 			<align>center</align>
-			<font>size25</font>
+			<font></font>
 		    <textcolor>HL</textcolor>
 		</control>
-		
+		      <control type="label" id="100" description="Heading and Progress">
+        <posx>480</posx>
+        <posy>351</posy>
+        <width>970</width>
+        <height>45</height>
+        <textcolor>HL</textcolor>
+					<font>size25</font>
 
+        <align>center</align>
+        <label>$INFO[Control.GetLabel(1)]$INFO[System.Progressbar,  ,%]</label>
+      </control>
 		<control type="textbox" id="9">
-			<!-- Dialog info prompt -->
 			<left>500</left>
 			<top>414</top>
 			<width>920</width>
@@ -36,6 +42,7 @@
 			<font>size22</font>
 			<autoscroll time="2000" delay="8000" repeat="5000">Skin.HasSetting(text-autoscroll) + !System.ScreenSaverActive</autoscroll>
 		</control>
+		<!--
 		<control type="progress" id="20">
 			<left>500</left>
 			<top>590</top>
@@ -43,8 +50,7 @@
 			<height>18</height>
 			<info>System.Progressbar</info>
 		</control>
-		
-		
+		-->
 		<control type="grouplist" id="9000">
 			<orientation>horizontal</orientation>
 			<left>398</left>
@@ -57,18 +63,24 @@
 				<height>75</height>
 				<font>size23</font>
 				<align>center</align>
+				          <pulseonselect>true</pulseonselect>
+
 			</control>
 			<control type="button" id="11">
 				<width>375</width>
 				<height>75</height>
 				<font>size23</font>
 				<align>center</align>
+				          <pulseonselect>true</pulseonselect>
+
 			</control>
 			<control type="button" id="12">
 				<width>375</width>
 				<height>75</height>
 				<font>size23</font>
 				<align>center</align>
+				          <pulseonselect>true</pulseonselect>
+
 			</control>
 		</control>
 		
