@@ -126,7 +126,7 @@
             <label>$INFO[VideoPlayer.Plot]</label>
             <align>justify</align>
             <!--<autoscroll>false</autoscroll>-->
-            <font>size20</font>
+            <font>size19</font>
           </control>
         </control>
         <control type="grouplist">

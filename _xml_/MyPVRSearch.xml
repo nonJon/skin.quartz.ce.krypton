@@ -5,36 +5,89 @@
 	<views>50</views>
 	<controls>
 		<control type="group">
-                        <include>Header</include>
+            <include>FullBackground</include>
+            <include>Header</include>
 			<include>OpenClose</include>
 			<control type="group">
 				<description>TV Search group</description>
 				<visible>Control.IsVisible(50)</visible>
 				<include>VisibleFadeEffect</include>
+				
+				
+				<control type="group">
+					<visible>ListItem.HasEPG + !Player.HasVideo</visible>
+					<left>0</left>
+					<top>0</top>
+					<control type="image">
+					<posx>60</posx>
+					<posy>90</posy>
+					<width>600</width>
+					<height>320</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<!--<aspectratio align="center" aligny="center">keep</aspectratio>-->
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="label">
+						<left>690</left>
+						<top>100</top>
+						<width>940</width>
+						<height>20</height>
+						<label>[B]$INFO[ListItem.EpgEventTitle]$INFO[ListItem.EpisodeName, (,)][/B]</label>
+						<font>size22</font>
+						<textcolor>white</textcolor>
+						<scroll>true</scroll>
+					</control>
+					<control type="label">
+						<left>690</left>
+						<top>150</top>
+						<width>940</width>
+						<height>20</height>
+						<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Season, • $LOCALIZE[20373] ]$INFO[ListItem.Episode, • $LOCALIZE[20359] ]$INFO[ListItem.Genre, • ]</label>
+						<font>font12</font>
+						<textcolor>grey</textcolor>
+					</control>
+					<control type="textbox">
+						<description>Plot value</description>
+						<left>690</left>
+						<top>185</top>
+						<width>940</width>
+						<height>224</height>
+						<font>font12</font>
+						<align>justify</align>
+						<textcolor>grey</textcolor>
+						<autoscroll delay="10000" time="3000" repeat="6000">true</autoscroll>
+						<label>$INFO[ListItem.Plot]</label>
+					</control>
+				</control>
+				
+				
+				
+				
+				
 				<control type="image" description="video window background">
 					<visible>Player.HasVideo</visible>
 					<posx>60</posx>
-					<posy>100</posy>
+					<posy>90</posy>
 					<width>600</width>
-					<height>340</height>
+					<height>320</height>
 					<texture>img/BlackDot.png</texture>
 				</control>
 				<control type="videowindow" description="TV Channel Live BG">
 					<visible>Player.HasVideo</visible>
 					<posx>60</posx>
-					<posy>10</posy>
+					<posy>90</posy>
 					<width>600</width>
-					<height>500</height>
+					<height>320</height> 
 				</control>
-                                   <control type="label">
+                <control type="label">
 					<posx>60</posx>
-                                   <posy>50</posy>
-                                   <font>size17</font>
-                                   <width>600</width>
-                                   <textcolor>Grey</textcolor> 
-                                   <include>Genre51Commons</include>
-                                   <label>$INFO[VideoPlayer.Title,$LOCALIZE[31023]: ]</label>
-	                       </control>
+                    <posy>50</posy>
+                    <font>size17</font>
+                    <width>600</width>
+                    <textcolor>Grey</textcolor> 
+                    <include>Genre51Commons</include>
+                    <label>$INFO[VideoPlayer.Title,$LOCALIZE[31023]: ]</label>
+	            </control>
 				<control type="group" description="Header">
 					<posx>60</posx>
 					<posy>430</posy>
@@ -57,15 +110,15 @@
 						<description>Schedule Time header label</description>
 						<posx>710</posx>
 						<posy>0</posy>
-						<width>280</width>
+						<width>320</width>
 						<height>30</height>
 						<label>$LOCALIZE[21820]</label>
 					</control>
 					<control type="label">
 						<description>Channel header label</description>
-						<posx>1020</posx>
+						<posx>1060</posx>
 						<posy>0</posy>
-						<width>480</width>
+						<width>440</width>
 						<height>30</height>
 						<label>$LOCALIZE[19148]</label>
 					</control>
@@ -83,7 +136,9 @@
 					<posy>490</posy>
 					<width>1800</width>
 					<height>468</height>
-					<scrolltime>350</scrolltime>
+					<scrolltime>200</scrolltime>
+							<viewtype label="">list</viewtype>
+
 					<onleft>104</onleft>
 					<onright>77</onright>
 					<onup>50</onup>
@@ -103,22 +158,25 @@
 							<width>680</width>
 							<height>78</height>
 							<scroll>false</scroll>
+							<font>size20</font>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label" description="Date">
 							<posx>710</posx>
 							<posy>0</posy>
-							<width>280</width>
+							<width>320</width>
 							<height>78</height>
 							<scroll>false</scroll>
+							<font>size20</font>
 							<info>ListItem.Date</info>
 						</control>
 						<control type="label" description="Channel label">
-							<posx>1010</posx>
+							<posx>1060</posx>
 							<posy>0</posy>
-							<width>480</width>
+							<width>440</width>
 							<height>78</height>
 							<scroll>false</scroll>
+							<font>size20</font>
 							<info>ListItem.ChannelName</info>
 						</control>
 						<control type="image">
@@ -163,7 +221,7 @@
 							<posy>3</posy>
 							<width>1800</width>
 							<height>75</height>
-							<texture>img/ListFO.png</texture>
+							<texture border="8">img/MediaButton2.png</texture>
 						</control>
 						<control type="label" description="Timer label">
 							<posx>10</posx>
@@ -171,22 +229,28 @@
 							<width>680</width>
 							<height>78</height>
 							<scroll>false</scroll>
+							<textcolor>HL</textcolor>
+							<font>size20</font>
 							<info>ListItem.Label</info>
 						</control>
 						<control type="label" description="Date">
 							<posx>710</posx>
 							<posy>0</posy>
-							<width>280</width>
+							<width>320</width>
 							<height>78</height>
 							<scroll>false</scroll>
+							<textcolor>HL</textcolor>
+							<font>size20</font>
 							<info>ListItem.Date</info>
 						</control>
 						<control type="label" description="Channel label">
-							<posx>1010</posx>
+							<posx>1060</posx>
 							<posy>0</posy>
-							<width>480</width>
+							<width>440</width>
 							<height>78</height>
 							<scroll>false</scroll>
+							<textcolor>HL</textcolor>
+							<font>size20</font>
 							<info>ListItem.ChannelName</info>
 						</control>
 						<control type="image">
@@ -204,6 +268,7 @@
 							<height>30</height>
 							<scroll>false</scroll>
 							<font>size19</font>
+							<textcolor>HL</textcolor>
 							<label>$LOCALIZE[19043]</label>
 							<visible>ListItem.IsRecording</visible>
 						</control>
@@ -214,6 +279,7 @@
 							<height>30</height>
 							<scroll>false</scroll>
 							<font>size19</font>
+							<textcolor>HL</textcolor>
 							<label>$LOCALIZE[31510]</label>
 							<visible>ListItem.HasTimer</visible>
 						</control>
@@ -221,7 +287,7 @@
 				</control>
 				<control type="group" description="Footer">
 					<posx>60</posx>
-					<posy>1008</posy>
+					<posy>53r</posy>
 					<control type="image" description="Bottom split">
 						<posx>0</posx>
 						<posy>-9</posy>
@@ -232,13 +298,28 @@
 					<control type="label">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>1740</width>
+						<width>1320</width>
 						<height>40</height>
 						<aligny>center</aligny>
+						<font>size19</font>
 						<align>left</align>
 						<scroll>false</scroll>
-						<label>[COLOR=White]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Duration,  -  ,  -  ]  [COLOR=Grey]$INFO[ListItem.StartTime,( ,  -  ]$INFO[ListItem.EndTime,, )][/COLOR]</label>
+						<label>[COLOR=White]$INFO[ListItem.Label][/COLOR]$INFO[ListItem.Duration,  •  ,  •  ]  [COLOR=Grey]$INFO[ListItem.StartTime,( ,  •  ]$INFO[ListItem.EndTime,, )][/COLOR]</label>
 					</control>
+					
+								<control type="label">
+				<description>Page Count Label</description>
+				<right>40</right>
+				<width>500</width>
+				<height>40</height>
+				<textcolor>grey</textcolor>
+				<scroll>false</scroll>
+				<font>size19</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>([COLOR=White]$INFO[Container(50).NumItems][/COLOR]) $LOCALIZE[31025] • $LOCALIZE[31024] ([COLOR=White]$INFO[Container(50).CurrentPage]/$INFO[Container(50).NumPages][/COLOR])</label>
+			</control>
+					
 				</control>
 			</control>
 		</control>

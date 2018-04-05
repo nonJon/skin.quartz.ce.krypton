@@ -3,7 +3,8 @@
   <defaultcontrol allways="true">50</defaultcontrol>
   <include>OpenClose</include>
   <controls>
-    <include>MiniBackground</include>
+  <include>FullBackground</include>
+    <!--<include>MiniBackground</include>-->
     <control type="label">
       <include>Heading</include>
       <label>10503</label>
@@ -161,7 +162,7 @@
           <ondown>7</ondown>
           <height>60</height>
 		  <align>center</align>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+          <texturenofocus border="8">img/ListNF.png</texturenofocus>
         </control>
         <control type="button" id="7" description="Save">
           <posx>0</posx>
@@ -175,7 +176,7 @@
           <ondown>8</ondown>
           <height>60</height>
   		  <align>center</align>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+          <texturenofocus border="8">img/ListNF.png</texturenofocus>
         </control>
         <control type="button" id="8" description="Clear">
           <posx>0</posx>
@@ -188,7 +189,7 @@
           <onup>7</onup>
           <ondown>6</ondown>
   		  <align>center</align>
-          <texturenofocus border="8">img/ButtonNF.png</texturenofocus>
+          <texturenofocus border="8">img/ListNF.png</texturenofocus>
         </control>
       </control>
     </control>

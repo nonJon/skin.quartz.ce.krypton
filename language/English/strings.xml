@@ -3,7 +3,7 @@
   <!-- Misc labels -->
   <string id="31000">Change Your</string>
   <string id="31001">Love</string>
-  <string id="31002">Hate</string>
+  <string id="31002">View Options</string>
   <string id="31003">Power Options</string>
   <string id="31004">Working...</string>
   <string id="31005">Hide INFO</string>
@@ -29,7 +29,6 @@
 
   <!-- Extra labels -->
   <string id="31040">Now Playing</string>
-
   <string id="31042">PLAYING</string>
   <string id="31043">PAUSED</string>
   <string id="31044">FAST FORWARD</string>
@@ -38,6 +37,9 @@
   <string id="31047">Current Preset</string>
   <string id="31048">Visualization Presets</string>
   <string id="31049">Ends</string><!--Time when currently playing video will end -->
+  <string id="31050">Ascending</string>
+  <string id="31051">Descending</string>
+
 
 
   <!-- Playlist Editor labels -->
@@ -50,49 +52,60 @@
   <string id="31061">Current Selected</string>
   
   <!-- Skin Settings labels -->
-  <string id="31100">  (click to assign item from favourites)</string>
-  <string id="31101">Home screen options</string>
-  <string id="31102">Background</string>
-  <string id="31103">Show "Paused" in picture slide show</string>
-  <string id="31104">Play Trailers in a window [COLOR=Silver](Video Information Dialog Only)[/COLOR]</string>
-  <string id="31105">Show media titles in background scanner</string>
-  <string id="31106">Miscellaneous options</string>
-  <string id="31107">Hide Flagging read from video filenames [COLOR=Silver](Blu-ray, HD-DVD)[/COLOR]</string>
-  <string id="31108">Hide Main Menu Buttons</string>
-  <string id="31109">Media backgrounds</string>
-  <string id="31110">Edit Background for Media Type</string>
-  <string id="31111">Hide</string>
-  <string id="31112">Options</string>
-  <string id="31113">Single Image</string>
-  <string id="31114">Multi Image</string>
-  <string id="31115">Customizer</string>
-  <string id="31116"></string>
-  <string id="31117">Show Recently added Videos</string>
-  <string id="31118">Home Page Programs Submenu</string>
-  <string id="31119"></string>  <!-- blanked 2010-11-12 -->
-  <string id="31120">BUTTON LABEL</string>
-  <string id="31121"></string>  <!-- blanked 2010-11-12 -->
-  <string id="31122">Weather Page</string>
-  <string id="31123">Use "Posters" instead of "Banners" for TV Shows</string>
-  <string id="31124">Show Background "Now Playing" Video</string>
-  <string id="31125">Show Background "Now Playing" Visualization</string>
+  <string id="31100">General</string>
+  <string id="31101">Views</string>
+  <string id="31102">Homepage</string>
+  <string id="31103">Addons</string>
+  <string id="31104">Advanced</string>
+  <string id="31105">About</string>
+  <string id="31106"></string>
+  <string id="31107">Enable auto scrolling for plot & review</string>
+  <string id="31108">Automatically scroll text that has been truncated by the limits of a container.</string>
+  <string id="31109">Enable scrollbars</string>
+  <string id="31110">Allows option to scroll through content a page at a time.</string>
+  <string id="31111">Show clock</string>
+  <string id="31112">Display current time in the upper-right-hand corner of the screen.</string>
+  <string id="31113">Disable options dialogs</string>
+  <string id="31114">Prevent access to certain menus for altering the look and feel of KODI.</string>
+  <string id="31115">KODI 'Quit' button function</string>
+  <string id="31116">Choose what action to perform when exiting KODI.</string>
+  <string id="31117">Reset above settings to default</string>
+  <string id="31118">Resets only the displayed settings to skin defaults.</string>
+  <string id="31119">Hide unwatched progress indicators</string>  
+  <string id="31120">Hide the icons that indicate whether media content has been consumed.</string>
+  <string id="31121">Hide fanart background pictures</string>  
+  <string id="31122">Choose whether or not to display artwork in the background of certain views.</string>
+  <string id="31123">Background fanart visibility</string>
+  <string id="31124">Enter a number from 1 to 10.  Ten is the brightest.  Default = 4</string>
+  <string id="31125"></string>
+  <string id="31126">Home menus customizer</string>  
+  <string id="31127">Customize Home menu categories and the available menus under each.</string> 
+  <string id="31128">Home media shelf customizer</string>
+  <string id="31129">Manage options for displaying content above the Home menu.</string>  
+  <string id="31130">Enable onscreen debug info</string>  
+  <string id="31131">When enabled, the current KODI module and focus object will be displayed. Useful for troubleshooting.</string>
+  <string id="31132">Enable debug logging</string>
+  <string id="31133">Turn debug logging on or off. Useful for troubleshooting.</string>
+  <string id="31134">Backup skin settings</string>
+  <string id="31135">Saves Quartz skin settings in a time-stamped .zip archive.</string>
+  <string id="31136">Restore skin settings</string>
+  <string id="31140">Restore previously saved Quartz skin settings.</string>
+  <string id="31141">Reset ALL skin settings to default values</string>
+  <string id="31142">What this means is Old Testament... real Wrath-of-God type stuff! Fire and brimstone coming down from the skies! Rivers and seas boiling! Forty years of darkness! Earthquakes, volcanoes! The dead rising from the grave! Human sacrifice, dogs and cats living together, mass hysteria!</string>
+  <string id="31143">Skin name:</string>
+  <string id="31144">Skin version:</string>
+  <string id="31145">Color theme:</string>
+  <string id="31146">Screen mode:</string>
+  <string id="31147">Original skin design:</string>
+  <string id="31148">Presently maintained by:</string>
+  <string id="31149">With assets or inspiration from:</string>
+  <string id="31150">Skin info</string>
+  <string id="31151">Credits</string>
+  <string id="31152">Add-on Required</string>
+  <string id="31153">Please install the [B]Skin Helper Service Skin Backup[/B] add-on before using this feature.</string>
 
-  <string id="31126"></string>  <!-- blanked 2010-11-12 -->
-  <string id="31127"></string>  <!-- blanked 2010-11-12 -->
-  <string id="31128">Lyrics</string>
-  <string id="31129"></string>  <!-- blanked 2010-11-12 -->
-  <string id="31130"></string>  <!-- blanked 2010-11-12 -->
+
   
-  <string id="31131">Use Horizontal Home Menu</string>
-  <string id="31132">Lyrics Add-on</string>
-  <string id="31133">Subtitle Add-on</string>
-  <string id="31134">Home Page Videos Submenu</string>
-  <string id="31135">Home Page Music Submenu</string>
-  <string id="31136">Home Page Pictures Submenu</string>
-
-  <string id="31140">Music OSD</string>
-  <string id="31141">Video OSD</string>
-
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>
   <string id="31201">Categories</string>

@@ -9,7 +9,7 @@
         <posy>105</posy>
         <width>1023</width>
         <height>862</height>
-        <texture border="21">img/DialogNew.png</texture><colordiffuse>Overlay</colordiffuse>
+        <texture border="128">img/DialogPanel.png</texture>   <!--<colordiffuse>Overlay</colordiffuse>-->
       </control>
       <control type="label" description="Dialog heading">
         <posx>615</posx>
@@ -19,6 +19,7 @@
         <label>13008</label>
         <align>center</align>
         <aligny>center</aligny>
+	    <textcolor>HL</textcolor>
         <include>TitleCommons</include>
       </control>
       <control type="group">

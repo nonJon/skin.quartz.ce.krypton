@@ -477,8 +477,8 @@
             <onclick>ActivateWindow(1112)</onclick>
           </item>
           <item id="10" description="Quit">
-            <visible>!Skin.HasSetting(XBMC4) + String.IsEmpty(Skin.String(shutdown))</visible>
-            <label fallback="13009">$VAR[QuitLabel2]</label>
+            <visible>!Skin.HasSetting(XBMC4) + StringCompare(Skin.String(shutdown),)</visible>
+            <label>13009</label>
             <onclick>ActivateWindow(shutdownmenu)</onclick>
           </item>
           <item id="11" description="Quit">

@@ -46,6 +46,7 @@
     <value condition="Control.HasFocus(306) + Skin.HasSetting(XBMCShelf_Image)">$INFO[Skin.String(XBMCShelf_Icon)]</value>
   </variable>
   <variable name="QuitLabel2" description="Label2 for skin settings Quit function item">
+    <value condition="StringCompare(Skin.String(shutdown),)">$LOCALIZE[33061]</value>
     <value condition="StringCompare(Skin.String(shutdown),quit)">$LOCALIZE[13009]</value>
     <value condition="StringCompare(Skin.String(shutdown),powerdown)">$LOCALIZE[13005]</value>
     <value condition="StringCompare(Skin.String(shutdown),hibernate)">$LOCALIZE[13010]</value>
@@ -101,11 +102,18 @@
     <value condition="Container.content(tvshows) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20343]</value>
     <value condition="Container.content(musicvideos) + StringCompare(Container.FolderName,$LOCALIZE[369])">$LOCALIZE[20389]</value>
     <value condition="Window.IsActive(weather)">$INFO[Window(Weather).Property(WeatherProvider)]</value>
+			<value condition="Control.IsVisible(10)">$LOCALIZE[22020]</value><!-- EPG -->
+		<value condition="Window.IsActive(TVSearch)">$LOCALIZE[137]</value><!-- Search -->
+		<value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value><!-- Timer -->
+		<value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[20007]</value><!-- Recordings -->
     <value>$INFO[Container.FolderName]</value>
   </variable>
-  <variable name="PVR_Headings" description="PVR Headings">
-    <value condition="Control.IsVisible(16) | Control.IsVisible(15) | Control.IsVisible(10)">$INFO[Control.GetLabel(31)]</value>
-    <value>$INFO[Container.FolderName]</value>
+  <variable name="	" description="PVR Headings">
+		<value condition="Control.IsVisible(10)">$LOCALIZE[22020]</value><!-- EPG -->
+		<value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value><!-- Search -->
+		<value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value><!-- Timer -->
+		<value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[20007]</value><!-- Recordings -->
+		<value>$INFO[Container.FolderName]</value>
   </variable>
   <variable name="TopLabel" description="Shown Above Plots and descriptions">
     <value condition="!Container.content(Addons) + Window.IsActive(MyPics.xml)">$INFO[ListItem.Date,, • ]$INFO[ListItem.Size]</value>
@@ -156,4 +164,24 @@
     <value condition="SubString(ListItem.FilenameAndPath,3dbd) | SubString(ListItem.FilenameAndPath,SBS.)">badges/flags/3D.png</value>
     <value condition="SubString(ListItem.FilenameAndPath,Anaglyph)">badges/flags/3D-Anaglyph.png</value>
   </variable>
+	<variable name="SkinSettingHelp">
+		<value condition="Control.HasFocus(3200)">$LOCALIZE[31108]</value>
+		<value condition="Control.HasFocus(3201)">$LOCALIZE[31110]</value>
+		<value condition="Control.HasFocus(3202)">$LOCALIZE[31112]</value>
+		<value condition="Control.HasFocus(3203)">$LOCALIZE[31114]</value>
+		<value condition="Control.HasFocus(3204)">$LOCALIZE[31116]</value>
+		<value condition="Control.HasFocus(3220)">$LOCALIZE[31118]</value>
+		<value condition="Control.HasFocus(3300)">$LOCALIZE[31120]</value>
+		<value condition="Control.HasFocus(3301)">$LOCALIZE[31122]</value>
+		<value condition="Control.HasFocus(3302)">$LOCALIZE[31124]</value>
+		<value condition="Control.HasFocus(3320)">$LOCALIZE[31118]</value>
+		<value condition="Control.HasFocus(3400)">$LOCALIZE[31127]</value>
+		<value condition="Control.HasFocus(3401)">$LOCALIZE[31129]</value>
+		<value condition="Control.HasFocus(3500)">$LOCALIZE[31131]</value>
+		<value condition="Control.HasFocus(3501)">$LOCALIZE[31133]</value>
+		<value condition="Control.HasFocus(3502)">$LOCALIZE[31135]</value>
+		<value condition="Control.HasFocus(3503)">$LOCALIZE[31140]</value>
+		<value condition="Control.HasFocus(3504)">$LOCALIZE[31142]</value>
+		<value condition="Window.IsVisible(Custom_HomeCustomise.xml) + !IsEmpty(Window(home).Property(ItemPath))">$LOCALIZE[31374]</value>
+	</variable>
 </includes>

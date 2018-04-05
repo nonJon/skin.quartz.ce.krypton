@@ -135,7 +135,7 @@
                 <onclick>noop</onclick>
               </item>
               <item id="1006" description="XBMC">
-                <label>XBMC</label>
+                <label>KODI</label>
                 <onclick>noop</onclick>
               </item>
             </content>

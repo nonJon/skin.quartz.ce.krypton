@@ -20,6 +20,7 @@
         <label>$LOCALIZE[19142]</label>
         <align>center</align>
         <aligny>center</aligny>
+		<textcolor>HL</textcolor>
         <visible>!pvr.IsPlayingRadio</visible>
       </control>
       <control type="image">
@@ -28,7 +29,8 @@
         <width>1290</width>
         <height>66</height>
         <aspectratio>stretch</aspectratio>
-        <texture flipy="true" border="5">img/ButtonFO2.png</texture>
+        <!--<texture flipy="true" border="5">img/MediaButton2.png</texture>-->
+		<!--<texture border="4">img/ListFO.png</texture>-->
       </control>
       <control type="edit" id="9">
         <description>Search string</description>
@@ -37,8 +39,8 @@
         <width>1275</width>
         <height>60</height>
         <font>size18</font>
-        <texturefocus>-</texturefocus>
-        <texturenofocus>-</texturenofocus>
+          <texturefocus border="5">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="4">img/ListNF.png</texturenofocus>
         <align>left</align>
         <onleft>9</onleft>
         <onright>9</onright>
@@ -66,8 +68,8 @@
           <height>66</height>
           <width>645</width>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <align>left</align>
           <aligny>center</aligny>
           <label>19134</label>
@@ -83,8 +85,8 @@
           <height>66</height>
           <width>645</width>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <align>left</align>
           <aligny>center</aligny>
           <label>19135</label>
@@ -100,8 +102,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>19128</label>
           <onright>16</onright>
           <onleft>16</onleft>
@@ -115,8 +117,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>19129</label>
           <onright>17</onright>
           <onleft>17</onleft>
@@ -130,8 +132,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>515</label>
           <onright>19</onright>
           <onleft>19</onleft>
@@ -147,8 +149,8 @@
           <font>size18</font>
           <align>left</align>
           <aligny>center</aligny>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <pulseonselect>no</pulseonselect>
           <label>19132</label>
           <onleft>21</onleft>
@@ -165,8 +167,8 @@
           <font>size18</font>
           <align>left</align>
           <aligny>center</aligny>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <pulseonselect>no</pulseonselect>
           <label>19123</label>
           <onleft>23</onleft>
@@ -183,8 +185,8 @@
           <font>size18</font>
           <align>left</align>
           <aligny>center</aligny>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <pulseonselect>no</pulseonselect>
           <label>19124</label>
           <onleft>27</onleft>
@@ -203,8 +205,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>19130</label>
           <onright>10</onright>
           <onleft>10</onleft>
@@ -218,8 +220,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>19131</label>
           <onright>11</onright>
           <onleft>11</onleft>
@@ -233,8 +235,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>19126</label>
           <onright>14</onright>
           <onleft>14</onleft>
@@ -248,8 +250,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>19127</label>
           <onright>15</onright>
           <onleft>15</onleft>
@@ -265,8 +267,8 @@
           <font>size18</font>
           <align>left</align>
           <aligny>center</aligny>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <pulseonselect>no</pulseonselect>
           <label>19121</label>
           <onright>18</onright>
@@ -281,8 +283,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>19141</label>
           <onright>20</onright>
           <onleft>20</onleft>
@@ -296,8 +298,8 @@
           <width>645</width>
           <height>66</height>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>19148</label>
           <onleft>22</onleft>
           <onright>22</onright>
@@ -313,8 +315,8 @@
           <font>size18</font>
           <align>left</align>
           <aligny>center</aligny>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <pulseonselect>no</pulseonselect>
           <label>19125</label>
           <onleft>24</onleft>
@@ -335,8 +337,8 @@
           <align>center</align>
           <aligny>center</aligny>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>409</label>
           <onleft>26</onleft>
           <onright>25</onright>
@@ -352,8 +354,8 @@
           <align>center</align>
           <aligny>center</aligny>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>222</label>
           <onleft>28</onleft>
           <onright>26</onright>
@@ -369,8 +371,8 @@
           <align>center</align>
           <aligny>center</aligny>
           <font>size18</font>
-          <texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-          <texturenofocus border="5">img/ButtonNF.png</texturenofocus>
+          <texturefocus border="4">img/MediaButton2.png</texturefocus>
+          <texturenofocus border="5">img/ListNF.png</texturenofocus>
           <label>137</label>
           <onleft>25</onleft>
           <onright>28</onright>

@@ -61,7 +61,7 @@
       <width>100%</width>
       <height>100%</height>
       <aspectratio>stretch</aspectratio>
-      <texture fallback="img/BGOverlay4.png">img/BGOverlay$INFO[Skin.String(test)].png</texture>
+      <texture fallback="img/BGOverlay4.png">img/BGOverlay$INFO[Skin.String(FanartVisibility)].png</texture>
       <colordiffuse>Overlay</colordiffuse>
     </control>
   </include> 
@@ -98,7 +98,18 @@
       <texture>img/BlackDot.png</texture>
     </control>
   </include>
-  
+  <include name="SkinSettingsButton">
+    <!--<width max="880">auto</width>-->
+    <height>81</height>
+	      <width>1260</width>
+
+    <textoffsetx>20</textoffsetx>
+    <texturefocus border="5">img/MediaButton2.png</texturefocus>
+    <!--<textoffsetx>20</textoffsetx>-->
+    <align>left</align>
+    <aligny>center</aligny>
+    <font>size23</font>
+  </include>
   <include name="DimBG">
     <control type="image" description="Default BG">
       <posx>0</posx>
