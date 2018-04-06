@@ -101,7 +101,10 @@
         <font>size20</font>
 		<label>$LOCALIZE[222]</label>
 		<texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-        <onleft>3</onleft>
+		<onleft condition="!Control.IsVisible(3)">6</onleft>
+		<onleft condition="Control.IsVisible(3)">3</onleft>
+		<onright condition="!Control.IsVisible(3)">6</onright>
+		<onright condition="Control.IsVisible(3)">3</onright>
         <onright>3</onright>
 		<ondown>5</ondown>
 		<onup>5</onup>
@@ -115,8 +118,10 @@
         <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
         <font>size20</font>
 		<texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
-        <onleft>3</onleft>
-        <onright>3</onright>
+		<onleft condition="!Control.IsVisible(3)">6</onleft>
+		<onleft condition="Control.IsVisible(3)">3</onleft>
+		<onright condition="!Control.IsVisible(3)">6</onright>
+		<onright condition="Control.IsVisible(3)">3</onright>
 		<ondown>7</ondown>
 		<onup>7</onup>
       </control>
@@ -129,7 +134,8 @@
           <width>450</width>
           <height>450</height>
           <fadetime>200</fadetime>
-          <texture fallback="DefaultFolder.png">$INFO[Container(6).ListItem.Thumb]</texture>
+          <!--<texture fallback="DefaultFolder.png">$INFO[Container(6).ListItem.Thumb]</texture>-->
+		  <texture fallback="DefaultFolder.png">$INFO[ListItem.Thumb]</texture>
           <bordertexture border="12">img/ThumbBorder.png</bordertexture>
           <bordersize>9</bordersize>
           <aspectratio aligny="top">keep</aspectratio>
