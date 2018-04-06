@@ -14,7 +14,7 @@
         <texture>img/Sidebar.png</texture>
       </control>
       <control type="label" id="1" description="Header label">
-        <include>HeadingR</include>
+        <include>Heading</include>
         <label>13406</label>
       </control>
       <control type="panel" id="3">
@@ -22,7 +22,9 @@
         <posy>150</posy>
         <width>600</width>
         <height>825</height>
-        <onleft>5</onleft>
+		<onleft condition="!Control.IsVisible(5)">7</onleft>
+		<onleft condition="Control.IsVisible(5)">5</onleft>
+
         <itemlayout width="600" height="75">
           <control type="label" description="Main Label">
             <posx>20</posx>
@@ -58,7 +60,8 @@
         <posy>150</posy>
         <width>600</width>
         <height>825</height>
-        <onleft>5</onleft>
+		<onleft condition="!Control.IsVisible(5)">7</onleft>
+		<onleft condition="Control.IsVisible(5)">5</onleft>
         <itemlayout width="600" height="75">
           <control type="label" description="Main Label">
             <posx>20</posx>
@@ -89,16 +92,35 @@
           </control>
         </focusedlayout>
       </control>
-      <control type="button" id="5" description="Manual Get more common button">
+      <control type="button" id="7" description="Cancel">
         <posx>60</posx>
         <posy>150</posy>
         <width>360</width>
         <height>81</height>
         <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
         <font>size20</font>
+		<label>$LOCALIZE[222]</label>
+		<texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
         <onleft>3</onleft>
         <onright>3</onright>
+		<ondown>5</ondown>
+		<onup>5</onup>
+		<onclick>Close</onclick>
       </control>
+      <control type="button" id="5" description="Manual Get more common button">
+        <posx>60</posx>
+        <posy>232</posy>
+        <width>360</width>
+        <height>81</height>
+        <texturenofocus border="4">img/SettingsButtonNF.png</texturenofocus>
+        <font>size20</font>
+		<texturefocus border="4">img/SettingsButtonFO.png</texturefocus>
+        <onleft>3</onleft>
+        <onright>3</onright>
+		<ondown>7</ondown>
+		<onup>7</onup>
+      </control>
+
       <control type="group">
         <visible>!Control.IsVisible(3)</visible>
         <control type="image" description="Item Thumb">
@@ -112,27 +134,18 @@
           <bordersize>9</bordersize>
           <aspectratio aligny="top">keep</aspectratio>
         </control>
-        <control type="label" description="Author">
-          <visible>!String.IsEmpty(Container(6).ListItem.Property(Addon.Version))</visible>
+        <control type="label" description="Summary">
+          <visible>!String.IsEmpty(Container(6).ListItem.Label2)</visible>
           <centerleft>810</centerleft>
           <posy>720</posy>
-          <width>450</width>
-          <height>150</height>
+          <width>550</width>
+          <height>250</height>
           <align>center</align>
           <font>size22</font>
-          <label>$INFO[Container(6).ListItem.Property(Addon.Version),$LOCALIZE[24051] ]</label>
+		  <wrapmultiline>true</wrapmultiline>
+          <label>$INFO[Container(6).ListItem.Label2]</label>
         </control>
-        <control type="label" description="Author">
-          <visible>!String.IsEmpty(Container(6).ListItem.Property(Addon.Creator))</visible>
-          <centerleft>810</centerleft>
-          <posy>839</posy>
-          <width>450</width>
-          <height>150</height>
-          <wrapmultiline>true</wrapmultiline>
-          <align>center</align>
-          <font>size22</font>
-          <label>$INFO[Container(6).ListItem.Property(Addon.Creator),$LOCALIZE[21863]: ]</label>
-        </control>
+
       </control>
     </control>
   </controls>
