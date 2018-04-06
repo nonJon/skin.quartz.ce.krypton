@@ -134,8 +134,8 @@
           <width>450</width>
           <height>450</height>
           <fadetime>200</fadetime>
-          <!--<texture fallback="DefaultFolder.png">$INFO[Container(6).ListItem.Thumb]</texture>-->
-		  <texture fallback="DefaultFolder.png">$INFO[ListItem.Thumb]</texture>
+          <texture fallback="DefaultFolder.png">$INFO[Container(6).ListItem.Thumb]</texture>
+		  <!--<texture fallback="DefaultFolder.png">$INFO[ListItem.Thumb]</texture>-->
           <bordertexture border="12">img/ThumbBorder.png</bordertexture>
           <bordersize>9</bordersize>
           <aspectratio aligny="top">keep</aspectratio>
