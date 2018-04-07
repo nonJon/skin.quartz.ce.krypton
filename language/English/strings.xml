@@ -2,7 +2,7 @@
 <strings>
   <!-- Misc labels -->
   <string id="31000">Change Your</string>
-  <string id="31001">Love</string>
+  <string id="31001">Video decoder</string>
   <string id="31002">View Options</string>
   <string id="31003">Power Options</string>
   <string id="31004">Working...</string>
@@ -75,8 +75,8 @@
   <string id="31120">Hide the icons that indicate whether media content has been consumed.</string>
   <string id="31121">Hide fanart background pictures</string>  
   <string id="31122">Choose whether or not to display artwork in the background of certain views.</string>
-  <string id="31123">Background fanart visibility</string>
-  <string id="31124">Enter a number from 1 to 10.  Ten is the brightest.  Default = 4</string>
+  <string id="31123">Background visibility</string>
+  <string id="31124">Enter a number from 0 to 10.  Ten is the brightest.  Default = 4</string>
   <string id="31125"></string>
   <string id="31126">Home menus customizer</string>  
   <string id="31127">Customize Home menu categories and the available menus under each.</string> 
@@ -147,7 +147,11 @@
   <string id="31329">[B]Timer set![/B] [COLOR=grey2] - System auto shutdown in[/COLOR]</string>
   <string id="31330">Click button to play[CR][CR]Movie trailer</string>
   <string id="31331">Hide Unwatched progress indicators</string>
-
+  <string id="31332">Audio process information</string>
+  <string id="31333">Video process information</string>
+  <string id="31334">Hardware decoding</string>
+  <string id="31335">Inactive</string>
+  <string id="31336">Decoder</string>
 
   <!-- Video and Music OSD Labels  -->
   <string id="31351">Pause</string>
@@ -196,6 +200,7 @@
   <string id="31297">min</string>
   <string id="31298">Submenu items</string>
   <string id="31299">Level:</string>
+
 
   <string id="31999">Scrollbars</string>
   <string id="31998">Active</string>
