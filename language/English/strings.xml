@@ -74,7 +74,7 @@
   <string id="31119">Hide unwatched progress indicators</string>  
   <string id="31120">Hide the icons that indicate whether media content has been consumed.</string>
   <string id="31121">Hide fanart background pictures</string>  
-  <string id="31122">Choose whether or not to display artwork in the background of certain views.</string>
+  <string id="31122">Do not to display artwork in the background of various views (not recommended).</string>
   <string id="31123">Background visibility</string>
   <string id="31124">Enter a number from 0 to 10.  Ten is the brightest.  Default = 4</string>
   <string id="31125"></string>
