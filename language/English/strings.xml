@@ -75,8 +75,8 @@
   <string id="31120">Hide the icons that indicate whether media content has been consumed.</string>
   <string id="31121">Hide fanart background pictures</string>  
   <string id="31122">Do not display artwork in the background of various views (not recommended).</string>
-  <string id="31123">Background visibility</string>
-  <string id="31124">Enter a number from 0 to 10.  Ten is the brightest.  Default = 4</string>
+  <string id="31123">Background art visibility</string>
+  <string id="31124">Enter a number from 1 to 10.  Ten is the brightest.  Default = 4</string>
   <string id="31125"></string>
   <string id="31126">Home menus customizer</string>  
   <string id="31127">Customize Home menu categories and the available menus under each.</string> 

@@ -56,6 +56,17 @@
   <include file="Includes_Shelf_Items.xml" />
   <include name="DiffuseBG">
     <control type="image" description="BG">
+	  <visible>Skin.HasSetting(HideFanart)</visible>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>100%</width>
+      <height>100%</height>
+      <aspectratio>stretch</aspectratio>
+      <texture>img/BGOverlay.png</texture>
+      <colordiffuse>Overlay</colordiffuse>
+    </control>
+    <control type="image" description="BG">
+	  <visible>!Skin.HasSetting(HideFanart)</visible>
       <posx>0</posx>
       <posy>0</posy>
       <width>100%</width>
@@ -66,7 +77,7 @@
     </control>
   </include> 
   <include name="FullBackground">
-    <control type="image" description="Fanart">
+    <control type="image" description="Show picture thumbs">
       <visible>Window.IsActive(MyPics.xml) + !Container.Content(addons)</visible>
       <posx>0</posx>
       <posy>0</posy>
@@ -76,7 +87,7 @@
       <fadetime>400</fadetime>
       <texture background="true" fallback="img/BlackDot.png">$INFO[ListItem.Thumb]</texture>
     </control>
-    <control type="image" description="Fanart">
+    <control type="image" description="Show fanart">
       <visible>![Window.IsActive(MyPics.xml) + !Container.Content(addons)]</visible>
       <visible>!Skin.HasSetting(HideFanart)</visible>
       <posx>0</posx>
@@ -86,6 +97,16 @@
       <aspectratio>stretch</aspectratio>
       <fadetime>400</fadetime>
       <texture background="true" fallback="img/BlackDot.png">$INFO[ListItem.Art(fanart)]</texture>
+    </control>
+    <control type="image" description="Hide fanart">
+      <visible>!Window.IsActive(MyPics.xml) + Skin.HasSetting(HideFanart)</visible>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>100%</width>
+      <height>100%</height>
+      <aspectratio>stretch</aspectratio>
+      <fadetime>400</fadetime>
+      <texture background="true" >img/BlackDot.png</texture>
     </control>
 	<include>DiffuseBG</include>
   </include>
@@ -101,8 +122,7 @@
   <include name="SkinSettingsButton">
     <!--<width max="880">auto</width>-->
     <height>81</height>
-	      <width>1260</width>
-
+	<width>1260</width>
     <textoffsetx>20</textoffsetx>
     <texturefocus border="5">img/MediaButton2.png</texturefocus>
     <!--<textoffsetx>20</textoffsetx>-->

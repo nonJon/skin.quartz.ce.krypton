@@ -190,7 +190,7 @@
 		  <radioposx>1210</radioposx>
         </control>
         <control type="button" id="3302" description="Fanart visibility">
-		  <!--<visible>!Skin.HasSetting(HideFanart)</visible>-->
+		  <visible>!Skin.HasSetting(HideFanart)</visible>
           <include>SkinSettingsButton</include>
 		  <label>$LOCALIZE[31123]</label>
           <label2>$INFO[Skin.String(FanartVisibility)]</label2>
