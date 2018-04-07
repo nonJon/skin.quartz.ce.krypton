@@ -97,13 +97,13 @@
     </control>
     <include>MediaHeader</include>
     <control type="group" description="Thumbs no info">
-      <posy>240</posy>
+      <!--<posy>240</posy>-->
       <visible>ListItem.IsFolder</visible>
       <animation effect="fade" time="400">Visible</animation>
       <animation effect="fade" time="0">Hidden</animation>
       <control type="image" description="Thumb">
         <posx>600</posx>
-        <posy>405</posy>
+        <posy>120</posy>
         <width>378</width>
         <height>378</height>
         <include>Icon_Fade</include>
@@ -137,6 +137,7 @@
         <posx>510</posx>
         <posy>630</posy>
         <control type="label" description="Main Label">
+		<visible>container.content(addons)</visible>
           <posy>-45</posy>
           <width>555</width>
           <font>size22B</font>
@@ -172,6 +173,7 @@
           <label>$INFO[ListItem.AddonDisclaimer]</label>
         </control>
         <control type="label" description="2 bottom Label">
+		  <visible>container.content(addons)</visible>
           <posy>380</posy>
           <width>655</width>
           <include>Genre51Commons</include>
