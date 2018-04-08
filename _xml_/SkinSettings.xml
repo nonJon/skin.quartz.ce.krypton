@@ -222,6 +222,22 @@
           <label>$LOCALIZE[31128]</label>
           <onclick>ActivateWindow(1117)</onclick>
         </control>
+        <control type="radiobutton" id="3402" description="Use custom BG">
+		  <visible>!Skin.HasSetting(HideFanart)</visible>
+          <include>SkinSettingsButton</include>
+		  <label>$LOCALIZE[31154]</label>
+		  <onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
+		  <selected>Skin.HasSetting(UseCustomBackground)</selected>
+		  <radioposx>1210</radioposx>
+        </control>
+        <control type="button" id="3403" description="Custom BG path">
+		  <visible>Skin.HasSetting(UseCustomBackground) + !Skin.HasSetting(HideFanart)</visible>
+          <include>SkinSettingsButton</include>
+          <label>  - $LOCALIZE[31156]</label>
+		  <label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
+		  <onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
+		  <enable>Skin.HasSetting(UseCustomBackground)</enable>
+        </control>
 
       </control>
 	  

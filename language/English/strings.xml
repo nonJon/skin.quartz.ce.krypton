@@ -73,7 +73,7 @@
   <string id="31118">Resets only the displayed settings to skin defaults.</string>
   <string id="31119">Hide unwatched progress indicators</string>  
   <string id="31120">Hide the icons that indicate whether media content has been consumed.</string>
-  <string id="31121">Hide fanart background pictures</string>  
+  <string id="31121">Hide background art</string>  
   <string id="31122">Do not display artwork in the background of various views (not recommended).</string>
   <string id="31123">Background art visibility</string>
   <string id="31124">Enter a number from 1 to 10.  Ten is the brightest.  Default = 4</string>
@@ -103,8 +103,10 @@
   <string id="31151">Credits</string>
   <string id="31152">Add-on Required</string>
   <string id="31153">Please install the [B]Skin Helper Service Skin Backup[/B] add-on before using this feature.</string>
-
-
+  <string id="31154">Enable custom background for homepage</string>
+  <string id="31155">Customize the Quartz homepage by displaying your art in the background.</string>
+  <string id="31156">Background path</string>
+  <string id="31157">Select what art to display on the homepage.</string>
   
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>

@@ -3,6 +3,35 @@
   <defaultcontrol always="true">8998</defaultcontrol>
  <controls>
   <include>FullBackground</include>
+  
+  
+  
+  
+     <control type="image" description="Experimental custom BG">
+	  <depth>-0.80</depth>
+	  <width>100%</width>
+	  <height>100%</height>
+	  <animation effect="zoom" center="auto" end="101,101" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
+	  <aspectratio>scale</aspectratio>
+	  <texture>$INFO[Skin.String(CustomBackgroundPath)]</texture>
+	  <visible>!Skin.HasSetting(HideFanart) + Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))</visible>
+      <include>VisibleFadeEffect</include>
+	</control>
+    <control type="image" description="BG">
+	  <visible>!Skin.HasSetting(HideFanart) + Skin.HasSetting(UseCustomBackground) + !String.IsEmpty(Skin.String(CustomBackgroundPath))</visible>
+      <posx>0</posx>
+      <posy>0</posy>
+      <width>100%</width>
+      <height>100%</height>
+      <aspectratio>stretch</aspectratio>
+      <texture fallback="img/BGOverlay4.png">img/BGOverlay$INFO[Skin.String(FanartVisibility)].png</texture>
+      <colordiffuse>Overlay</colordiffuse>
+    </control>	
+	
+	
+	
+	
+	
   <include>MediaHeader</include>
 	 <control type="group" description="Content">
     <include>OpenClose</include>

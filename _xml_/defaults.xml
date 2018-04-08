@@ -157,15 +157,23 @@
     <pulseonselect>false</pulseonselect>
 	</default>
   <default type="slider" description="Seek Slider">
-    <visible>true</visible>
+	<pulseonselect>false</pulseonselect>
+	<orientation>horizontal</orientation>	
+	<texturesliderbar>OSD/ProgressBackground.png</texturesliderbar>
+    <textureslidernib>HUD/SliderNibNF.png</textureslidernib>
+    <textureslidernibfocus>HUD/SliderNibFO.png</textureslidernibfocus> 	
+	
+	<!--
+	<visible>true</visible>
     <height>75</height>
-		<width>450</width>
+	<width>450</width>
     <aligny>center</aligny>
     <sliderwidth>150</sliderwidth>
     <sliderheight>24</sliderheight>
-		<texturesliderbar>HUD/SliderBG.png</texturesliderbar>
+	<texturesliderbar>HUD/SliderBG.png</texturesliderbar>
     <textureslidernib>HUD/SliderNibNF.png</textureslidernib>
-    <textureslidernibfocus>HUD/SliderNibFO.png</textureslidernibfocus>
+    <textureslidernibfocus>HUD/SliderNibFO.png</textureslidernibfocus>   
+	-->
   </default>
   <default type="sliderex" description="Default Slider">
     <height>75</height>
