@@ -2,7 +2,7 @@
 <strings>
   <!-- Misc labels -->
   <string id="31000">Change Your</string>
-  <string id="31001">Video decoder</string>
+  <string id="31001">Pixel format</string>
   <string id="31002">View Options</string>
   <string id="31003">Power Options</string>
   <string id="31004">Working...</string>
@@ -66,7 +66,7 @@
   <string id="31111">Show clock</string>
   <string id="31112">Display current time in the upper-right-hand corner of the screen.</string>
   <string id="31113">Disable options dialogs</string>
-  <string id="31114">Prevent access to certain menus for altering the look and feel of KODI.</string>
+  <string id="31114">Prevent access to certain menus for altering the look and feel of Quartz.</string>
   <string id="31115">KODI 'Quit' button function</string>
   <string id="31116">Choose what action to perform when exiting KODI.</string>
   <string id="31117">Reset above settings to default</string>
@@ -76,7 +76,7 @@
   <string id="31121">Hide background art</string>  
   <string id="31122">Do not display artwork in the background of various views (not recommended).</string>
   <string id="31123">Background art visibility</string>
-  <string id="31124">Enter a number from 1 to 10.  Ten is the brightest.  Default = 4</string>
+  <string id="31124">Adjust the visibility of background art.  Enter a number from 1 to 10.  Ten is the brightest.  Default = 4</string>
   <string id="31125"></string>
   <string id="31126">Home menus customizer</string>  
   <string id="31127">Customize Home menu categories and the available menus under each.</string> 
@@ -104,9 +104,9 @@
   <string id="31152">Add-on Required</string>
   <string id="31153">Please install the [B]Skin Helper Service Skin Backup[/B] add-on before using this feature.</string>
   <string id="31154">Enable custom background for homepage</string>
-  <string id="31155">Customize the Quartz homepage by displaying your art in the background.</string>
-  <string id="31156">Background path</string>
-  <string id="31157">Select what art to display on the homepage.</string>
+  <string id="31155">Customize the Quartz home screen by displaying your art in the background.</string>
+  <string id="31156">Image path:</string>
+  <string id="31157">Select what art to display on the home screen.</string>
   
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>
@@ -153,7 +153,7 @@
   <string id="31333">Video process information</string>
   <string id="31334">Hardware decoding</string>
   <string id="31335">Inactive</string>
-  <string id="31336">Decoder</string>
+  <string id="31336">Video decoder</string>
 
   <!-- Video and Music OSD Labels  -->
   <string id="31351">Pause</string>

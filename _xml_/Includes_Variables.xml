@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+  <variable name="VideoHWDecoder">
+	<value condition="Player.Process(videohwdecoder)">Hardware</value>
+	<value>Software</value>
+  </variable>
   <variable name="Fanart.Thumb" description="Thumb fallback for fanart">
     <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 	<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>

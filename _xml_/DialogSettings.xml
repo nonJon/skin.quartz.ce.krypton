@@ -6,10 +6,16 @@
 		<top>0</top>
 	</coordinates>
 	<controls>
-		<include>FullBackground</include>
+    <control type="image">
+      <posx>225</posx>
+      <posy>0</posy>
+      <width>1470</width>
+      <height>1080</height>
+      <texture border="128">img/DialogPanelST.png</texture><!--<colordiffuse>Overlay</colordiffuse>-->
+    </control>
 		<control type="label" id="2">
 			<left>336</left>
-			<top>105</top>
+			<top>135</top>
 			<width>1242</width>
 			<height>38</height>
 			<align>center</align>
@@ -18,9 +24,9 @@
 		</control>
 		<control type="grouplist" id="5">
 			<left>366</left>
-			<top>189</top>
+			<top>199</top>
 			<width>1182</width>
-			<height>675</height>
+			<height>665</height>
 			<pagecontrol>60</pagecontrol>
 			<onleft>noop</onleft>
 			<onright>60</onright>
@@ -60,9 +66,10 @@
 		<control type="scrollbar" id="60">
 			<left>1558</left>
 			<top>186</top>
-			<width>20</width>
+			<width>10</width>
 			<height>675</height>
 			<onright>5</onright>
+			<onleft>5</onleft>
 			<animation condition="!Control.HasFocus(60) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
 			<visible>$EXP[isEnabledScrollbar]</visible>
 		</control>
@@ -86,7 +93,7 @@
 		</control>
 		<control type="grouplist" id="9000">
 			<left>372</left>
-			<top>900</top>
+			<top>878</top>
 			<width>1170</width>
 			<height>75</height>
 			<align>center</align>
