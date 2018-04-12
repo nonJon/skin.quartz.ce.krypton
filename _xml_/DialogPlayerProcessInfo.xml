@@ -204,7 +204,7 @@
 					<font>size20</font>
 				    <texturenofocus>img/BlackDotST.png</texturenofocus>
 					<texturefocus>img/BlackDotST.png</texturefocus>
-					<visible>VideoPlayer.Content(livetv)</visible>
+					<enable>VideoPlayer.Content(livetv)</enable>
 					<onclick>Close</onclick>
 				</control>
 				<control type="button" id="5552">

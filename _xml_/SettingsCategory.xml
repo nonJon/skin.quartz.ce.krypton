@@ -26,7 +26,7 @@
         <font>-</font>
       </control>
       <control type="grouplist" id="3" description="Left - Button Area">
-        <posx>45</posx>
+        <posx>40</posx>
         <posy>165</posy>
         <width>420</width>
         <height>900</height>
@@ -38,7 +38,7 @@
         <orientation>vertical</orientation>
       </control>
       <control type="label" description="Settings level label">
-        <posx>45</posx>
+        <posx>40</posx>
         <posy>900</posy>
         <width>360</width>
         <height>60</height>
@@ -47,7 +47,7 @@
         <label>$LOCALIZE[31299]</label>
       </control>
       <control type="button" id="20" description="Settings level">
-        <posx>45</posx>
+        <posx>40</posx>
         <posy>960</posy>
         <onright>noop</onright>
         <onleft>noop</onleft>

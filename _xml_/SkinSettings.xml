@@ -14,7 +14,7 @@
       </control>
 		
     <control type="list" id="3000" description="Left panel - categories">
-      <posx>60</posx>
+      <posx>40</posx>
       <posy>165</posy>
       <width>420</width>
       <height>900</height>
@@ -328,7 +328,7 @@
 		  <control type="label">
 			<width>1535</width>
 			<height>200</height>
-			<label>[COLOR grey]$LOCALIZE[31147][/COLOR] Pecinko[CR][CR][COLOR grey]$LOCALIZE[31148][/COLOR]  nonJon[CR][CR][COLOR grey]$LOCALIZE[31149][/COLOR] AppTV, Amber, Confluence & Estuary</label>
+			<label>[COLOR grey]$LOCALIZE[31147][/COLOR] pecinko[CR][CR][COLOR grey]$LOCALIZE[31148][/COLOR]  nonJon[CR][CR][COLOR grey]$LOCALIZE[31149][/COLOR] AppTV, Amber, Confluence & Estuary</label>
 			<font>size22</font>
 		  </control>			
 		</control>

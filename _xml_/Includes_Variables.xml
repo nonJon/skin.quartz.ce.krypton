@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+<variable name="VarFanart">
+   <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+   <value>$INFO[Skin.String(CustomBackgroundPath)]</value>
+</variable>
   <variable name="VideoHWDecoder">
-	<value condition="Player.Process(videohwdecoder)">Hardware</value>
-	<value>Software</value>
+	<value condition="Player.Process(videohwdecoder)">$LOCALIZE[13270]</value>
+	<value>$LOCALIZE[13419]</value>
   </variable>
   <variable name="Fanart.Thumb" description="Thumb fallback for fanart">
     <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>

@@ -852,7 +852,7 @@
         <visible>IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
         <posx>210</posx>
         <width>480</width>
-        <textcolor>White2</textcolor>
+        <textcolor>HL</textcolor>
         <include>51MainLabel</include>
         <label>$INFO[ListItem.Label]</label>
       </control>
@@ -860,7 +860,7 @@
         <visible>!IntegerGreaterThan(ListItem.VideoResolution,700)</visible>
         <posx>210</posx>
         <width>540</width>
-        <textcolor>White2</textcolor>
+        <textcolor>HL</textcolor>
         <include>51MainLabel</include>
         <label>$INFO[ListItem.Label]</label>
       </control>

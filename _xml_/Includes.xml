@@ -79,6 +79,7 @@
   <include name="FullBackground">
     <control type="image" description="Show picture thumbs">
       <visible>Window.IsActive(MyPics.xml) + !Container.Content(addons)</visible>
+	  <depth>-0.80</depth>
       <posx>0</posx>
       <posy>0</posy>
       <width>100%</width>
@@ -90,6 +91,7 @@
     <control type="image" description="Show fanart">
       <visible>![Window.IsActive(MyPics.xml) + !Container.Content(addons)]</visible>
       <visible>!Skin.HasSetting(HideFanart)</visible>
+	  <depth>-0.80</depth>
       <posx>0</posx>
       <posy>0</posy>
       <width>100%</width>
