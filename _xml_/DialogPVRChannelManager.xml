@@ -59,14 +59,14 @@
             <posx>30</posx>
             <width>555</width>
             <include>51MainLabel</include>
-            <label>$INFO[ListItem.Label]$INFO[ListItem.ChannelNumber, (,)]</label>
+            <label>$INFO[ListItem.Label]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
           </control>
           <control type="label" description="Main Label">
             <visible>String.IsEmpty(ListItem.Icon)</visible>
             <posx>30</posx>
             <width>735</width>
             <include>51MainLabel</include>
-            <label>$INFO[ListItem.Label]$INFO[ListItem.ChannelNumber, (,)]</label>
+            <label>$INFO[ListItem.Label]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
           </control>
           <control type="label" description="Label2">
             <visible>!String.IsEmpty(ListItem.Icon)</visible>
@@ -105,14 +105,14 @@
             <posx>30</posx>
             <width>555</width>
             <include>51MainLabelFO</include>
-            <label>$INFO[ListItem.Label]$INFO[ListItem.ChannelNumber, (,)]</label>
+            <label>$INFO[ListItem.Label]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
           </control>
           <control type="label" description="Main Label">
             <visible>String.IsEmpty(ListItem.Icon)</visible>
             <posx>30</posx>
             <width>735</width>
             <include>51MainLabelFO</include>
-            <label>$INFO[ListItem.Label]$INFO[ListItem.ChannelNumber, (,)]</label>
+            <label>$INFO[ListItem.Label]$INFO[ListItem.ChannelNumberLabel, (,)]</label>
           </control>
           <control type="label" description="Label2">
             <visible>!String.IsEmpty(ListItem.Icon)</visible>

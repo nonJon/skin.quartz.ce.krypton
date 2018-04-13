@@ -54,7 +54,7 @@
             <!--<selectedcolor>selected</selectedcolor>-->
             <align>center</align>
             <aligny>center</aligny>
-            <label>$INFO[ListItem.ChannelNumber]</label>
+            <label>$INFO[ListItem.ChannelNumberLabel]</label>
           </control> 
           <control type="label">
             <visible>!String.IsEmpty(ListItem.Icon)</visible>
@@ -116,7 +116,7 @@
             <!--<selectedcolor>selected</selectedcolor>-->
             <align>center</align>
             <aligny>center</aligny>
-            <label>$INFO[ListItem.ChannelNumber]</label>
+            <label>$INFO[ListItem.ChannelNumberLabel]</label>
           </control> 
           <control type="label">
             <visible>!String.IsEmpty(ListItem.Icon)</visible>

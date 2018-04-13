@@ -180,7 +180,7 @@
 						<height>78</height>
 						<font>size18</font>
 						<align>center</align>
-						<info>ListItem.ChannelNumber</info>
+						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="label" id="1" description="Column 1 selected">
 						<posx>80</posx>
@@ -223,7 +223,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>White2</textcolor>
-						<info>ListItem.ChannelNumber</info>
+						<info>ListItem.ChannelNumberLabel</info>
 					</control>
 					<control type="label" id="1" description="Column 1 Focused">
 						<posx>80</posx>
@@ -416,7 +416,7 @@
                 <width>1425</width>
                 <font>size22</font>
                 <include>51MainLabel</include>
-                <label>[COLOR=Grey2]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName][/COLOR]$INFO[ListItem.Label, - ]</label>
+                <label>[COLOR=Grey2]$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName][/COLOR]$INFO[ListItem.Label, - ]</label>
               </control>
               <control type="label" description="Label2">
                 <posx>165</posx>
@@ -469,7 +469,7 @@
                 <width>1425</width>
                 <font>size22</font>
                 <include>51MainLabelFO</include>
-                <label>[COLOR=Grey2]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName][/COLOR]$INFO[ListItem.Label, - ]</label>
+                <label>[COLOR=Grey2]$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName][/COLOR]$INFO[ListItem.Label, - ]</label>
               </control>
               <control type="label" description="Label2">
                 <posx>165</posx>
@@ -576,7 +576,7 @@
                 <width>1425</width>
                 <font>size22</font>
                 <include>51MainLabel</include>
-                <label>[COLOR=Grey2]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName][/COLOR]$INFO[ListItem.Label, - ]</label>
+                <label>[COLOR=Grey2]$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName][/COLOR]$INFO[ListItem.Label, - ]</label>
               </control>
               <control type="label" description="Label2">
                 <posx>165</posx>
@@ -629,7 +629,7 @@
                 <width>1425</width>
                 <font>size22</font>
                 <include>51MainLabelFO</include>
-                <label>[COLOR=Grey2]$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName][/COLOR]$INFO[ListItem.Label, - ]</label>
+                <label>[COLOR=Grey2]$INFO[ListItem.ChannelNumberLabel,,. ]$INFO[ListItem.ChannelName][/COLOR]$INFO[ListItem.Label, - ]</label>
               </control>
               <control type="label" description="Label2">
                 <posx>165</posx>
@@ -691,7 +691,7 @@
           <textcolor>White2</textcolor>
           <align>left</align>
           <aligny>center</aligny>
-          <label>$INFO[ListItem.ChannelName]  [COLOR=Grey]$INFO[ListItem.ChannelNumber,(,)][/COLOR]</label>
+          <label>$INFO[ListItem.ChannelName]  [COLOR=Grey]$INFO[ListItem.ChannelNumberLabel,(,)][/COLOR]</label>
         </control>
         <control type="image">
           <posx>1335</posx>
