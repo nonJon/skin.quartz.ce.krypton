@@ -38,7 +38,7 @@
           <onright>600</onright>
           <onup>609</onup>
           <ondown>609</ondown>
-          <texturefocus>MusicOSD/OSDRepeatFO.png</texturefocus>
+          <texturefocus colordiffuse="HL">MusicOSD/OSDRepeatNF.png</texturefocus>
           <texturenofocus>MusicOSD/OSDRepeatNF.png</texturenofocus>
           <onclick>XBMC.PlayerControl(Repeat)</onclick>
         </control>
@@ -56,7 +56,7 @@
           <posy>3</posy>
           <width>90</width>
           <height>98</height>
-          <texture>MusicOSD/OSDRepeatOneFO.png</texture>
+          <texture colordiffuse="HL">MusicOSD/OSDRepeatOneNF.png</texture>
           <visible>Playlist.IsRepeatOne</visible>
           <visible>Control.HasFocus(1)</visible>
         </control>
@@ -74,7 +74,7 @@
           <posy>3</posy>
           <width>90</width>
           <height>98</height>
-          <texture>MusicOSD/OSDRepeatAllFO.png</texture>
+          <texture colordiffuse="HL">MusicOSD/OSDRepeatAllNF.png</texture>
           <visible>Playlist.IsRepeat</visible>
           <visible>Control.HasFocus(1)</visible>
         </control>
@@ -101,7 +101,7 @@
           <height>98</height>
           <label>210</label>
           <font>-</font>
-          <texturefocus>MusicOSD/OSDPreviousFO.png</texturefocus>
+          <texturefocus colordiffuse="HL">MusicOSD/OSDPreviousNF.png</texturefocus>
           <texturenofocus>MusicOSD/OSDPreviousNF.png</texturenofocus>
           <onleft>1</onleft>
           <onright>602</onright>
@@ -117,10 +117,10 @@
           <label>31351</label>
           <altlabel>208</altlabel>
           <font>-</font>
-          <texturefocus>MusicOSD/OSDPauseFO.png</texturefocus>
+          <texturefocus colordiffuse="HL">MusicOSD/OSDPauseNF.png</texturefocus>
           <texturenofocus>MusicOSD/OSDPauseNF.png</texturenofocus>
           <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-          <alttexturefocus>MusicOSD/OSDPlayFO.png</alttexturefocus>
+          <alttexturefocus colordiffuse="HL">MusicOSD/OSDPlayNF.png</alttexturefocus>
           <alttexturenofocus>MusicOSD/OSDPlayNF.png</alttexturenofocus>
           <onleft>600</onleft>
           <onright>603</onright>
@@ -135,7 +135,7 @@
           <height>98</height>
           <label>31352</label>
           <font>-</font>
-          <texturefocus>MusicOSD/OSDStopFO.png</texturefocus>
+          <texturefocus colordiffuse="HL">MusicOSD/OSDStopNF.png</texturefocus>
           <texturenofocus>MusicOSD/OSDStopNF.png</texturenofocus>
           <onleft>602</onleft>
           <onright>605</onright>
@@ -150,7 +150,7 @@
           <height>98</height>
           <label>209</label>
           <font>-</font>
-          <texturefocus>MusicOSD/OSDNextFO.png</texturefocus>
+          <texturefocus colordiffuse="HL">MusicOSD/OSDNextNF.png</texturefocus>
           <texturenofocus>MusicOSD/OSDNextNF.png</texturenofocus>
           <onleft>603</onleft>
           <onright>21</onright>
@@ -170,10 +170,10 @@
           <onright>609</onright>
           <onup>609</onup>
           <ondown>609</ondown>
-          <texturefocus>MusicOSD/OSDRandomOffFO.png</texturefocus>
+          <texturefocus colordiffuse="HL">MusicOSD/OSDRandomOffNF.png</texturefocus>
           <texturenofocus>MusicOSD/OSDRandomOffNF.png</texturenofocus>
           <usealttexture>Playlist.IsRandom</usealttexture>
-          <alttexturefocus>MusicOSD/OSDRandomOnFO.png</alttexturefocus>
+          <alttexturefocus colordiffuse="HL">MusicOSD/OSDRandomOnNF.png</alttexturefocus>
           <alttexturenofocus>MusicOSD/OSDRandomOnNF.png</alttexturenofocus>
           <onclick>XBMC.PlayerControl(Random)</onclick>
         </control>
@@ -205,7 +205,7 @@
           <onright>10</onright>
           <onup>602</onup>
           <ondown>602</ondown>
-          <texturefocus>MusicOSD/OSDOptionsFO.png</texturefocus>
+          <texturefocus colordiffuse="HL">MusicOSD/OSDOptionsNF.png</texturefocus>
           <texturenofocus>MusicOSD/OSDOptionsNF.png</texturenofocus>
           <onclick allowhiddenfocus="true">Control.SetFocus(555)</onclick>
           <!--<onclick>ActivateWindow(1113)</onclick>-->
