@@ -236,19 +236,19 @@
         <control type="label" description="Main Label">
           <posy>-52</posy>
           <font>size20</font>
-          <textcolor>HL</textcolor>
+          <!--<textcolor>HL</textcolor>-->
           <width>608</width>
           <height>36</height>
           <align>left</align>
           <scroll>false</scroll>
-          <label>$INFO[ListItem.Title]</label>
+          <label>[B]$INFO[ListItem.Title][/B]</label>
         </control>
         <control type="image" description="Rating">
           <posx>615</posx>
-          <posy>-45</posy>
-          <height>27</height>
+          <posy>-54</posy>
+          <height>40</height>
           <width>150</width>
-          <colordiffuse>HL</colordiffuse>
+          <!--<colordiffuse>HL</colordiffuse>-->
           <aspectratio align="left">keep</aspectratio>
 		  <texture>badges/$VAR[MediaRating]</texture>
         </control>
@@ -280,7 +280,7 @@
             <width>156</width>
             <height>30</height>
             <align>right</align>
-            <textcolor>Grey</textcolor>
+            <!--<textcolor>Grey</textcolor>-->
             <label>$LOCALIZE[558]:</label>
           </control>
           <control type="label" description="Genre label 2">
@@ -288,7 +288,7 @@
             <width>156</width>
             <height>30</height>
             <align>right</align>
-            <textcolor>Grey</textcolor>
+            <!--<textcolor>Grey</textcolor>-->
             <label>$LOCALIZE[515]:</label>
           </control>
           <control type="label" description="Type label 3">
@@ -296,7 +296,7 @@
             <width>156</width>
             <height>30</height>
             <align>right</align>
-            <textcolor>Grey</textcolor>
+            <!--<textcolor>Grey</textcolor>-->
             <label>$LOCALIZE[564]:</label>
           </control>
           <control type="label" description="Duration label 3">
@@ -304,7 +304,7 @@
             <width>156</width>
             <height>30</height>
             <align>right</align>
-            <textcolor>Grey</textcolor>
+            <!--<textcolor>Grey</textcolor>-->
             <label>$LOCALIZE[180]:</label>
           </control>
         </control>

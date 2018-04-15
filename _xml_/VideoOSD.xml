@@ -32,7 +32,7 @@
               <width>93</width>
               <height>57</height>
               <texturenofocus>OSD/Stop.png</texturenofocus>
-              <texturefocus>OSD/StopFocused.png</texturefocus>
+              <texturefocus colordiffuse="HL">OSD/Stop.png</texturefocus>
               <onup>606</onup>
 			  <onleft>607</onleft>
               <onright>601</onright>
@@ -43,18 +43,18 @@
               <width>93</width>
               <height>57</height>
               <texturenofocus>OSD/SkipBack.png</texturenofocus>
-              <texturefocus>OSD/SkipBackFocused.png</texturefocus>
+              <texturefocus colordiffuse="HL">OSD/SkipBack.png</texturefocus>
               <onup>606</onup>
 			  <onleft>600</onleft>
               <onright>602</onright>
               <onclick>XBMC.PlayerControl(Previous)</onclick>
             </control>
-            <control type="button" id="602">
+            <control type="button" id="602"> 
               <posx>662</posx>
               <width>93</width>
               <height>57</height>
               <texturenofocus>OSD/Rewind.png</texturenofocus>
-              <texturefocus>OSD/RewindFocused.png</texturefocus>
+              <texturefocus colordiffuse="HL">OSD/Rewind.png</texturefocus>
               <onleft>601</onleft>
               <onright>603</onright>
               <onup>606</onup>
@@ -65,10 +65,10 @@
               <width>93</width>
               <height>57</height>
               <texturenofocus>OSD/Play.png</texturenofocus>
-              <texturefocus>OSD/PlayFocused.png</texturefocus>
+              <texturefocus colordiffuse="HL">OSD/Play.png</texturefocus>
               <usealttexture>Player.Playing</usealttexture>
               <alttexturenofocus>OSD/Pause.png</alttexturenofocus>
-              <alttexturefocus>OSD/PauseFocused.png</alttexturefocus>
+              <alttexturefocus colordiffuse="HL">OSD/Pause.png</alttexturefocus>
               <onleft>602</onleft>
               <onright>604</onright>
               <onup>606</onup>
@@ -79,7 +79,7 @@
               <width>93</width>
               <height>57</height>
               <texturenofocus>OSD/FastForward.png</texturenofocus>
-              <texturefocus>OSD/FastForwardFocused.png</texturefocus>
+              <texturefocus colordiffuse="HL">OSD/FastForward.png</texturefocus>
               <onleft>603</onleft>
               <onright>605</onright>
               <onup>606</onup>
@@ -90,7 +90,7 @@
               <width>93</width>
               <height>57</height>
               <texturenofocus>OSD/SkipForward.png</texturenofocus>
-              <texturefocus>OSD/SkipForwardFocused.png</texturefocus>
+              <texturefocus colordiffuse="HL">OSD/SkipForward.png</texturefocus>
               <onleft>604</onleft>
               <onright>606</onright>
               <onup>606</onup>
@@ -101,7 +101,7 @@
               <width>93</width>
               <height>57</height>
               <texturenofocus>OSD/DVD.png</texturenofocus>
-              <texturefocus>OSD/DVDFocused.png</texturefocus>
+              <texturefocus colordiffuse="HL">OSD/DVD.png</texturefocus>
               <onleft>605</onleft>
               <onright>607</onright>
 			  <onup>606</onup>

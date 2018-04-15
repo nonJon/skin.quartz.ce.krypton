@@ -235,7 +235,7 @@
         <height>75</height>
         <textcolor>HL</textcolor>
         <font>size28</font>
-        <label>$VAR[GlobalHeadings]</label>
+        <label>[B]$VAR[GlobalHeadings][/B]</label>
       </control>
     </control>
   </include>

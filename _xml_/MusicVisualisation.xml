@@ -126,6 +126,14 @@
               <!--<label>[B]$INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength][/B]</label>  -->
               <font>size17</font>
             </control>
+        <control type="image" description="Rating">
+          <posx>120</posx>
+          <posy>715</posy>
+          <height>26</height>
+          <width>150</width>
+          <aspectratio align="left">keep</aspectratio>
+		  <texture colordiffuse="Grey2">badges/$VAR[MediaRating]</texture>
+        </control>
             <control type="group">
               <posy>756</posy>
               <control type="label">
@@ -240,6 +248,14 @@
               <!--<label>[B]$INFO[MusicPlayer.PlaylistPosition] $LOCALIZE[20163] $INFO[MusicPlayer.PlaylistLength][/B]</label>  -->
               <font>size17</font>
             </control>
+        <control type="image" description="Rating">
+          <posx>-274</posx>
+          <posy>715</posy>
+          <height>26</height>
+          <width>150</width>
+          <aspectratio align="left">keep</aspectratio>
+		  <texture colordiffuse="Grey2">badges/$VAR[MediaRating]</texture>
+        </control>	
           </control>
           <control type="group">
             <posy>756</posy>

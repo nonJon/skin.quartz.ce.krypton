@@ -19,7 +19,7 @@
         <posx>0</posx>
         <posy>6</posy>
         <control type="image" description="Icon">
-          <posx>1320</posx>
+          <posx>1260</posx>
           <posy>270</posy>
           <width>570</width>
           <height>570</height>
@@ -52,15 +52,22 @@
           <autoscroll time="6000" delay="8000" repeat="8000">true</autoscroll>
           <info>ListItem.Album</info>
         </control>
+        <control type="image" description="Rating">
+		  <visible>$EXP[isAlbum]</visible>
+          <posx>855</posx>
+          <posy>200</posy>
+          <height>50</height>
+          <width>150</width>
+          <aspectratio align="left">keep</aspectratio>
+		  <texture>badges/$VAR[MediaRating]</texture>
+        </control>
         <control type="label" description="Artist Label">
 		  <visible>$EXP[isAlbum]</visible>
-          <!--<visible>!container.content(artists)</visible>-->
           <posy>270</posy>
           <width>1050</width>
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>Grey</textcolor>
           <label>$INFO[ListItem.Artist]</label>
         </control>
         <control type="label" description="Styles Label">
@@ -70,19 +77,17 @@
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>Grey</textcolor>
           <scroll>false</scroll>
           <label>$INFO[ListItem.Property(Artist_Style)]</label>
         </control>
         <control type="label" description="Moods Label">
           <visible>container.content(artists)</visible>
-          <visible>IsEmpty(ListItem.Property(Artist_Style))</visible>
+          <visible>String.IsEmpty(ListItem.Property(Artist_Style))</visible>
           <posy>270</posy>
           <width>1050</width>
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>Grey</textcolor>
           <scroll>false</scroll>
           <label>$INFO[ListItem.Property(Artist_Mood)]</label>
         </control>
@@ -93,7 +98,6 @@
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>Grey</textcolor>
           <label>$INFO[ListItem.Year,, • ]$INFO[ListItem.Genre]</label>
         </control>
         <control type="label" description="Genre">
@@ -103,7 +107,6 @@
           <height>45</height>
           <font>size22</font>
           <align>left</align>
-          <textcolor>Grey</textcolor>
           <label>$INFO[ListItem.Property(Artist_Genre)]</label>
         </control>
         <control type="textbox" description="Plot">
@@ -111,40 +114,56 @@
           <posx>0</posx>
           <posy>405</posy>
           <width>1050</width>
-          <height>378</height>
+          <height>420</height>
           <font>size22</font>
           <align>justify</align>
 		  <label fallback="161">$INFO[ListItem.Property(Artist_Description)]</label>
           <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
         </control>
+        <control type="textbox" description="Plot">
+		<visible>$EXP[isAlbum]</visible>
+          <posx>0</posx>
+          <posy>405</posy>
+          <width>1050</width>
+          <height>420</height>
+          <font>size22</font>
+          <align>justify</align>
+		  <label fallback="161">$INFO[ListItem.Property(Album_Description)]</label>
+          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+        </control>
       </control>
-	  <control type="group" description="Top info songs">
+	  
+	  
+	  <control type="group" description="Info songs">
 		<visible>$EXP[isSong]</visible>
         <posx>-30</posx>
         <posy>-486</posy>
         <include>MusicInfo</include>
         <control type="textbox" description="Plot">
+          <visible>!String.IsEmpty(ListItem.Property(Album_Description))</visible>
           <posx>90</posx>
-          <posy>1068</posy>
+          <posy>1016</posy>
           <width>1050</width>
-          <height>258</height>
+          <height>420</height>
           <font>size22</font>
           <align>justify</align>
-          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+          <autoscroll delay="6500" time="3000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
           <label>$INFO[ListItem.Property(Album_Description)]</label>
         </control>
         <control type="textbox" description="Plot">
-          <visible>IsEmpty(ListItem.Property(Album_Description))</visible>
+          <visible>String.IsEmpty(ListItem.Property(Album_Description)) + !String.IsEmpty(ListItem.Property(Artist_Description))</visible>
           <posx>90</posx>
-          <posy>1068</posy>
+          <posy>1016</posy>
           <width>1050</width>
-          <height>258</height>
+          <height>420</height>
           <font>size22</font>
           <align>justify</align>
-          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+          <autoscroll delay="7500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
           <label>$INFO[ListItem.Property(Artist_Description)]</label>
         </control>
       </control>
+	  
+	  
     </control>
     <control type="label" description="Path">
       <visible>Skin.HasSetting(ShowFileInfo)</visible>
@@ -154,118 +173,91 @@
       <height>27</height>
       <font>size15</font>
       <align>left</align>
-      <textcolor>Grey</textcolor>
+      <!--<textcolor>Grey</textcolor>-->
       <haspath>true</haspath>
       <scroll>true</scroll>
       <label>$INFO[ListItem.FilenameAndPath]</label>
     </control>
-    <control type="image">
-      <posx>0</posx>
-      <posy>1023</posy>
-      <height>60</height>
-      <width>1920</width>
-      <aspectratio>stretch</aspectratio>
-      <texture>img/BlackDotT.png</texture>
-    </control>
-    <control type="image" description="Navbar">
-      <posx>-82</posx>
-      <posy>1028</posy>
-      <width>2085</width>
-      <height>1</height>
-      <aspectratio>stretch</aspectratio>
-      <texture>img/Line1.png</texture>
-    </control>
+
+      <control type="image" description="Navbar">
+        <posx>-90</posx>
+        <posy>963</posy>
+        <width>2100</width>
+        <height>136</height>
+        <aspectratio>stretch</aspectratio>
+        <texture>img/HomeMenuBar.png</texture>
+      </control>
     <control type="group" description="Options">
       <posy>0</posy>
       <posx>0</posx>
       <control type="grouplist" id="300">
-        <posx>15</posx>
-        <posy>1024</posy>
-        <width>1890</width>
-        <height>58</height>
+        <posx>0</posx>
+        <posy>993</posy>
+        <width>1920</width>
+        <height>88</height>
         <itemgap>0</itemgap>
         <aligny>bottom</aligny>
         <align>center</align>
         <onup>50</onup>
         <orientation>horizontal</orientation>
-        <control type="button" id="12" description="Album Info">
-		  <visible>$EXP[isSong]</visible>
-          <height>60</height>
-          <width>270</width>
-          <label>10523</label>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>		
-		
-        <control type="button" id="6" description="Refresh">
-          <height>60</height>
-          <width>330</width>
-          <label>184</label>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>
-        <control type="button" id="10" description="Get Thumb">
-          <height>60</height>
-          <width>330</width>
-          <label>13405</label>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>
-				
-        <control type="button" id="14" description="Decrease Rating">
-		  <visible>$EXP[isSong]</visible>
-          <height>60</height>
-          <width>270</width>
-          <label>-  $LOCALIZE[563]</label>
-          <onclick>DecreaseRating</onclick>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
+        <control type="button" id="11">
+          <!--Cancel-->
+          <height>66</height>
+          <width>300</width>
+          <align>center</align>
+          <label>222</label>
+          <onclick>Close</onclick>
         </control>
         <control type="button" id="15" description="Increase Rating">
-		  <visible>$EXP[isSong]</visible>
-          <height>60</height>
-          <width>270</width>
+		  <visible>$EXP[isSong] | $EXP[isAlbum]</visible>
+          <height>66</height>
+          <width>300</width>
+		  <align>center</align>
           <label>+ $LOCALIZE[563]</label>
           <onclick>IncreaseRating</onclick>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
+          <font>size22</font>
         </control>
-<!--
-        <control type="button" id="11" description="Last FM">
-          <height>60</height>
-          <width>330</width>
-          <label>Last FM</label>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
-        </control>  -->
-		
-        <control type="button" id="13" description="Get FanArt">
-		<visible>$EXP[isArtist]</visible>
-          <height>60</height>
-          <width>330</width>
-          <label>20413</label>
-          <font>size18</font>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
+        <control type="button" id="14" description="Decrease Rating">
+		  <visible>$EXP[isSong] | $EXP[isAlbum]</visible>
+          <height>66</height>
+          <width>300</width>
+		  <align>center</align>
+          <label>-  $LOCALIZE[563]</label>
+          <onclick>DecreaseRating</onclick>
+          <font>size22</font>
         </control>
-        <control type="togglebutton" id="8999" description="Path">
-		<visible>$EXP[isAlbum] | $EXP[isSong]</visible>
+        <control type="button" id="12" description="Album Info">
+		  <!--<visible>$EXP[isSong]</visible>-->
+          <height>66</height>
+          <width>300</width>
+		  <align>center</align>
+		  <label>10523</label>
+          <font>size22</font>
+        </control>		
+        <control type="button" id="10" description="Get Thumb">
+          <height>66</height>
+          <width>300</width>
+		  <align>center</align>
+          <label>13405</label>
+          <font>size22</font>
+        </control>
 
-          <!--<visible>!Container.content(artists)</visible>-->
-          <height>60</height>
-          <width>270</width>
+    <!--<control type="togglebutton" id="8999" description="Path">
+		  <visible>$EXP[isAlbum] | $EXP[isSong]</visible>
+          <height>66</height>
+          <width>300</width>
+		  <align>center</align>
           <align>center</align>
-          <font>size18</font>
+          <font>size22</font>
           <label>Location</label>
           <onclick>Skin.ToggleSetting(ShowFileInfo)</onclick>
-          <texturefocus>img/HomeBarFO.png</texturefocus>
-          <alttexturefocus>img/HomeBarFO.png</alttexturefocus>
+        </control> -->
+        <control type="button" id="6" description="Refresh">
+          <height>66</height>
+          <width>300</width>
+		  <align>center</align>
+          <label>184</label>
+          <font>size22</font>
         </control>
       </control>
     </control>

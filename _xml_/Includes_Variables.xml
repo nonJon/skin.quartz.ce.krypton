@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+<variable name="NoThumb">
+   <value condition="String.IsEmpty(ListItem.Art(thumb))" >HL</value>
+   <value condition="String.IsEqual(ListItem.Art(thumb), DefaultAddonAudioDecoder.png)" >HL</value>
+   <value condition="String.IsEqual(ListItem.Art(thumb), DefaultAddonLibrary.png)" >HL</value>
+
+   <value>0</value>
+</variable>
 <variable name="VarFanart">
    <value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
    <value>$INFO[Skin.String(CustomBackgroundPath)]</value>
@@ -21,17 +28,17 @@
     <value>$INFO[ListItem.Thumb]</value>
   </variable>
   	<variable name="MediaRating">
-		<value condition="String.Contains(ListItem.UserRating,10)">rating10.png</value>
-		<value condition="String.Contains(ListItem.UserRating,9)">rating9.png</value>
-		<value condition="String.Contains(ListItem.UserRating,8)">rating8.png</value>
-		<value condition="String.Contains(ListItem.UserRating,7)">rating7.png</value>
-		<value condition="String.Contains(ListItem.UserRating,6)">rating6.png</value>
-		<value condition="String.Contains(ListItem.UserRating,5)">rating5.png</value>
-		<value condition="String.Contains(ListItem.UserRating,4)">rating4.png</value>
-		<value condition="String.Contains(ListItem.UserRating,3)">rating3.png</value>
-		<value condition="String.Contains(ListItem.UserRating,2)">rating2.png</value>
-		<value condition="String.Contains(ListItem.UserRating,1)">rating1.png</value>
-		<value condition="String.Contains(ListItem.UserRating,0)">rating0.png</value>
+		<value condition="String.Contains(ListItem.UserRating,10) | String.Contains(MusicPlayer.UserRating,10)">rating10.png</value>
+		<value condition="String.Contains(ListItem.UserRating,9) | String.Contains(MusicPlayer.UserRating,9)">rating9.png</value>
+		<value condition="String.Contains(ListItem.UserRating,8) | String.Contains(MusicPlayer.UserRating,8)">rating8.png</value>
+		<value condition="String.Contains(ListItem.UserRating,7) | String.Contains(MusicPlayer.UserRating,7)">rating7.png</value>
+		<value condition="String.Contains(ListItem.UserRating,6) | String.Contains(MusicPlayer.UserRating,6)">rating6.png</value>
+		<value condition="String.Contains(ListItem.UserRating,5) | String.Contains(MusicPlayer.UserRating,5)">rating5.png</value>
+		<value condition="String.Contains(ListItem.UserRating,4) | String.Contains(MusicPlayer.UserRating,4)">rating4.png</value>
+		<value condition="String.Contains(ListItem.UserRating,3) | String.Contains(MusicPlayer.UserRating,3)">rating3.png</value>
+		<value condition="String.Contains(ListItem.UserRating,2) | String.Contains(MusicPlayer.UserRating,2)">rating2.png</value>
+		<value condition="String.Contains(ListItem.UserRating,1) | String.Contains(MusicPlayer.UserRating,1)">rating1.png</value>
+		<value condition="String.Contains(ListItem.UserRating,0) | String.Contains(MusicPlayer.UserRating,0)">rating0.png</value> <!--
 		<value condition="String.Contains(ListItem.Rating,10)">rating10.png</value>
 		<value condition="String.Contains(ListItem.Rating,9)">rating9.png</value>
 		<value condition="String.Contains(ListItem.Rating,8)">rating8.png</value>
@@ -42,7 +49,7 @@
 		<value condition="String.Contains(ListItem.Rating,3)">rating3.png</value>
 		<value condition="String.Contains(ListItem.Rating,2)">rating2.png</value>
 		<value condition="String.Contains(ListItem.Rating,1)">rating1.png</value>
-		<value condition="String.Contains(ListItem.Rating,0)">rating0.png</value>
+		<value condition="String.Contains(ListItem.Rating,0)">rating0.png</value>-->
 		<value>rating0.png</value>
 	</variable>
   <variable name="ShelfIcon" description="Shelf custom and fallback image">
