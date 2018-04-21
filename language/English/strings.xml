@@ -2,7 +2,7 @@
 <strings>
   <!-- Misc labels -->
   <string id="31000">Change Your</string>
-  <string id="31001">Pixel format</string>
+  <string id="31001">Video decoder</string>
   <string id="31002">View Options</string>
   <string id="31003">Power Options</string>
   <string id="31004">Working...</string>
@@ -76,14 +76,14 @@
   <string id="31121">Hide background art</string>  
   <string id="31122">Do not display artwork in the background of various views (not recommended).</string>
   <string id="31123">Background art visibility</string>
-  <string id="31124">Adjust the visibility of background art.  Enter a number from 1 to 10.  Ten is the brightest.  Default = 4</string>
+  <string id="31124">Adjust the visibility of background art.  Enter a number from 1 to 10.  Ten is the brightest (default=4).</string>
   <string id="31125"></string>
   <string id="31126">Home menus customizer</string>  
   <string id="31127">Customize Home menu categories and the available menus under each.</string> 
   <string id="31128">Home media shelf customizer</string>
   <string id="31129">Manage options for displaying content above the Home menu.</string>  
   <string id="31130">Enable onscreen debug info</string>  
-  <string id="31131">When enabled, the current KODI module and focus object will be displayed. Useful for troubleshooting.</string>
+  <string id="31131">While enabled, the current KODI module and focus object will be displayed. Useful for troubleshooting.</string>
   <string id="31132">Enable debug logging</string>
   <string id="31133">Turn debug logging on or off. Useful for troubleshooting.</string>
   <string id="31134">Backup skin settings</string>
@@ -107,7 +107,10 @@
   <string id="31155">Customize the Quartz home screen by displaying your art in the background.</string>
   <string id="31156">Image path:</string>
   <string id="31157">Select what art to display on the home screen.</string>
-  
+  <string id="31158">Menu transparency</string>
+  <string id="31159">Adjust the level of transparency for pop-up menus (default=Medium).</string>
+  <string id="31160">OSD menu transparency</string>
+  <string id="31161">Adjust the level of transparency for menus that pop-up over the video player (default=High).</string> 
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>
   <string id="31201">Categories</string>
@@ -126,7 +129,7 @@
   <string id="31306">Eject</string>
   <string id="31307">Hide Fanart background pictures</string>
   <string id="31308">Movie Details</string>
-  <string id="31309">Memory Used</string>
+  <string id="31309">Memory Used:</string>
   <string id="31310">Track Number</string>
   <string id="31311">Fanart image[CR][CR]Unavailable[CR][CR] Click button to set</string>
   <string id="31312">Current Scraper</string>
@@ -153,7 +156,7 @@
   <string id="31333">Video process information</string>
   <string id="31334">Hardware decoding</string>
   <string id="31335">Inactive</string>
-  <string id="31336">Video decoder</string>
+  <string id="31336">Decoder</string>
 
   <!-- Video and Music OSD Labels  -->
   <string id="31351">Pause</string>

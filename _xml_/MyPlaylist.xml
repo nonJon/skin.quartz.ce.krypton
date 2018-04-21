@@ -152,13 +152,12 @@
       <visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>  
       <include>DialogOpenCloseVisible</include>
       <control type="image" description="List back">
-        <posx>459</posx>
-        <posy>50</posy>
-        <width>1002</width>
-        <height>762</height>
+        <posx>580</posx>
+        <posy>160</posy>
+        <width>760</width>
+        <height>530</height>
         <aspectratio>stretch</aspectratio>
-		 <texture border="128">img/DialogPanel.png</texture> <!--
-        <texture border="121">img/DialogPanel.png</texture><colordiffuse>Overlay</colordiffuse>  -->
+        <texture colordiffuse="$VAR[MenuTransperancy]" border="128">img/DialogCE.png</texture>
       </control>
       <control type="grouplist" id="9000">
         <include>9000GrouplistParameters</include>

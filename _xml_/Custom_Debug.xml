@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1150">
 	<zorder>2</zorder>
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
-		<control type="group">
+		<control type="group"><!-- Window/Dialog debug -->
 			<visible>Skin.HasSetting(DebugInfo)</visible>
 			<control type="grouplist">
 				<left>22</left>
@@ -11,11 +11,13 @@
 				<width>930</width>
 				<height>675</height>
 				<itemgap>18</itemgap>
+				<!-- Custom Window labels -->
 				<control type="label">
 					<textcolor>red</textcolor>
 					<label>CustomDialogOK.xml</label>
 					<visible>Window.IsVisible(CustomDialogOK.xml)</visible>
 				</control>
+				<!-- Window labels -->
 				<control type="label">
 					<textcolor>red</textcolor>
 					<label>AddonBrowser.xml</label>
@@ -43,6 +45,11 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>CustomDVD.xml</label>
+					<visible>Window.IsVisible(CustomDVD.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>LoginScreen.xml</label>
 					<visible>Window.IsVisible(LoginScreen.xml)</visible>
 				</control>
@@ -58,6 +65,16 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>MyMusicPlaylist.xml</label>
+					<visible>Window.IsVisible(MyMusicPlaylist.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>MyPlaylist.xml</label>
+					<visible>Window.IsVisible(MyPlaylist.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>MyMusicPlaylistEditor.xml</label>
 					<visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible>
 				</control>
@@ -65,11 +82,6 @@
 					<textcolor>red</textcolor>
 					<label>MyPics.xml</label>
 					<visible>Window.IsVisible(MyPics.xml)</visible>
-				</control>
-				<control type="label">
-					<textcolor>red</textcolor>
-					<label>MyPlaylist.xml</label>
-					<visible>Window.IsVisible(MyPlaylist.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -103,8 +115,18 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>MyPVR.xml</label>
+					<visible>Window.IsVisible(MyPVR.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>MyVideoNav.xml</label>
 					<visible>Window.IsVisible(MyVideoNav.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>MyVideoPlaylist.xml</label>
+					<visible>Window.IsVisible(MyVideoPlaylist.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -118,8 +140,24 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>CustomSources.xml</label>
+					<visible>Window.IsVisible(CustomSources.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>SettingsCategory.xml</label>
 					<visible>Window.IsVisible(SettingsCategory.xml)</visible>
+				</control>
+
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>SkinSettings.xml</label>
+					<visible>Window.IsVisible(SkinSettings.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>CustomQuit.xml</label>
+					<visible>Window.IsVisible(CustomQuit.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -128,15 +166,19 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>SkinSettings.xml</label>
-					<visible>Window.IsVisible(SkinSettings.xml)</visible>
+					<label>DialogSettings.xml</label>
+					<visible>Window.IsVisible(DialogSettings.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
 					<label>VideoFullScreen.xml</label>
 					<visible>Window.IsVisible(VideoFullScreen.xml)</visible>
 				</control>
-				<!-- Dialog labels -->
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>DialogFullScreenInfo.xml</label>
+					<visible>Window.IsVisible(DialogFullScreenInfo.xml)</visible>
+				</control>				<!-- Dialog labels -->
 				<control type="label">
 					<textcolor>red</textcolor>
 					<label>DialogAddonInfo.xml</label>
@@ -149,8 +191,18 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>DialogAlbumInfo.xml</label>
+					<visible>Window.IsVisible(DialogAlbumInfo.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>DialogAudioDSPManager.xml</label>
 					<visible>Window.IsVisible(DialogAudioDSPManager.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>DialogAudioDSPSettings.xml</label>
+					<visible>Window.IsVisible(DialogAudioDSPSettings.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -164,8 +216,8 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>DialogConfirm.xml</label>
-					<visible>Window.IsVisible(DialogConfirm.xml)</visible>
+					<label>DialogContentSettings.xml</label>
+					<visible>Window.IsVisible(DialogContentSettings.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -184,8 +236,8 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>DialogGameControllers.xml</label>
-					<visible>Window.IsVisible(DialogGameControllers.xml)</visible>
+					<label>DialogKaiToast.xml</label>
+					<visible>Window.IsVisible(DialogKaiToast.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -199,18 +251,28 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>DialogMediaFilter.xml</label>
+					<visible>Window.IsVisible(DialogMediaFilter.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>DialogMediaSource.xml</label>
 					<visible>Window.IsVisible(DialogMediaSource.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>DialogMusicInfo.xml</label>
-					<visible>Window.IsVisible(DialogMusicInfo.xml)</visible>
+					<label>DialogMuteBug.xml</label>
+					<visible>Window.IsVisible(DialogMuteBug.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>DialogNotification.xml</label>
-					<visible>Window.IsVisible(DialogNotification.xml)</visible>
+					<label>DialogVolumeBar.xml</label>
+					<visible>Window.IsVisible(DialogVolumeBar.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>DialogNetworkSetup.xml</label>
+					<visible>Window.IsVisible(DialogNetworkSetup.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -219,8 +281,18 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>DialogOK.xml</label>
+					<visible>Window.IsVisible(DialogOK.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>DialogParametricEQ.xml</label>
 					<visible>Window.IsVisible(DialogParametricEQ.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>DialogPeripheralSettings.xml</label>
+					<visible>Window.IsVisible(DialogPeripheralSettings.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -229,8 +301,8 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>DialogPlayerProcessInfo.xml</label>
-					<visible>Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
+					<label>DialogProgress.xml</label>
+					<visible>Window.IsVisible(DialogProgress.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -269,6 +341,11 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>DialogPVRTimerSettings.xml</label>
+					<visible>Window.IsVisible(DialogPVRTimerSettings.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>DialogSeekbar.xml</label>
 					<visible>Window.IsVisible(DialogSeekbar.xml)</visible>
 				</control>
@@ -279,13 +356,13 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>DialogSettings.xml</label>
-					<visible>Window.IsVisible(DialogSettings.xml)</visible>
+					<label>DialogSlider.xml</label>
+					<visible>Window.IsVisible(DialogSlider.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>DialogSlider.xml</label>
-					<visible>Window.IsVisible(DialogSlider.xml)</visible>
+					<label>DialogSongInfo.xml</label>
+					<visible>Window.IsVisible(DialogSongInfo.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -319,6 +396,16 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
+					<label>DialogYesNo.xml</label>
+					<visible>Window.IsVisible(DialogYesNo.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>DialogConfirm.xml</label>
+					<visible>Window.IsVisible(DialogConfirm.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
 					<label>MusicOSD.xml</label>
 					<visible>Window.IsVisible(MusicOSD.xml)</visible>
 				</control>
@@ -331,6 +418,11 @@
 					<textcolor>red</textcolor>
 					<label>script-cu-lrclyrics-main.xml</label>
 					<visible>Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>script-globalsearch-contextmenu.xml</label>
+					<visible>Window.IsVisible(script-globalsearch-contextmenu.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -349,23 +441,18 @@
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>script-nextup-notication-NextUpInfo.xml</label>
-					<visible>Window.IsVisible(script-nextup-notication-NextUpInfo.xml)</visible>
+					<label>script-videoextras-context.xml</label>
+					<visible>Window.IsVisible(script-videoextras-context.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>script-nextup-notication-StillWatchingInfo.xml</label>
-					<visible>Window.IsVisible(script-nextup-notication-StillWatchingInfo.xml)</visible>
+					<label>script-videoextras-main.xml</label>
+					<visible>Window.IsVisible(script-videoextras-main.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
-					<label>script-skin_Helper_service-CustomSearch.xml</label>
-					<visible>Window.IsVisible(script-skin_Helper_service-CustomSearch.xml)</visible>
-				</control>
-				<control type="label">
-					<textcolor>red</textcolor>
-					<label>service-LibreELEC-Settings-mainWindow.xml</label>
-					<visible>Window.IsVisible(service-LibreELEC-Settings-mainWindow.xml)</visible>
+					<label>script-videoextras-resume.xml</label>
+					<visible>Window.IsVisible(script-videoextras-resume.xml)</visible>
 				</control>
 				<control type="label">
 					<textcolor>red</textcolor>
@@ -397,7 +484,13 @@
 					<label>VideoOSDBookmarks.xml</label>
 					<visible>Window.IsVisible(VideoOSDBookmarks.xml)</visible>
 				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>VideoOSDSettings.xml</label>
+					<visible>Window.IsVisible(VideoOSDSettings.xml)</visible>
+				</control>
 			</control>
+			<!-- Control label -->
 			<control type="label">
 				<left>968</left>
 				<top>22</top>
@@ -406,8 +499,8 @@
 				<textcolor>red</textcolor>
 				<align>right</align>
 				<label>$INFO[System.CurrentControl]</label>
-				<font>apptv25</font>
 			</control>
+			<!-- Path label -->
 			<control type="label">
 				<left>968</left>
 				<top>72</top>
@@ -416,7 +509,6 @@
 				<textcolor>red</textcolor>
 				<align>right</align>
 				<label>[COLOR=FF00FF00]$INFO[Container.FolderName,, - ][/COLOR]$INFO[Container.FolderPath]</label>
-				<font>apptv25</font>
 			</control>
 		</control>
 	</controls>

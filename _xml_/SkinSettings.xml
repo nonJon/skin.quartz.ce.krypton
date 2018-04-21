@@ -1,152 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-  <defaultcontrol always="true">3000</defaultcontrol>
-  <controls>
-    <include>FullBackground</include>
-    <include>Header</include>	
-      <control type="image" description="Sidebar">
-        <left>0</left>
-        <top>0</top>
-        <width>471</width>
-        <height>1080</height>
-        <aspectratio>stretch</aspectratio>
-        <texture>img/Sidebar.png</texture>
-      </control>
-		
-    <control type="list" id="3000" description="Left panel - categories">
-      <posx>40</posx>
-      <posy>165</posy>
-      <width>420</width>
-      <height>900</height>
-      <itemgap>9</itemgap>
-      <onright>3001</onright>
-      <onup>3000</onup>
-      <ondown>3000</ondown>
-      <orientation>vertical</orientation>
-      <itemlayout width="415" height="80">
-        <control type="image">
-          <width>390</width>
-          <height>70</height>
-          <texture>img/SettingsButtonNF.png</texture>
-          <aspectratio>stretch</aspectratio>
-        </control>
-        <control type="label">
-          <width>390</width>
-          <height>70</height>
-          <textoffsetx>20</textoffsetx>
-          <align>left</align>
-          <aligny>center</aligny>
-          <font>size23</font>
-          <info>ListItem.Label</info>
-        </control>
-      </itemlayout>
-      <focusedlayout width="415" height="80">
-        <control type="image">
-          <width>390</width>
-          <height>70</height>
-          <texture border="4">img/SettingsButtonFO.png</texture>
-          <animation effect="fade" start="100" end="70" time="10" condition="!Control.HasFocus(3000)">Conditional</animation>
-          <aspectratio>stretch</aspectratio>
-        </control>
-        <control type="label">
-          <width>390</width>
-          <height>70</height>
-          <textoffsetx>20</textoffsetx>
-          <align>left</align>
-          <aligny>center</aligny>
-          <font>size23</font>
-		  <textcolor>HL</textcolor>
-          <info>ListItem.Label</info>
-        </control>
-      </focusedlayout>
-      <content>
-	    <item id="3101">
-          <label>$LOCALIZE[31100]</label>
-          <onclick>noop</onclick>
-        </item>
-        <item id="3103">
-          <label>$LOCALIZE[31101]</label>
-          <onclick>noop</onclick>
-        </item>
-        <item id="3104">
-          <label>$LOCALIZE[31102]</label>
-          <onclick>noop</onclick>
-        </item>
-		<!--
+	<defaultcontrol always="true">3000</defaultcontrol>
+	<controls>
+		<include>FullBackground</include>
+		<include>Header</include>
+		<control type="image" description="Sidebar">
+			<left>0</left>
+			<top>0</top>
+			<width>471</width>
+			<height>1080</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>img/Sidebar.png</texture>
+		</control>
+		<control type="list" id="3000" description="Left panel - categories">
+			<posx>40</posx>
+			<posy>165</posy>
+			<width>420</width>
+			<height>900</height>
+			<itemgap>9</itemgap>
+			<onright>3001</onright>
+			<onup>3000</onup>
+			<ondown>3000</ondown>
+			<orientation>vertical</orientation>
+			<itemlayout width="415" height="80">
+				<control type="image">
+					<width>390</width>
+					<height>70</height>
+					<texture>img/SettingsButtonNF.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<width>390</width>
+					<height>70</height>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>size23</font>
+					<info>ListItem.Label</info>
+				</control>
+			</itemlayout>
+			<focusedlayout width="415" height="80">
+				<control type="image">
+					<width>390</width>
+					<height>70</height>
+					<texture border="4">img/SettingsButtonFO.png</texture>
+					<animation effect="fade" start="100" end="70" time="10" condition="!Control.HasFocus(3000)">Conditional</animation>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<width>390</width>
+					<height>70</height>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<aligny>center</aligny>
+					<font>size23</font>
+					<textcolor>HL</textcolor>
+					<info>ListItem.Label</info>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="3101">
+					<label>$LOCALIZE[31100]</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="3103">
+					<label>$LOCALIZE[31101]</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="3104">
+					<label>$LOCALIZE[31102]</label>
+					<onclick>noop</onclick>
+				</item>
+				<!--
         <item id="3102">
           <label>Add-ons</label>
           <onclick>noop</onclick>
         </item>
 		-->
-        <item id="3105">
-          <label>$LOCALIZE[31104]</label>
-          <onclick>noop</onclick>
-        </item>
-        <item id="3106">
-          <label>$LOCALIZE[31105]</label>
-          <onclick>noop</onclick>
-        </item>
-      </content>
-    </control>
-
-    <control type="group" id="3001" description="Right panel">
-      <posx>540</posx>
-      <posy>165</posy>
-      <width>1380</width>
-      <height>912</height>
-      <control type="grouplist" id="3020" description="Category General">
-        <visible>Container(3000).HasFocus(3101)</visible>
-        <width>1280</width>
-        <height>900</height>
-        <onleft>3000</onleft>
-        <pagecontrol>3001</pagecontrol>
-        <scrolltime tween="sine" easing="inout">280</scrolltime>
-        <control type="radiobutton" id="3200" description="AutoScroll">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31107]</label>
-          <onclick>Skin.ToggleSetting(AutoScroll)</onclick>
-          <selected>Skin.HasSetting(AutoScroll)</selected>
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="radiobutton" id="3201" description="Scrollbars">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31109]</label>
-          <onclick>Skin.ToggleSetting(Scrollbars_Active)</onclick>
-          <selected>Skin.HasSetting(Scrollbars_Active)</selected>
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="radiobutton" id="3202" description="Show Clock">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31111]</label>
-          <onclick>Skin.ToggleSetting(ShowClock)</onclick>
-          <selected>Skin.HasSetting(ShowClock)</selected>
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="radiobutton" id="3203" description="Options dialog">
-          <include>SkinSettingsButton</include>
-		  <label>$LOCALIZE[31113]</label>
-          <onclick>Skin.ToggleSetting(ViewOptions_Hide)</onclick>
-          <selected>Skin.HasSetting(ViewOptions_Hide)</selected>
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="button" id="3204" description="Quit button function">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31115]</label>
-          <label2>$VAR[QuitLabel2]</label2>
-		  <onclick>ActivateWindow(1114)</onclick>
-        </control>
-        <control type="button" id="3220" description="Reset section">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31117]</label>
-		  <onclick>Skin.Reset(AutoScroll)</onclick>
-		  <onclick>Skin.Reset(Scrollbars_Active)</onclick>
-		  <onclick>Skin.Reset(ShowClock)</onclick>
-		  <onclick>Skin.Reset(ViewOptions_Hide)</onclick>
-		  <onclick>Skin.Reset(shutdown)</onclick>
-        </control>
-      </control>
-	    
-   <!--<control type="grouplist" id="3011" description="Category Add-ons">
+				<item id="3105">
+					<label>$LOCALIZE[31104]</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="3106">
+					<label>$LOCALIZE[31105]</label>
+					<onclick>noop</onclick>
+				</item>
+			</content>
+		</control>
+		<control type="group" id="3001" description="Right panel">
+			<posx>540</posx>
+			<posy>165</posy>
+			<width>1380</width>
+			<height>912</height>
+			<control type="grouplist" id="3020" description="Category General">
+				<visible>Container(3000).HasFocus(3101)</visible>
+				<width>1280</width>
+				<height>900</height>
+				<onleft>3000</onleft>
+				<pagecontrol>3001</pagecontrol>
+				<scrolltime tween="sine" easing="inout">280</scrolltime>
+				<control type="radiobutton" id="3200" description="AutoScroll">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31107]</label>
+					<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
+					<selected>Skin.HasSetting(AutoScroll)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3201" description="Scrollbars">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31109]</label>
+					<onclick>Skin.ToggleSetting(Scrollbars_Active)</onclick>
+					<selected>Skin.HasSetting(Scrollbars_Active)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3202" description="Show Clock">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31111]</label>
+					<onclick>Skin.ToggleSetting(ShowClock)</onclick>
+					<selected>Skin.HasSetting(ShowClock)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3203" description="Options dialog">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31113]</label>
+					<onclick>Skin.ToggleSetting(ViewOptions_Hide)</onclick>
+					<selected>Skin.HasSetting(ViewOptions_Hide)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="button" id="3204" description="Quit button function">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31115]</label>
+					<label2>$VAR[QuitLabel2]</label2>
+					<onclick>ActivateWindow(1114)</onclick>
+				</control>
+				<control type="button" id="3220" description="Reset section">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31117]</label>
+					<onclick>Skin.Reset(AutoScroll)</onclick>
+					<onclick>Skin.Reset(Scrollbars_Active)</onclick>
+					<onclick>Skin.Reset(ShowClock)</onclick>
+					<onclick>Skin.Reset(ViewOptions_Hide)</onclick>
+					<onclick>Skin.Reset(shutdown)</onclick>
+				</control>
+			</control>
+			<!--<control type="grouplist" id="3011" description="Category Add-ons">
         <visible>Container(3000).HasFocus(3102)</visible>
         <width>892</width>
         <height>900</height>
@@ -167,182 +164,348 @@
         </control>
       </control>
 	  -->
-	  
-      <control type="grouplist" id="3030" description="Category Views">
-        <visible>Container(3000).HasFocus(3103)</visible>
-        <width>1280</width>
-        <height>900</height>
-        <onleft>3000</onleft>
-        <pagecontrol>3001</pagecontrol>
-        <scrolltime tween="sine" easing="inout">280</scrolltime>
-        <control type="radiobutton" id="3300" description="Watched progress indicators">
-          <include>SkinSettingsButton</include>
-		  <label>$LOCALIZE[31119]</label>
-          <onclick>Skin.ToggleSetting(HideUnwatched)</onclick>
-		  <selected>Skin.HasSetting(HideUnwatched)</selected>
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="radiobutton" id="3301" description="Hide fanart">
-          <include>SkinSettingsButton</include>
-		  <label>$LOCALIZE[31121]</label>
-          <onclick>Skin.ToggleSetting(HideFanart)</onclick>
-		  <selected>Skin.HasSetting(HideFanart)</selected>	
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="button" id="3302" description="Fanart visibility">
-		  <visible>!Skin.HasSetting(HideFanart)</visible>
-          <include>SkinSettingsButton</include>
-		  <label>$LOCALIZE[31123]</label>
-          <label2>$INFO[Skin.String(FanartVisibility)]</label2>
-          <onclick>Skin.SetNumeric(FanartVisibility,207)</onclick>  
-        </control>
-        <control type="button" id="3320" description="Reset section">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31117]</label>
-		  <onclick>Skin.Reset(HideUnwatched)</onclick>
-		  <onclick>Skin.Reset(HideFanart)</onclick>
-		  <onclick>Skin.Reset(FanartVisibility)</onclick>
-        </control>
-      </control>
-
-      <control type="grouplist" id="3040" description="Category Homepage">
-        <visible>Container(3000).HasFocus(3104)</visible>
-        <width>1280</width>
-        <height>900</height>
-        <onleft>3000</onleft>
-        <pagecontrol>3001</pagecontrol>
-        <scrolltime tween="sine" easing="inout">280</scrolltime>
-        <control type="button" id="3400" description="Home screen categories">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31126]</label>
-          <onclick>ActivateWindow(1116)</onclick>
-        </control>
-        <control type="button" id="3401" description="Home Menu">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31128]</label>
-          <onclick>ActivateWindow(1117)</onclick>
-        </control>
-        <control type="radiobutton" id="3402" description="Use custom BG">
-		  <visible>!Skin.HasSetting(HideFanart)</visible>
-          <include>SkinSettingsButton</include>
-		  <label>$LOCALIZE[31154]</label>
-		  <onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
-		  <selected>Skin.HasSetting(UseCustomBackground)</selected>
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="button" id="3403" description="Custom BG path">
-		  <visible>Skin.HasSetting(UseCustomBackground) + !Skin.HasSetting(HideFanart)</visible>
-          <include>SkinSettingsButton</include>
-          <label>  - $LOCALIZE[31156]</label>
-		  <label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
-		  <onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
-		  <enable>Skin.HasSetting(UseCustomBackground)</enable>
-        </control>
-
-      </control>
-	  
-      <control type="grouplist" id="3050" description="Category Advanced">
-        <visible>Container(3000).HasFocus(3105)</visible>
-        <width>1280</width>
-        <height>900</height>
-        <onleft>3000</onleft>
-        <pagecontrol>3001</pagecontrol>
-        <scrolltime tween="sine" easing="inout">280</scrolltime>
-        <control type="radiobutton" id="3500" description="Debug loggin">
-          <include>SkinSettingsButton</include>
-		  <label>$LOCALIZE[31130]</label>
-		  <onclick>Skin.ToggleSetting(DebugInfo)</onclick>
-		  <selected>Skin.HasSetting(DebugInfo)</selected>
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="radiobutton" id="3501" description="Debug loggin">
-          <include>SkinSettingsButton</include>
-		  <label>$LOCALIZE[20191]</label>
-		  <onclick>ToggleDebug</onclick>
- 		  <selected>System.GetBool(debug.showloginfo)</selected>
-		  <radioposx>1210</radioposx>
-        </control>
-        <control type="button" id="3502" description="Backup Skin">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31134]</label>
-						<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
-						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=backup)</onclick>
-        </control>
-        <control type="button" id="3503" description="Restore Skin">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31136]</label>
-						<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
-						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup)</onclick>
-        </control>
-        <control type="button" id="3504" description="Reset Skin">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[31141]</label>
-          <onclick>Skin.ResetSettings</onclick>
-          <onclick>XBMC.ReloadSkin()</onclick>
-          <icon>DefaultIconWarning.png</icon>
-        </control>
-      </control>
-	  
-      <control type="grouplist" id="3060" description="Category About">
-        <visible>Container(3000).HasFocus(3106)</visible>
-        <width>1200</width>
-        <height>1000</height>
-        <onleft>3000</onleft>
-        <pagecontrol>3001</pagecontrol>
-        <scrolltime tween="sine" easing="inout">280</scrolltime>
- 	    <control type="grouplist">
-		  <control type="label">
-			<width>1335</width>
-			<height>100</height>
-			<label>$LOCALIZE[31150]</label>
-			<align>center</align>
-			<textcolor>HL</textcolor>
-			<font>size22</font>
-		  </control>	
-		  <control type="label">
-			<width>1335</width>
-			<height>135</height>
-			<label>[COLOR grey]$LOCALIZE[31143][/COLOR] $INFO[System.AddonTitle(skin.quartz.ce.krypton)] [CR][CR][COLOR grey]$LOCALIZE[31144][/COLOR] $INFO[System.AddonVersion(skin.quartz.ce.krypton)]</label>
-			<font>size22</font>
-		  </control>
-		  <control type="label">
-			<width>1335</width>
-			<height>75</height>
-			<label>[COLOR grey]$LOCALIZE[31145][/COLOR] $INFO[Skin.CurrentColourTheme]</label>
-			<font>size22</font>
-		  </control>
-		  <control type="label">
-			<width>1335</width>
-			<height>75</height>
-			<label>[COLOR grey]$LOCALIZE[31146][/COLOR] $INFO[System.ScreenMode]</label>
-			<font>size22</font>
-		  </control>
-		  <control type="label">
-			<width>1335</width>
-			<height>100</height>
-			<label>$LOCALIZE[31151][CR]</label>
-			<align>center</align>
-			<textcolor>HL</textcolor>
-			<font>size22</font>
-		  </control>				
-		  <control type="label">
-			<width>1535</width>
-			<height>200</height>
-			<label>[COLOR grey]$LOCALIZE[31147][/COLOR] pecinko[CR][CR][COLOR grey]$LOCALIZE[31148][/COLOR]  nonJon[CR][CR][COLOR grey]$LOCALIZE[31149][/COLOR] AppTV, Amber, Confluence & Estuary</label>
-			<font>size22</font>
-		  </control>			
+			<control type="grouplist" id="3030" description="Category Views">
+				<visible>Container(3000).HasFocus(3103)</visible>
+				<width>1280</width>
+				<height>900</height>
+				<onleft>3000</onleft>
+				<pagecontrol>3001</pagecontrol>
+				<scrolltime tween="sine" easing="inout">280</scrolltime>
+				<control type="radiobutton" id="3300" description="Watched progress indicators">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31119]</label>
+					<onclick>Skin.ToggleSetting(HideUnwatched)</onclick>
+					<selected>Skin.HasSetting(HideUnwatched)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3301" description="Hide fanart">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31121]</label>
+					<onclick>Skin.ToggleSetting(HideFanart)</onclick>
+					<selected>Skin.HasSetting(HideFanart)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="button" id="3302" description="Fanart visibility">
+					<visible>!Skin.HasSetting(HideFanart)</visible>
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31123]</label>
+					<label2>$INFO[Skin.String(FanartVisibility)]</label2>
+					<onclick>Skin.SetNumeric(FanartVisibility,207)</onclick>
+				</control>
+				<control type="group" id="3303" description="Menu transparency">
+					<height>80</height>
+					<width>1280</width>
+					<control type="list" id="3304">
+						<left>0</left>
+						<top>0</top>
+						<height>80</height>
+						<width>1280</width>
+						<onup>3302</onup>
+						<ondown>3305</ondown>
+						<onleft>3000</onleft>
+						<scrolltime>0</scrolltime>
+						<itemlayout width="1260" height="80"/>
+						<focusedlayout width="1260" height="80">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>1260</width>
+								<height>80</height>
+								<texture border="7">img/MediaButton2.png</texture>
+								<visible>ControlGroup(3303).HasFocus()</visible>
+							</control>
+							<control type="label">
+								<left>18</left>
+								<top>8</top>
+								<height>70</height>
+								<width>800</width>
+								<label>$LOCALIZE[31158]</label>
+							</control>
+							<control type="label">
+								<left>450</left>
+								<top>8</top>
+								<height>70</height>
+								<width>790</width>
+								<align>right</align>
+								<label fallback="Medium">$INFO[ListItem.Label]</label>
+							</control>
+							<control type="image">
+								<left>804</left>
+								<top>10</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>scroll-down-focus.png</texture>
+								<visible>Control.HasFocus(3304)</visible>
+							</control>
+							<control type="image">
+								<left>804</left>
+								<top>10</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>scroll-down.png</texture>
+								<visible>!Control.HasFocus(3304)</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item>
+								<label>$LOCALIZE[351]</label>
+								<onclick>Skin.Reset(MenuOff)</onclick>
+								<onclick>Skin.SetBool(MenuLow)</onclick>
+								<visible>Skin.HasSetting(MenuOff)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[391]</label>
+								<onclick>Skin.Reset(MenuLow)</onclick>
+								<onclick>Skin.SetBool(MenuMed)</onclick>
+								<visible>Skin.HasSetting(MenuLow)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[392]</label>
+								<onclick>Skin.Reset(MenuMed)</onclick>
+								<onclick>Skin.SetBool(MenuHigh)</onclick>
+								<visible>Skin.HasSetting(MenuMed) | [!Skin.HasSetting(MenuOff) + !Skin.HasSetting(MenuMed) + !Skin.HasSetting(MenuHigh)]</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[393]</label>
+								<onclick>Skin.Reset(MenuHigh)</onclick>
+								<onclick>Skin.SetBool(MenuOff)</onclick>
+								<visible>Skin.HasSetting(MenuHigh)</visible>
+							</item>
+						</content>
+					</control>
+				</control>
+				<control type="group" id="3305" description="Menu transparency">
+					<height>80</height>
+					<width>1280</width>
+					<control type="list" id="3306">
+						<left>0</left>
+						<top>0</top>
+						<height>80</height>
+						<width>1280</width>
+						<onup>3303</onup>
+						<ondown>3320</ondown>
+						<onleft>3000</onleft>
+						<scrolltime>0</scrolltime>
+						<itemlayout width="1260" height="80"/>
+						<focusedlayout width="1260" height="80">
+							<control type="image">
+								<left>0</left>
+								<top>0</top>
+								<width>1260</width>
+								<height>80</height>
+								<texture border="7">img/MediaButton2.png</texture>
+								<visible>ControlGroup(3305).HasFocus()</visible>
+							</control>
+							<control type="label">
+								<left>18</left>
+								<top>8</top>
+								<height>70</height>
+								<width>800</width>
+								<label>$LOCALIZE[31160]</label>
+							</control>
+							<control type="label">
+								<left>450</left>
+								<top>8</top>
+								<height>70</height>
+								<width>790</width>
+								<align>right</align>
+								<label fallback="High">$INFO[ListItem.Label]</label>
+							</control>
+							<control type="image">
+								<left>804</left>
+								<top>10</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>scroll-down-focus.png</texture>
+								<visible>Control.HasFocus(3306)</visible>
+							</control>
+							<control type="image">
+								<left>804</left>
+								<top>10</top>
+								<width>32</width>
+								<height>32</height>
+								<texture>scroll-down.png</texture>
+								<visible>!Control.HasFocus(3306)</visible>
+							</control>
+						</focusedlayout>
+						<content>
+							<item>
+								<label>$LOCALIZE[351]</label>
+								<onclick>Skin.Reset(OSDOff)</onclick>
+								<onclick>Skin.SetBool(OSDLow)</onclick>
+								<visible>Skin.HasSetting(OSDOff)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[391]</label>
+								<onclick>Skin.Reset(OSDLow)</onclick>
+								<onclick>Skin.SetBool(OSDMed)</onclick>
+								<visible>Skin.HasSetting(OSDLow)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[392]</label>
+								<onclick>Skin.Reset(OSDMed)</onclick>
+								<onclick>Skin.SetBool(OSDHigh)</onclick>
+								<visible>Skin.HasSetting(OSDMed)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[393]</label>
+								<onclick>Skin.Reset(OSDHigh)</onclick>
+								<onclick>Skin.SetBool(OSDOff)</onclick>
+								<visible>Skin.HasSetting(OSDHigh) | [!Skin.HasSetting(OSDOff) + !Skin.HasSetting(OSDLow) + !Skin.HasSetting(OSDMed)]</visible>
+							</item>
+						</content>
+					</control>
+				</control>
+				<control type="button" id="3320" description="Reset section">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31117]</label>
+					<onclick>Skin.Reset(HideUnwatched)</onclick>
+					<onclick>Skin.Reset(HideFanart)</onclick>
+					<onclick>Skin.Reset(FanartVisibility)</onclick>
+					<onclick>Skin.Reset(MenuOff)</onclick>
+					<onclick>Skin.Reset(MenuLow)</onclick>
+					<onclick>Skin.Reset(MenuMed)</onclick>
+					<onclick>Skin.Reset(MenuHigh)</onclick>
+					<onclick>Skin.Reset(OSDOff)</onclick>
+					<onclick>Skin.Reset(OSDLow)</onclick>
+					<onclick>Skin.Reset(OSDMed)</onclick>
+					<onclick>Skin.Reset(OSDHigh)</onclick>
+				</control>
+			</control>
+			<control type="grouplist" id="3040" description="Category Homepage">
+				<visible>Container(3000).HasFocus(3104)</visible>
+				<width>1280</width>
+				<height>900</height>
+				<onleft>3000</onleft>
+				<pagecontrol>3001</pagecontrol>
+				<scrolltime tween="sine" easing="inout">280</scrolltime>
+				<control type="button" id="3400" description="Home screen categories">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31126]</label>
+					<onclick>ActivateWindow(1116)</onclick>
+				</control>
+				<control type="button" id="3401" description="Home Menu">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31128]</label>
+					<onclick>ActivateWindow(1117)</onclick>
+				</control>
+				<control type="radiobutton" id="3402" description="Use custom BG">
+					<visible>!Skin.HasSetting(HideFanart)</visible>
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31154]</label>
+					<onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
+					<selected>Skin.HasSetting(UseCustomBackground)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="button" id="3403" description="Custom BG path">
+					<visible>Skin.HasSetting(UseCustomBackground) + !Skin.HasSetting(HideFanart)</visible>
+					<include>SkinSettingsButton</include>
+					<label>- $LOCALIZE[31156]</label>
+					<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
+					<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
+					<enable>Skin.HasSetting(UseCustomBackground)</enable>
+				</control>
+			</control>
+			<control type="grouplist" id="3050" description="Category Advanced">
+				<visible>Container(3000).HasFocus(3105)</visible>
+				<width>1280</width>
+				<height>900</height>
+				<onleft>3000</onleft>
+				<pagecontrol>3001</pagecontrol>
+				<scrolltime tween="sine" easing="inout">280</scrolltime>
+				<control type="radiobutton" id="3500" description="Debug loggin">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31130]</label>
+					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
+					<selected>Skin.HasSetting(DebugInfo)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3501" description="Debug loggin">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[20191]</label>
+					<onclick>ToggleDebug</onclick>
+					<selected>System.GetBool(debug.showloginfo)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="button" id="3502" description="Backup Skin">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31134]</label>
+					<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
+					<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=backup)</onclick>
+				</control>
+				<control type="button" id="3503" description="Restore Skin">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31136]</label>
+					<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
+					<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup)</onclick>
+				</control>
+				<control type="button" id="3504" description="Reset Skin">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31141]</label>
+					<onclick>Skin.ResetSettings</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<icon>DefaultIconWarning.png</icon>
+				</control>
+			</control>
+			<control type="grouplist" id="3060" description="Category About">
+				<visible>Container(3000).HasFocus(3106)</visible>
+				<width>1200</width>
+				<height>1000</height>
+				<onleft>3000</onleft>
+				<pagecontrol>3001</pagecontrol>
+				<scrolltime tween="sine" easing="inout">280</scrolltime>
+				<control type="grouplist">
+					<control type="label">
+						<width>1335</width>
+						<height>100</height>
+						<label>$LOCALIZE[31150]</label>
+						<align>center</align>
+						<textcolor>HL</textcolor>
+						<font>size22</font>
+					</control>
+					<control type="label">
+						<width>1335</width>
+						<height>135</height>
+						<label>[COLOR grey]$LOCALIZE[31143][/COLOR] $INFO[System.AddonTitle(skin.quartz.ce.krypton)] [CR][CR][COLOR grey]$LOCALIZE[31144][/COLOR] $INFO[System.AddonVersion(skin.quartz.ce.krypton)]</label>
+						<font>size22</font>
+					</control>
+					<control type="label">
+						<width>1335</width>
+						<height>75</height>
+						<label>[COLOR grey]$LOCALIZE[31145][/COLOR] $INFO[Skin.CurrentColourTheme]</label>
+						<font>size22</font>
+					</control>
+					<control type="label">
+						<width>1335</width>
+						<height>75</height>
+						<label>[COLOR grey]$LOCALIZE[31146][/COLOR] $INFO[System.ScreenMode]</label>
+						<font>size22</font>
+					</control>
+					<control type="label">
+						<width>1335</width>
+						<height>100</height>
+						<label>$LOCALIZE[31151][CR]</label>
+						<align>center</align>
+						<textcolor>HL</textcolor>
+						<font>size22</font>
+					</control>
+					<control type="label">
+						<width>1535</width>
+						<height>200</height>
+						<label>[COLOR grey]$LOCALIZE[31147][/COLOR] pecinko[CR][CR][COLOR grey]$LOCALIZE[31148][/COLOR] nonJon[CR][CR][COLOR grey]$LOCALIZE[31149][/COLOR] AppTV, Amber, Confluence & Estuary</label>
+						<font>size22</font>
+					</control>
+				</control>
+			</control>
 		</control>
-      </control>
-	</control>
-
-	<control type="textbox">
-		<left>560</left>
-		<top>910</top>
-		<width>1300</width>
-		<height>150</height>
-		<font>size20</font>
-		<textcolor>HL</textcolor>
-		<label>$VAR[SkinSettingHelp]</label>
-	</control>
-  </controls>
+		<control type="textbox">
+			<left>560</left>
+			<top>910</top>
+			<width>1300</width>
+			<height>150</height>
+			<font>size20</font>
+			<textcolor>HL</textcolor>
+			<label>$VAR[SkinSettingHelp]</label>
+		</control>
+	</controls>
 </window>

@@ -339,7 +339,7 @@
       <posy>1020</posy>
       <visible>IntegerGreaterThan(Control.GetLabel(23),95) | !IntegerGreaterThan(Control.GetLabel(23),5)</visible>
       <animation effect="fade" time="800">VisibleChange</animation>
-      <animation condition="Window.IsActive(MusicOSD.xml)" effect="slide" start="0,0" end="0,-105" time="200">Conditional</animation>
+      <animation condition="Window.IsActive(MusicOSD.xml)" effect="slide" start="0,0" end="0,-80" time="200">Conditional</animation>
       <control type="label" description="Previous">
         <posx>30</posx>
         <height>36</height>
