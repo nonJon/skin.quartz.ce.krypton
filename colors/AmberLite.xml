@@ -22,10 +22,14 @@
 
 	<color name="MenuOff">f0f0f0f0</color>	
 	<color name="MenuLow">e0e0e0e0</color>
+	<color name="MenuMedLow">d0d0d0d0</color>
 	<color name="MenuMed">c0c0c0Cc</color>
+	<color name="MenuMedHigh">b0b0b0b0</color>
 	<color name="MenuHigh">a0a0a0a0</color>
 	<color name="OSDOff">f0f0f0f0</color>
-	<color name="OSDLow">c0c0c0Cc</color>
+	<color name="OSDLow">c0c0c0c0</color>
+	<color name="OSDMedLow">b0b0b0b0</color>
 	<color name="OSDMed">a0a0a0a0</color>
+	<color name="OSDMedHigh">90909090</color>
 	<color name="OSDHigh">80808080</color>
 </colors>

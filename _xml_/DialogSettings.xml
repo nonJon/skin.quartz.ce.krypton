@@ -2,33 +2,44 @@
 <window>
 	<defaultcontrol always="true">5</defaultcontrol>
 	<coordinates>
-		<left>288</left>
-		<top>100</top>
+		<left>0</left>
+		<top>0</top>
 	</coordinates>
-	<controls>
+	<controls>  
+		<control type="group"> 
+			<include>DimBG</include>
+			<visible>!Window.IsVisible(VideoFullScreen.xml)</visible> 
+		</control>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" time="150" condition="Window.Is(contentsettings) + Window.IsActive(AddonSettings)">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) | Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) | Window.IsVisible(OSDAudioDSPSettings) |  Window.IsVisible(FileBrowser)]">Conditional</animation>
-			<animation effect="fade" start="100" end="0" time="400" condition="Window.Is(osdaudiodspsettings) + Window.IsVisible(SliderDialog)">Conditional</animation>
+			<animation effect="fade" start="100" end="0" time="150" condition="Window.Is(contentsettings) 
+				+ Window.IsActive(AddonSettings)">Conditional
+			</animation>
+			<animation effect="fade" start="100" end="0" time="300" condition="[Window.Is(osdaudiosettings) 
+				| Window.Is(osdvideosettings)] + [Window.IsVisible(SliderDialog) | Window.IsVisible(OSDAudioDSPSettings) 
+				|  Window.IsVisible(FileBrowser)]">Conditional
+			</animation>
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.Is(osdaudiodspsettings) 
+				+ Window.IsVisible(SliderDialog)">Conditional
+			</animation>
 			<control type="image">
-				<posx>140</posx>
-				<posy>60</posy>
+				<posx>428</posx>
+				<posy>160</posy>
 				<width>1070</width>
 				<height>780</height>
 				<texture colordiffuse="$VAR[MenuTransperancy]" border="128">img/DialogCE.png</texture>
 				<visible>!Window.IsVisible(VideoFullScreen.xml)</visible>
 			</control>
 			<control type="image">
-				<posx>140</posx>
-				<posy>60</posy>
+				<posx>428</posx>
+				<posy>160</posy>
 				<width>1070</width>
 				<height>780</height>
 				<texture colordiffuse="$VAR[OSDTransperancy]" border="128">img/DialogCE.png</texture>
 				<visible>Window.IsVisible(VideoFullScreen.xml)</visible>
 			</control>
 			<control type="label" id="2">
-				<left>220</left>
-				<top>125</top>
+				<left>508</left>
+				<top>225</top>
 				<width>900</width>
 				<height>38</height>
 				<align>center</align>
@@ -36,8 +47,8 @@
 				<textcolor>HL</textcolor>
 			</control>
 			<control type="grouplist" id="5">
-				<left>220</left>
-				<top>200</top>
+				<left>508</left>
+				<top>300</top>
 				<width>900</width>
 				<height>480</height>
 				<pagecontrol>60</pagecontrol>
@@ -73,18 +84,21 @@
 			</control>
 			<control type="scrollbar" id="60">
 				<left>1140</left>
-				<top>200</top>
+				<top>588</top>
 				<width>10</width>
 				<height>480</height>
 				<onright>9000</onright>
 				<onleft>5</onleft>
-				<animation condition="!Control.HasFocus(60) + !Container.Scrolling + !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" effect="fade" start="100" end="0" time="200" reversible="true">Conditional</animation>
+				<animation condition="!Control.HasFocus(60) + !Container.Scrolling 
+					+ !String.IsEqual(Skin.String(show-scrollbar),$LOCALIZE[31875])" 
+					effect="fade" start="100" end="0" time="200" reversible="true">Conditional
+				</animation>
 				<visible>$EXP[isEnabledScrollbar]</visible>
 			</control>
 			<control type="group">
 				<control type="image">
 					<left>945</left>
-					<top>159</top>
+					<top>547</top>
 					<height>24</height>
 					<width>24</width>
 					<texture>scroll-up.png</texture>
@@ -92,7 +106,7 @@
 				</control>
 				<control type="image">
 					<left>945</left>
-					<top>867</top>
+					<top>1255</top>
 					<height>24</height>
 					<width>24</width>
 					<texture>scroll-down.png</texture>
@@ -101,7 +115,7 @@
 			</control>
 			<control type="grouplist" id="9000">
 				<left>220</left>
-				<top>700</top>
+				<top>1088</top>
 				<width>900</width>
 				<height>75</height>
 				<align>center</align>

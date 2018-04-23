@@ -1530,7 +1530,7 @@
 		<textcolor>Silver</textcolor>
 		<align>justify</align>
 		<aligny>bottom</aligny>
-		<autoscroll delay="8000" time="4300" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+		<autoscroll delay="8000" time="4300" repeat="10000">Skin.HasSetting(_AutoScroll)</autoscroll>
 	</include>
 	<include name="Genre51Commons">
 		<posy>-9</posy>

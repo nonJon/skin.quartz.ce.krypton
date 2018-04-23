@@ -137,7 +137,7 @@
       <posy>0</posy>
       <width>1920</width>
       <height>1080</height>
-      <texture>img/BGDiffuse.png</texture>
+      <texture colordiffuse="$VAR[DialogDimmer]">img/BGDiffuse.png</texture>
       <aspectratio>stretch</aspectratio>
     </control>
   </include>

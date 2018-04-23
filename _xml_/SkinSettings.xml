@@ -99,11 +99,11 @@
 				<onleft>3000</onleft>
 				<pagecontrol>3001</pagecontrol>
 				<scrolltime tween="sine" easing="inout">280</scrolltime>
-				<control type="radiobutton" id="3200" description="AutoScroll">
+				<control type="radiobutton" id="3200" description="_AutoScroll">
 					<include>SkinSettingsButton</include>
 					<label>$LOCALIZE[31107]</label>
-					<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
-					<selected>Skin.HasSetting(AutoScroll)</selected>
+					<onclick>Skin.ToggleSetting(_AutoScroll)</onclick>
+					<selected>Skin.HasSetting(_AutoScroll)</selected>
 					<radioposx>1210</radioposx>
 				</control>
 				<control type="radiobutton" id="3201" description="Scrollbars">
@@ -136,7 +136,7 @@
 				<control type="button" id="3220" description="Reset section">
 					<include>SkinSettingsButton</include>
 					<label>$LOCALIZE[31117]</label>
-					<onclick>Skin.Reset(AutoScroll)</onclick>
+					<onclick>Skin.Reset(_AutoScroll)</onclick>
 					<onclick>Skin.Reset(Scrollbars_Active)</onclick>
 					<onclick>Skin.Reset(ShowClock)</onclick>
 					<onclick>Skin.Reset(ViewOptions_Hide)</onclick>
@@ -227,7 +227,7 @@
 								<height>70</height>
 								<width>790</width>
 								<align>right</align>
-								<label fallback="Medium">$INFO[ListItem.Label]</label>
+								<label fallback="MediumLow">$INFO[ListItem.Label]</label>
 							</control>
 							<control type="image">
 								<left>804</left>
@@ -256,14 +256,29 @@
 							<item>
 								<label>$LOCALIZE[391]</label>
 								<onclick>Skin.Reset(MenuLow)</onclick>
-								<onclick>Skin.SetBool(MenuMed)</onclick>
+								<onclick>Skin.SetBool(MenuMedLow)</onclick>
 								<visible>Skin.HasSetting(MenuLow)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[392]$LOCALIZE[391]</label>
+								<onclick>Skin.Reset(MenuMedLow)</onclick>
+								<onclick>Skin.SetBool(MenuMed)</onclick>
+								<visible>Skin.HasSetting(MenuMedLow) | 
+									[!Skin.HasSetting(MenuOff) + !Skin.HasSetting(MenuLow) + !Skin.HasSetting(MenuMed) 
+									 + !Skin.HasSetting(MenuMedHigh)+ !Skin.HasSetting(MenuHigh)]
+								</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[392]</label>
 								<onclick>Skin.Reset(MenuMed)</onclick>
+								<onclick>Skin.SetBool(MenuMedHigh)</onclick>
+								<visible>Skin.HasSetting(MenuMed)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[392]$LOCALIZE[393]</label>
+								<onclick>Skin.Reset(MenuMedHigh)</onclick>
 								<onclick>Skin.SetBool(MenuHigh)</onclick>
-								<visible>Skin.HasSetting(MenuMed) | [!Skin.HasSetting(MenuOff) + !Skin.HasSetting(MenuMed) + !Skin.HasSetting(MenuHigh)]</visible>
+								<visible>Skin.HasSetting(MenuMedHigh)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[393]</label>
@@ -309,7 +324,7 @@
 								<height>70</height>
 								<width>790</width>
 								<align>right</align>
-								<label fallback="High">$INFO[ListItem.Label]</label>
+								<label fallback="MediumHigh">$INFO[ListItem.Label]</label>
 							</control>
 							<control type="image">
 								<left>804</left>
@@ -338,20 +353,35 @@
 							<item>
 								<label>$LOCALIZE[391]</label>
 								<onclick>Skin.Reset(OSDLow)</onclick>
-								<onclick>Skin.SetBool(OSDMed)</onclick>
+								<onclick>Skin.SetBool(OSDMedLow)</onclick>
 								<visible>Skin.HasSetting(OSDLow)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[392]$LOCALIZE[391]</label>
+								<onclick>Skin.Reset(OSDMedLow)</onclick>
+								<onclick>Skin.SetBool(OSDMed)</onclick>
+								<visible>Skin.HasSetting(OSDMedLow)</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[392]</label>
 								<onclick>Skin.Reset(OSDMed)</onclick>
-								<onclick>Skin.SetBool(OSDHigh)</onclick>
+								<onclick>Skin.SetBool(OSDMedHigh)</onclick>
 								<visible>Skin.HasSetting(OSDMed)</visible>
+							</item>
+							<item>
+								<label>$LOCALIZE[392]$LOCALIZE[393]</label>
+								<onclick>Skin.Reset(OSDMedHigh)</onclick>
+								<onclick>Skin.SetBool(OSDHigh)</onclick>
+								<visible>Skin.HasSetting(OSDMedHigh)) 
+									| [!Skin.HasSetting(OSDOff) + !Skin.HasSetting(OSDLow) + !Skin.HasSetting(OSDMedLow) 
+									+ !Skin.HasSetting(OSDMed) + !Skin.HasSetting(OSDHigh)]
+								</visible>
 							</item>
 							<item>
 								<label>$LOCALIZE[393]</label>
 								<onclick>Skin.Reset(OSDHigh)</onclick>
 								<onclick>Skin.SetBool(OSDOff)</onclick>
-								<visible>Skin.HasSetting(OSDHigh) | [!Skin.HasSetting(OSDOff) + !Skin.HasSetting(OSDLow) + !Skin.HasSetting(OSDMed)]</visible>
+								<visible>Skin.HasSetting(OSDHigh</visible>
 							</item>
 						</content>
 					</control>
@@ -364,7 +394,9 @@
 					<onclick>Skin.Reset(FanartVisibility)</onclick>
 					<onclick>Skin.Reset(MenuOff)</onclick>
 					<onclick>Skin.Reset(MenuLow)</onclick>
+					<onclick>Skin.Reset(MenuMedLow)</onclick>
 					<onclick>Skin.Reset(MenuMed)</onclick>
+					<onclick>Skin.Reset(MenuMedHigh)</onclick>
 					<onclick>Skin.Reset(MenuHigh)</onclick>
 					<onclick>Skin.Reset(OSDOff)</onclick>
 					<onclick>Skin.Reset(OSDLow)</onclick>

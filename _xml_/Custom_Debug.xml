@@ -164,11 +164,7 @@
 					<label>SettingsProfile.xml</label>
 					<visible>Window.IsVisible(SettingsProfile.xml)</visible>
 				</control>
-				<control type="label">
-					<textcolor>red</textcolor>
-					<label>DialogSettings.xml</label>
-					<visible>Window.IsVisible(DialogSettings.xml)</visible>
-				</control>
+
 				<control type="label">
 					<textcolor>red</textcolor>
 					<label>VideoFullScreen.xml</label>
@@ -488,6 +484,16 @@
 					<textcolor>red</textcolor>
 					<label>VideoOSDSettings.xml</label>
 					<visible>Window.IsVisible(VideoOSDSettings.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>DialogPlayerProcessInfo.xml</label>
+					<visible>Window.IsVisible(DialogPlayerProcessInfo.xml)</visible>
+				</control>
+				<control type="label">
+					<textcolor>red</textcolor>
+					<label>DialogSettings.xml</label>
+					<visible>Window.IsVisible(DialogSettings.xml)</visible>
 				</control>
 			</control>
 			<!-- Control label -->

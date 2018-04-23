@@ -59,7 +59,7 @@
   <string id="31104">Advanced</string>
   <string id="31105">About</string>
   <string id="31106"></string>
-  <string id="31107">Enable auto scrolling for plot & review</string>
+  <string id="31107">Enable auto scrolling for plot &amp; review</string>
   <string id="31108">Automatically scroll text that has been truncated by the limits of a container.</string>
   <string id="31109">Enable scrollbars</string>
   <string id="31110">Allows option to scroll through content a page at a time.</string>
@@ -108,9 +108,12 @@
   <string id="31156">Image path:</string>
   <string id="31157">Select what art to display on the home screen.</string>
   <string id="31158">Menu transparency</string>
-  <string id="31159">Adjust the level of transparency for pop-up menus (default=Medium).</string>
+  <string id="31159">Adjust the level of transparency for pop-up menus.</string>
   <string id="31160">OSD menu transparency</string>
-  <string id="31161">Adjust the level of transparency for menus that pop-up over the video player (default=High).</string> 
+  <string id="31161">Adjust the level of transparency for menus that pop-up over the video player.</string> 
+  <string id="31162">PVR info</string>
+  <string id="31163">Player process info</string>
+  
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>
   <string id="31201">Categories</string>

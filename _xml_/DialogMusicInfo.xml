@@ -118,7 +118,7 @@
           <font>size22</font>
           <align>justify</align>
 		  <label fallback="161">$INFO[ListItem.Property(Artist_Description)]</label>
-          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(_AutoScroll)</autoscroll>
         </control>
         <control type="textbox" description="Plot">
 		<visible>$EXP[isAlbum]</visible>
@@ -129,7 +129,7 @@
           <font>size22</font>
           <align>justify</align>
 		  <label fallback="161">$INFO[ListItem.Property(Album_Description)]</label>
-          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+          <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(_AutoScroll)</autoscroll>
         </control>
       </control>
 	  

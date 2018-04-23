@@ -15,7 +15,7 @@
 				<!--<right>10</right>-->
 				<width>1920</width>
 				<height>270</height>
-				<texture border="40">img/BlackDotST.png</texture>
+				<texture colordiffuse="$VAR[OSDTransperancy]" border="40">img/BlackDotST.png</texture>
 			</control>
 			<control type="grouplist">
 				<left>52</left>
@@ -200,10 +200,10 @@
 				<control type="button" id="5551">
 					<width>auto</width>
 					<height>auto</height>
-					<label>PVR info</label>
+					<label>$LOCALIZE[31162]</label>
 					<font>size20</font>
-				    <texturenofocus>img/BlackDotST.png</texturenofocus>
-					<texturefocus>img/BlackDotST.png</texturefocus>
+				    <texturenofocus colordiffuse="$VAR[OSDTransperancy]">img/BlackDotST.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[OSDTransperancy]">img/BlackDotST.png</texturefocus>
 					<enable>VideoPlayer.Content(livetv)</enable>
 					<onclick>Close</onclick>
 				</control>
@@ -211,9 +211,9 @@
 					<width>auto</width>
 					<height>auto</height>
 					<font>size20</font>
-					<label>Player process info</label>
-					<texturenofocus>img/BlackDotST.png</texturenofocus>
-					<texturefocus>img/BlackDotST.png</texturefocus>
+					<label>$LOCALIZE[31163]</label>
+					<texturenofocus colordiffuse="$VAR[OSDTransperancy]">img/BlackDotST.png</texturenofocus>
+					<texturefocus colordiffuse="$VAR[OSDTransperancy]">img/BlackDotST.png</texturefocus>
 					<onclick>Close</onclick>
 				</control>
 			</control>

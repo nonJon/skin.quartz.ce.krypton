@@ -76,7 +76,7 @@
             <width>1200</width>
             <height>336</height>
             <align>justify</align>
-            <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+            <autoscroll delay="6500" time="4000" repeat="10000">Skin.HasSetting(_AutoScroll)</autoscroll>
             <label>$INFO[ListItem.AddonDescription]</label>
           </control>
         </control>
