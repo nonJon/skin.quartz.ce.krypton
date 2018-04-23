@@ -83,8 +83,8 @@
 				<textoffsetx>27</textoffsetx>
 			</control>
 			<control type="scrollbar" id="60">
-				<left>1140</left>
-				<top>588</top>
+				<left>1440</left>
+				<top>300</top>
 				<width>10</width>
 				<height>480</height>
 				<onright>9000</onright>
