@@ -114,8 +114,8 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9000">
-				<left>220</left>
-				<top>1088</top>
+				<left>508</left>
+				<top>800</top>
 				<width>900</width>
 				<height>75</height>
 				<align>center</align>
