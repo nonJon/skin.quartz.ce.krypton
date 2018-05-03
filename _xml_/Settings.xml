@@ -3,7 +3,7 @@
   <defaultcontrol always="true">52</defaultcontrol>
   <controls>
     <include>FullBackground</include>
-    <include>MediaHeader</include>
+		<include>Header</include>
     <control type="group" description="Content">
       <include>OpenClose</include>
       <control type="group">
@@ -56,31 +56,31 @@
           </focusedlayout>
           <content>
             <item id="0" description="Interface">
-              <label>$LOCALIZE[14207]</label>
+							<label>$LOCALIZE[14206]</label>
               <onclick>activatewindow(InterfaceSettings)</onclick>
             </item>
             <item id="1" description="Skin options">
-              <label>$LOCALIZE[20077]</label>
+							<label>$LOCALIZE[166]</label>
               <onclick>activatewindow(SkinSettings)</onclick>
             </item>
             <item id="2" description="Player">
-              <label>$LOCALIZE[14201]</label>
+							<label>$LOCALIZE[14200]</label>
               <onclick>activatewindow(PlayerSettings)</onclick>
             </item>
             <item id="3" description="Media">
-              <label>$LOCALIZE[14212]</label>
+							<label>$LOCALIZE[14211]</label>
               <onclick>activatewindow(MediaSettings)</onclick>
             </item>
 b           <item id="6" description="PVR">
-              <label>$LOCALIZE[14205]</label>
+							<label>$LOCALIZE[14204]</label>
               <onclick>activateWindow(PVRSettings)</onclick>
             </item>
             <item id="4" description="Service">
-              <label>$LOCALIZE[14208]</label>
+							<label>$LOCALIZE[24018]</label>
               <onclick>activatewindow(ServiceSettings)</onclick>
             </item>
             <item id="7" description="System">
-              <label>$LOCALIZE[14209]</label>
+							<label>$LOCALIZE[24992]</label>
               <onclick>activatewindow(SystemSettings)</onclick>
             </item>
             <item id="5" description="Addons">
@@ -128,7 +128,7 @@ b           <item id="6" description="PVR">
       <control type="group" description="Items description">
         <posx>165</posx>
         <posy>630</posy>
-        <control type="label" description="Appearance">
+				<control type="label" description="Interface settings">
           <visible>Container(52).HasFocus(0)</visible>
           <width>660</width>
           <height>225</height>
@@ -139,7 +139,7 @@ b           <item id="6" description="PVR">
           <align>center</align>
           <label>$LOCALIZE[22080] $LOCALIZE[166]. $LOCALIZE[14090]. $LOCALIZE[14081]. $LOCALIZE[24008]</label>
         </control>
-        <control type="label" description="Skin">
+				<control type="label" description="Skin settings">
           <visible>Container(52).HasFocus(1)</visible>
           <width>660</width>
           <height>225</height>
@@ -150,7 +150,7 @@ b           <item id="6" description="PVR">
           <align>center</align>
           <label>$LOCALIZE[20077]. $LOCALIZE[33063]. $LOCALIZE[111].</label>
         </control>
-        <control type="label" description="Media Sources">
+				<control type="label" description="Player settings">
           <visible>Container(52).HasFocus(2)</visible>
           <width>660</width>
           <height>225</height>
@@ -159,9 +159,9 @@ b           <item id="6" description="PVR">
           <scroll>false</scroll>
           <aligny>top</aligny>
           <align>center</align>
-          <label>$LOCALIZE[21359] $LOCALIZE[21364]. $LOCALIZE[21365].</label>
+					<label>$LOCALIZE[14022]. $LOCALIZE[14086]. $LOCALIZE[14081]. $LOCALIZE[24012]. $LOCALIZE[14087]</label>
         </control>
-        <control type="label" description="Videos">
+				<control type="label" description="Media settings">
           <visible>Container(52).HasFocus(3)</visible>
           <width>660</width>
           <height>225</height>
@@ -170,9 +170,9 @@ b           <item id="6" description="PVR">
           <scroll>false</scroll>
           <aligny>top</aligny>
           <align>center</align>
-          <label>$LOCALIZE[14022]. $LOCALIZE[14086]. $LOCALIZE[14081]. $LOCALIZE[24012]. $LOCALIZE[14087]</label>
+					<label>$LOCALIZE[21359] $LOCALIZE[21364]. $LOCALIZE[21365].</label>
         </control>
-        <control type="label" description="Music">
+				<control type="label" description="Service settings">
           <visible>Container(52).HasFocus(4)</visible>
           <width>660</width>
           <height>225</height>
@@ -181,9 +181,9 @@ b           <item id="6" description="PVR">
           <scroll>false</scroll>
           <aligny>top</aligny>
           <align>center</align>
-          <label>$LOCALIZE[14022]. $LOCALIZE[14086]. $LOCALIZE[14081]. $LOCALIZE[15221]. $LOCALIZE[620]. $LOCALIZE[13327]</label>
+					<label>$LOCALIZE[14036]. $LOCALIZE[1200]. $LOCALIZE[798].</label>
         </control>
-        <control type="label" description="Pictures">
+				<control type="label" description="Add-ons">
           <visible>Container(52).HasFocus(5)</visible>
           <width>660</width>
           <height>225</height>
@@ -192,9 +192,9 @@ b           <item id="6" description="PVR">
           <scroll>false</scroll>
           <aligny>top</aligny>
           <align>center</align>
-          <label>$LOCALIZE[14081]. $LOCALIZE[108] $LOCALIZE[5].</label>
+					<label>$LOCALIZE[24033]. $LOCALIZE[24022]. $LOCALIZE[24021]. $LOCALIZE[24034]. $LOCALIZE[25000].</label>
         </control>
-        <control type="label" description="Addons">
+				<control type="label" description="PVR settings">
           <visible>Container(52).HasFocus(6)</visible>
           <width>660</width>
           <height>225</height>
@@ -203,43 +203,10 @@ b           <item id="6" description="PVR">
           <scroll>false</scroll>
           <aligny>top</aligny>
           <align>center</align>
-          <label>$LOCALIZE[24033]. $LOCALIZE[24022]. $LOCALIZE[24021]. $LOCALIZE[24034]. $LOCALIZE[25000].</label>
+					<label>$LOCALIZE[19069]. $LOCALIZE[264]. $LOCALIZE[14095]. $LOCALIZE[19259].</label>
         </control>
-        <control type="label" description="PVR">
+				<control type="label" description="System settings">
           <visible>Container(52).HasFocus(7)</visible>
-          <width>660</width>
-          <height>225</height>
-          <font>size22</font>
-          <wrapmultiline>true</wrapmultiline>
-          <scroll>false</scroll>
-          <aligny>top</aligny>
-          <align>center</align>
-          <label>$LOCALIZE[19069]. $LOCALIZE[264]. $LOCALIZE[14095]. $LOCALIZE[19259].</label>
-        </control>
-        <control type="label" description="Weather">
-          <visible>Container(52).HasFocus(8)</visible>
-          <width>660</width>
-          <height>225</height>
-          <font>size22</font>
-          <wrapmultiline>true</wrapmultiline>
-          <scroll>false</scroll>
-          <aligny>top</aligny>
-          <align>center</align>
-          <label>$LOCALIZE[24029].</label>
-        </control>
-        <control type="label" description="Service">
-          <visible>Container(52).HasFocus(9)</visible>
-          <width>660</width>
-          <height>225</height>
-          <font>size22</font>
-          <wrapmultiline>true</wrapmultiline>
-          <scroll>false</scroll>
-          <aligny>top</aligny>
-          <align>center</align>
-          <label>$LOCALIZE[14036]. $LOCALIZE[1200]. $LOCALIZE[798].</label>
-        </control>
-        <control type="label" description="System">
-          <visible>Container(52).HasFocus(10)</visible>
           <width>660</width>
           <height>225</height>
           <font>size22</font>
@@ -250,7 +217,7 @@ b           <item id="6" description="PVR">
           <label>$LOCALIZE[21373]. $LOCALIZE[337]. $LOCALIZE[14094]. $LOCALIZE[14095]. $LOCALIZE[14092]. $LOCALIZE[20100].</label>
         </control>
         <control type="label" description="Profiles">
-          <visible>Container(52).HasFocus(11)</visible>
+					<visible>Container(52).HasFocus(8)</visible>
           <width>660</width>
           <height>225</height>
           <font>size22</font>
@@ -261,7 +228,7 @@ b           <item id="6" description="PVR">
           <label>$LOCALIZE[20096]. $LOCALIZE[20100]. $LOCALIZE[20115].</label>
         </control>
         <control type="label" description="File manager">
-          <visible>Container(52).HasFocus(12)</visible>
+					<visible>Container(52).HasFocus(9)</visible>
           <width>660</width>
           <height>225</height>
           <font>size22</font>
@@ -272,7 +239,7 @@ b           <item id="6" description="PVR">
           <label>$LOCALIZE[744]. $LOCALIZE[115]. $LOCALIZE[116]. $LOCALIZE[117]. $LOCALIZE[118].</label>
         </control>
         <control type="label" description="System info">
-          <visible>Container(52).HasFocus(13)</visible>
+					<visible>Container(52).HasFocus(10)</visible>
           <width>660</width>
           <height>225</height>
           <font>size22</font>

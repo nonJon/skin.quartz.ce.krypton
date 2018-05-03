@@ -113,6 +113,12 @@
   <string id="31161">Adjust the level of transparency for menus that pop-up over the video player.</string> 
   <string id="31162">PVR info</string>
   <string id="31163">Player process info</string>
+  <string id="31164">Play music fullscreen</string>
+  <string id="31165">Automatically launch fullscreen visualizer on music playback.</string>
+  <string id="31166">Hide fanart in music player</string>
+  <string id="31167">Do not display background art in fullscreen music visualizer.</string>
+  
+  
   
   <!-- Script labels -->
   <string id="31200">Shortcuts</string>

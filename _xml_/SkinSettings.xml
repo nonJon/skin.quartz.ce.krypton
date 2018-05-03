@@ -71,12 +71,10 @@
 					<label>$LOCALIZE[31102]</label>
 					<onclick>noop</onclick>
 				</item>
-				<!--
-        <item id="3102">
-          <label>Add-ons</label>
+				<item id="3107">
+					<label>$LOCALIZE[16003]</label>
           <onclick>noop</onclick>
         </item>
-		-->
 				<item id="3105">
 					<label>$LOCALIZE[31104]</label>
 					<onclick>noop</onclick>
@@ -436,6 +434,34 @@
 					<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
 					<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
 					<enable>Skin.HasSetting(UseCustomBackground)</enable>
+				</control>
+			</control>
+			<control type="grouplist" id="3070" description="Category Player">
+				<visible>Container(3000).HasFocus(3107)</visible>
+				<width>1280</width>
+				<height>900</height>
+				<onleft>3000</onleft>
+				<pagecontrol>3001</pagecontrol>
+				<scrolltime tween="sine" easing="inout">280</scrolltime>
+				<control type="radiobutton" id="3700" description="Play music fullscreen">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31164]</label>
+					<onclick>Skin.ToggleSetting(_FullScreenMusic)</onclick>
+					<selected>Skin.HasSetting(_FullScreenMusic)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3701" description="Hide musicplayer fanart">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31166]</label>
+					<onclick>Skin.ToggleSetting(_HideMusicPlayerFanart)</onclick>
+					<selected>Skin.HasSetting(_HideMusicPlayerFanart)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="button" id="3720" description="Reset section">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31117]</label>
+					<onclick>Skin.Reset(_HideMusicPlayerFanart)</onclick>
+					<onclick>Skin.Reset(_FullScreenMusic)</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="3050" description="Category Advanced">

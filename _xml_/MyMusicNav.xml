@@ -711,6 +711,7 @@
 					<usealttexture>library.isscanningmusic</usealttexture>
 				</control>
 				<control type="button" id="697" description="Playlist">
+		  <enable>!Skin.HasSetting(_FullScreenMusic)</enable>
 					<include>9000Buttons</include>
 					<label>$LOCALIZE[31040]</label>
 					<onclick>ActivateWindow(musicplaylist)</onclick>

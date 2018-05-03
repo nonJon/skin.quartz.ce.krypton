@@ -82,8 +82,8 @@
 		<value condition="StringCompare(Skin.String(shutdown),reboot)">$LOCALIZE[13013]</value>
 	</variable>
 	<variable name="MusicPlayingFanartLabel2" description="Label2 for music playing FA">
-		<value condition="Skin.HasSetting(MusicPlayingFanart)">$LOCALIZE[449]</value>
-		<value>$LOCALIZE[13113]</value>
+    <value condition="Skin.HasSetting(_HideMusicPlayerFanart)">$LOCALIZE[13113]</value>
+    <value>$LOCALIZE[449]</value>
 	</variable>
 	<variable name="MoviesShelfLabel2" description="Label2 media shelf movies">
 		<value condition="Skin.HasSetting(MoviesShelf_Custom) | Skin.HasSetting(MoviesShelf_Image)">$LOCALIZE[16039]</value>
@@ -221,6 +221,9 @@
 		<value condition="Control.HasFocus(3502)">$LOCALIZE[31135]</value>
 		<value condition="Control.HasFocus(3503)">$LOCALIZE[31140]</value>
 		<value condition="Control.HasFocus(3504)">$LOCALIZE[31142]</value>
+		<value condition="Control.HasFocus(3700)">$LOCALIZE[31165]</value>
+		<value condition="Control.HasFocus(3701)">$LOCALIZE[31167]</value>
+		<value condition="Control.HasFocus(3720)">$LOCALIZE[31118]</value>
 		<value condition="Window.IsVisible(Custom_HomeCustomise.xml) + !IsEmpty(Window(home).Property(ItemPath))">$LOCALIZE[31374]</value>
 	</variable>
 </includes>
