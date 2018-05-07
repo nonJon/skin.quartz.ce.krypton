@@ -17,7 +17,7 @@
 			<width>1929</width>
 			<height>111</height>
 			<aspectratio>stretch</aspectratio>
-			<texture>img/BlackDotST.png</texture>
+			<texture colordiffuse="$VAR[MenuTransperancy]">img/BlackDotST.png</texture>
 		</control>
 		<control type="group">
 			<posx>120</posx>
@@ -233,7 +233,7 @@
 					<aspectratio>keep</aspectratio>
 					<texturefocus colordiffuse="HL">MusicOSD/OSDOptions.png</texturefocus>
 					<texturenofocus>MusicOSD/OSDOptions.png</texturenofocus>
-          <onclick allowhiddenfocus="true">Control.SetFocus(556)</onclick>
+					<onclick allowhiddenfocus="true">Control.SetFocus(556)</onclick>
 					<!--<onclick>ActivateWindow(1113)</onclick>-->
 				</control>
 			</control>
@@ -242,25 +242,14 @@
 			<animation effect="fade" start="100" end="0" time="100" condition="!ControlGroup(100).HasFocus()">Conditional</animation>
 			<control type="image">
 				<centerleft>960</centerleft>
-				<centertop>567</centertop>
+				<centertop>530</centertop>
 				<width>690</width>
-				<height>720</height>
+				<height>660</height>
 				<texture colordiffuse="$VAR[MenuTransperancy]" border="128">img/DialogCE.png</texture>
-			</control>
-			<control type="label" description="Dialog heading">
-				<posx>615</posx>
-				<posy>264</posy>
-				<width>690</width>
-				<height>52</height>
-				<label>33063</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>HL</textcolor>
-				<include>TitleCommons</include>
 			</control>
 			<control type="grouplist" id="100" description="Music OSD Options">
 				<posx>698</posx>
-				<posy>366</posy>
+				<posy>290</posy>
 				<width>525</width>
 				<height>483</height>
 				<onleft>101</onleft>

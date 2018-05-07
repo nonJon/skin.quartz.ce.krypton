@@ -117,6 +117,8 @@
   <string id="31165">Automatically launch fullscreen visualizer on music playback.</string>
   <string id="31166">Hide fanart in music player</string>
   <string id="31167">Do not display background art in fullscreen music visualizer.</string>
+  <string id="31168">Cache library art</string>
+  <string id="31169">Run this utility to ensure that recently scraped artwork is cached by KODI to render as efficiently as possible.  Note: KODI's built-in Web server (Settings / Services) must be enabled and using the default port and credentials for this utility to function.</string>
   
   
   

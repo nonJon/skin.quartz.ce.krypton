@@ -370,7 +370,7 @@
 								<label>$LOCALIZE[392]$LOCALIZE[393]</label>
 								<onclick>Skin.Reset(OSDMedHigh)</onclick>
 								<onclick>Skin.SetBool(OSDHigh)</onclick>
-								<visible>Skin.HasSetting(OSDMedHigh)) 
+								<visible>Skin.HasSetting(OSDMedHigh) 
 									| [!Skin.HasSetting(OSDOff) + !Skin.HasSetting(OSDLow) + !Skin.HasSetting(OSDMedLow) 
 									+ !Skin.HasSetting(OSDMed) + !Skin.HasSetting(OSDHigh)]
 								</visible>
@@ -379,7 +379,7 @@
 								<label>$LOCALIZE[393]</label>
 								<onclick>Skin.Reset(OSDHigh)</onclick>
 								<onclick>Skin.SetBool(OSDOff)</onclick>
-								<visible>Skin.HasSetting(OSDHigh</visible>
+								<visible>Skin.HasSetting(OSDHigh)</visible>
 							</item>
 						</content>
 					</control>
@@ -496,6 +496,11 @@
 					<label>$LOCALIZE[31136]</label>
 					<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
 					<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup)</onclick>
+				</control>
+				<control type="button" id="3505" description="cache textures">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31168]</label>
+					<onclick>RunScript(special://skin/scripts/cachit.py)</onclick>
 				</control>
 				<control type="button" id="3504" description="Reset Skin">
 					<include>SkinSettingsButton</include>
