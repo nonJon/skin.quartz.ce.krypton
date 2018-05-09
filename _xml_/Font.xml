@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
   <fontset id="Default">
+    <font>
+	  <name>Scroll</name>
+	  <filename>arial.ttf</filename>
+	  <size>100</size>
+	  <style>bold</style>
+	</font>
      <font>
       <name>font13</name>
       <filename>arial.ttf</filename>
