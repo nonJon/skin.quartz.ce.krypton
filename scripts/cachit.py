@@ -20,6 +20,7 @@ dialog.create('Texture Cache Maintenance', ("Initiating"))
 
 p = subprocess.Popen(['python', loc, 'c'], bufsize=1, shell=use_shell, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
+
 while True:
 	line = p.stdout.readline()
 	if line != b'':
@@ -27,16 +28,18 @@ while True:
 	else:
 		break
 	if dialog.iscanceled():
+		p.terminate()
+		p.kill() 
 		break
 
-streamdata = p.communicate()[0]
+p.communicate()[0]
 rc = p.returncode		
-p.stdout.close()
-time.sleep(4)
+#p.stdout.close()
 
-if (not rc) and dialog.iscanceled(): 
-	xbmcgui.Dialog().ok('Luke', "You switched off your targeting computer.", "", "What's wrong?")
+if dialog.iscanceled(): 
+	xbmcgui.Dialog().ok('Luke', "You switched off your targeting computer.", "",  "What's wrong?")
 elif not rc:
-	xbmcgui.Dialog().ok('Success', 'TCM completed processing without any errors.')
+	xbmcgui.Dialog().ok('Success', "", "", 'TCM completed processing without any errors.')
+	time.sleep(2)
 else:
-	xbmcgui.Dialog().ok('Ooops!', 'TCM was not able to do its thing.', '', 'Please ensure the KODI webserver is running with default settings.')
+	xbmcgui.Dialog().ok('Ooops!', 'TCM was not able to do its thing.',  'Please ensure the KODI webserver is running with default settings.')
