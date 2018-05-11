@@ -20,13 +20,13 @@
 	<color name="HL">FFe99931</color>
 	<color name="Overlay">FF1b1e22</color>
 
-	<color name="MenuOff">0</color>	
+	<color name="MenuOff">ffffffff</color>	
 	<color name="MenuLow">f0f0f0f0</color>
 	<color name="MenuMedLow">e0e0e0e0</color>
 	<color name="MenuMed">d0d0d0d0</color>
 	<color name="MenuMedHigh">c0c0c0Cc</color>
 	<color name="MenuHigh">b0b0b0b0</color>
-	<color name="OSDOff">f0f0f0f0</color>
+	<color name="OSDOff">ffffffff</color>
 	<color name="OSDLow">c0c0c0c0</color>
 	<color name="OSDMedLow">b0b0b0b0</color>
 	<color name="OSDMed">a0a0a0a0</color>

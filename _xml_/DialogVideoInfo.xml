@@ -5,8 +5,7 @@
     <origin x="0" y="0" />
   </coordinates>
   <controls>
-          <include>FullBackground</include>
-
+  <include>FullBackground</include>
     <control type="group" description="content">
       <include>OpenClose</include>
       <control type="group" description="Thumbs">
@@ -455,7 +454,7 @@
               <height>543</height>
               <width>369</width>
               <aspectratio>keep</aspectratio>
-              <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+              <texture fallback="DefaultActorSilhouette.png" background="true">$INFO[ListItem.Thumb]</texture>
             </control>
           </itemlayout>
           <focusedlayout width="480" height="750">
@@ -473,7 +472,7 @@
               <height>543</height>
               <width>369</width>
               <aspectratio>keep</aspectratio>
-              <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+              <texture fallback="DefaultActorSilhouette.png" background="true">$INFO[ListItem.Thumb]</texture>
             </control>
           </focusedlayout>
         </control>
@@ -496,7 +495,18 @@
           <align>center</align>
           <textcolor>Silver</textcolor>
           <font>size22B</font>
-          <label>$INFO[Container(50).ListItem.Label][CR]$INFO[Container(50).ListItem.Label2]</label> 
+          <label>$INFO[Container(50).ListItem.Label]</label> 
+        </control>
+        <control type="label" description="Media details">
+          <visible>Control.HasFocus(9012) | control.HasFocus(50)</visible>
+		  <visible>!String.IsEmpty(Container(50).ListItem.Label2)</visible>
+          <posx>345</posx>
+          <posy>785</posy>
+          <width>1230</width>
+          <align>center</align>
+          <textcolor>Grey3</textcolor>
+          <font>size20</font>
+          <label>[I][B]$LOCALIZE[20347] [CR]$INFO[Container(50).ListItem.Label2][/B][/I]</label> 
         </control>
       </control>
       <control type="image" description="Navbar">
@@ -574,7 +584,6 @@
             <font>size22</font>
             <label>$LOCALIZE[184]</label>
           </control>
-
           <control type="button" id="10" description="Get Art">
             <height>66</height>
             <width>270</width>
@@ -587,4 +596,3 @@
     </control>
   </controls>
 </window>
-
