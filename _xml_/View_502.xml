@@ -48,6 +48,16 @@
               <bordersize>-9</bordersize>
             </control>
             <control type="image">
+			  <visible>ListItem.IsParentFolder</visible>
+              <posx>34</posx>
+              <posy>24</posy>
+              <width>197</width>
+              <height>294</height>
+              <texture background="true">DefaultFolderBack.png</texture>
+              <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image">
+			  <visible>!ListItem.IsParentFolder</visible>
               <posx>34</posx>
               <posy>24</posy>
               <width>197</width>
@@ -99,6 +109,16 @@
               <bordersize>-9</bordersize>
             </control>
             <control type="image">
+			  <visible>ListItem.IsParentFolder</visible>
+              <posx>34</posx>
+              <posy>24</posy>
+              <width>197</width>
+              <height>294</height>
+              <texture background="true">DefaultFolderBack.png</texture>
+              <aspectratio>scale</aspectratio>
+            </control>
+            <control type="image">
+			  <visible>!ListItem.IsParentFolder</visible>
               <posx>34</posx>
               <posy>24</posy>
               <width>197</width>

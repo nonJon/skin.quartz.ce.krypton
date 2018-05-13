@@ -6,6 +6,25 @@
 		<value condition="String.IsEqual(ListItem.Art(thumb), DefaultAddonLibrary.png)" >HL</value>
 		<value>0</value>
 	</variable>
+	<variable name="Thumb">
+	  <value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+	  <value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
+	  <value condition="container.content(actors)">DefaultActorSolid.png</value>
+	  <value condition="container.content(directors)">DefaultDirector.png</value>
+	  <value condition="container.content(countries)">DefaultCountry.png</value>
+	  <value condition="Window.IsActive(MyMusicNav.xml) + container.content(genres)">DefaultMusicGenres.png</value>
+	  <value condition="container.content(genres)">DefaultGenre.png</value>
+	  <value condition="container.content(years)">DefaultYear.png</value>
+	  <value condition="container.content(studios)">DefaultStudios.png</value>
+	  <value condition="container.content(tags)">DefaultTags.png</value>	
+	  <value condition="container.content(artists)">DefaultMusicArtists.png</value>
+	  <value condition="container.content(roles)">DefaultMusicRoles.png</value>
+	  <value condition="container.content(playlists)">DefaultPlaylist.png</value>
+	  <value condition="Window.IsActive(MyMusicNav.xml) + ListItem.IsFolder">DefaultMusicSongs.png</value>
+	  <value condition="Window.IsActive(MyVideoNav.xml) + ListItem.IsFolder">DefaultMovies.png</value>
+	  <value condition="Window.IsActive(AddonBrowser.xml) + ListItem.IsFolder">DefaultAddon.png</value>
+	  <value>DefaultFolder.png</value>
+	</variable>
 	<variable name="VarFanart">
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value>$INFO[Skin.String(CustomBackgroundPath)]</value>

@@ -20,7 +20,7 @@
             <width>495</width>
             <height>495</height>
             <aspectratio align="right" aligny="top">keep</aspectratio>
-            <texture fallback="DefaultFolder.png">$INFO[ListItem.Thumb]</texture>
+            <texture fallback="DefaultAddonInfoLibrary.png">$INFO[ListItem.Thumb]</texture>
           </control>
         </control>
         <control type="group" description="top">

@@ -107,7 +107,7 @@
         <width>378</width>
         <height>378</height>
         <include>Icon_Fade</include>
-        <texture background="true" fallback="DefaultFolder.png">$INFO[ListItem.Thumb]</texture>
+        <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Thumb]</texture>
         <bordertexture border="12">img/ThumbBorder.png</bordertexture>
         <bordersize>9</bordersize>
         <aspectratio aligny="bottom">keep</aspectratio>
@@ -123,7 +123,7 @@
         <width>378</width>
         <height>378</height>
         <include>Icon_Fade</include>
-        <texture background="true" fallback="DefaultFolder.png">$INFO[ListItem.Thumb]</texture>
+        <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Thumb]</texture>
         <bordertexture border="12">img/ThumbBorder.png</bordertexture>
         <bordersize>9</bordersize>
         <aspectratio aligny="bottom">keep</aspectratio>

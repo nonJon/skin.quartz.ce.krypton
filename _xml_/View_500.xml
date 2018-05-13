@@ -29,6 +29,16 @@
             <bordersize>-9</bordersize>
           </control>
           <control type="image" description="Thumb">
+		    <visible>ListItem.IsParentFolder</visible>
+            <posx>8</posx>
+            <posy>3</posy>
+            <width>222</width>
+            <height>333</height>
+            <texture background="true">DefaultFolderBack.png</texture>
+            <aspectratio>scale</aspectratio>
+          </control>
+          <control type="image" description="Thumb">
+		    <visible>!ListItem.IsParentFolder</visible>
             <posx>8</posx>
             <posy>3</posy>
             <width>222</width>
@@ -55,6 +65,16 @@
             <bordersize>-9</bordersize>
           </control>
           <control type="image" description="Thumb">
+		    <visible>ListItem.IsParentFolder</visible>
+            <posx>8</posx>
+            <posy>3</posy>
+            <width>222</width>
+            <height>333</height>
+            <texture background="true">DefaultFolderBack.png</texture>
+            <aspectratio>scale</aspectratio>
+          </control>
+          <control type="image" description="Thumb">
+		    <visible>!ListItem.IsParentFolder</visible>
             <posx>8</posx>
             <posy>3</posy>
             <width>222</width>

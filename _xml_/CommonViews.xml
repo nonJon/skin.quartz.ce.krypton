@@ -95,7 +95,7 @@
 				<width>621</width>
 				<height>720</height>
 				<include>Icon_Fade</include>
-				<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+				<texture background="true">$VAR[Thumb]</texture>
 				<bordertexture border="12">img/ThumbBorder.png</bordertexture>
 				<bordersize>9</bordersize>
 				<aspectratio aligny="bottom">keep</aspectratio>
@@ -109,7 +109,7 @@
 			<width>621</width>
 			<height>720</height>
 			<include>Icon_Fade</include>
-			<texture background="true" fallback="DefaultFolder.png">$INFO[ListItem.Thumb]</texture>
+			<texture background="true">$VAR[Thumb]</texture>
 			<bordertexture border="12">img/ThumbBorder.png</bordertexture>
 			<bordersize>9</bordersize>
 			<aspectratio aligny="bottom">keep</aspectratio>
@@ -1336,12 +1336,23 @@
 	<include name="LargeListAlbumsLayout">
 		<itemlayout condition="container.content(albums)" width="802" height="111">
 			<control type="image">
+				<visible>ListItem.IsParentFolder</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<height>111</height>
 				<width>111</width>
 				<bordersize>6</bordersize>
-				<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+				<texture background="true">DefaultFolderBack.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="image">
+				<visible>!ListItem.IsParentFolder</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>111</height>
+				<width>111</width>
+				<bordersize>6</bordersize>
+				<texture fallback="DefaultMusicAlbums.png" background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="label" description="Main Label">
@@ -1374,12 +1385,23 @@
 		</itemlayout>
 		<focusedlayout condition="container.content(albums)" width="802" height="111">
 			<control type="image">
+				<visible>ListItem.IsParentFolder</visible>
 				<posx>0</posx>
 				<posy>0</posy>
 				<height>111</height>
 				<width>111</width>
 				<bordersize>6</bordersize>
-				<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+				<texture background="true">DefaultFolderBack.png</texture>
+				<aspectratio>scale</aspectratio>
+			</control>
+			<control type="image">
+				<visible>!ListItem.IsParentFolder</visible>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>111</height>
+				<width>111</width>
+				<bordersize>6</bordersize>
+				<texture fallback="DefaultMusicAlbums.png" background="true">$INFO[ListItem.Thumb]</texture>
 				<aspectratio>scale</aspectratio>
 			</control>
 			<control type="label" description="Main Label">
