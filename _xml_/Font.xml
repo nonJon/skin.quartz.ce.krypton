@@ -7,6 +7,12 @@
 	  <size>100</size>
 	  <style>bold</style>
 	</font>
+	<font>
+	  <name>Scroll2</name>
+	  <filename>arial.ttf</filename>
+	  <size>50</size>
+	  <style>bold</style>
+	</font>
      <font>
       <name>font13</name>
       <filename>arial.ttf</filename>
