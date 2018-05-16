@@ -98,7 +98,6 @@
     <include>MediaHeader</include>
     <control type="group" description="Thumbs no info">
       <!--<posy>240</posy>-->
-      <visible>ListItem.IsFolder</visible>
       <animation effect="fade" time="400">Visible</animation>
       <animation effect="fade" time="0">Hidden</animation>
       <control type="image" description="Thumb">
@@ -107,23 +106,7 @@
         <width>378</width>
         <height>378</height>
         <include>Icon_Fade</include>
-        <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Thumb]</texture>
-        <bordertexture border="12">img/ThumbBorder.png</bordertexture>
-        <bordersize>9</bordersize>
-        <aspectratio aligny="bottom">keep</aspectratio>
-      </control>
-    </control>
-    <control type="group" description="Faded Info thumbs">
-      <visible>!ListItem.IsFolder</visible>
-      <animation effect="fade" time="400">Visible</animation>
-      <animation effect="fade" time="0">Hidden</animation>
-      <control type="image" description="Thumb">
-        <posx>600</posx>
-        <posy>120</posy>
-        <width>378</width>
-        <height>378</height>
-        <include>Icon_Fade</include>
-        <texture background="true" fallback="DefaultAddon.png">$INFO[ListItem.Thumb]</texture>
+        <texture colordiffuse="$VAR[IconColor]" background="true" fallback="DefaultAddon.png">$VAR[Thumb]</texture>
         <bordertexture border="12">img/ThumbBorder.png</bordertexture>
         <bordersize>9</bordersize>
         <aspectratio aligny="bottom">keep</aspectratio>

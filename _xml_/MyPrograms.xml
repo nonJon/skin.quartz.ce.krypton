@@ -108,7 +108,7 @@
 							<posy>18</posy>
 							<width>267</width>
 							<height>267</height>
-							<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+							<texture background="true">$VAR[Thumb]</texture>
 							<bordertexture border="12">img/ThumbBorder.png</bordertexture>
 							<bordersize>6</bordersize>
 							<aspectratio>stretch</aspectratio>
@@ -120,7 +120,7 @@
 							<posy>18</posy>
 							<width>267</width>
 							<height>267</height>
-							<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+							<texture background="true">$VAR[Thumb]</texture>
 							<bordertexture border="12">img/ThumbBorder.png</bordertexture>
 							<bordersize>6</bordersize>
 							<aspectratio>stretch</aspectratio>

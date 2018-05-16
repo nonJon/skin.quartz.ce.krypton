@@ -449,6 +449,16 @@
               <texture>img/BlackDot.png</texture>
             </control>
             <control type="image" description="Thumb">
+			  <visible>String.IsEmpty(ListItem.Thumb)</visible>
+              <posx>56</posx>
+              <posy>69</posy>
+              <height>543</height>
+              <width>369</width>
+              <aspectratio>keep</aspectratio>
+              <texture colordiffuse="$VAR[IconDiffuse]" background="true">DefaultActorSolid.png</texture>
+            </control>
+            <control type="image" description="Thumb">
+			  <visible>!String.IsEmpty(ListItem.Thumb)</visible>
               <posx>56</posx>
               <posy>69</posy>
               <height>543</height>
@@ -467,6 +477,16 @@
               <texture>img/BlackDot.png</texture>
             </control>
             <control type="image" description="Thumb">
+			  <visible>String.IsEmpty(ListItem.Thumb)</visible>
+              <posx>56</posx>
+              <posy>69</posy>
+              <height>543</height>
+              <width>369</width>
+              <aspectratio>keep</aspectratio>
+              <texture colordiffuse="$VAR[IconDiffuse]" background="true">DefaultActorSolid.png</texture>
+            </control>
+            <control type="image" description="Thumb">
+			  <visible>!String.IsEmpty(ListItem.Thumb)</visible>
               <posx>56</posx>
               <posy>69</posy>
               <height>543</height>

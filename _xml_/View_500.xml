@@ -34,7 +34,7 @@
             <posy>3</posy>
             <width>222</width>
             <height>333</height>
-            <texture background="true">DefaultFolderBack.png</texture>
+            <texture colordiffuse="$VAR[IconColor]" background="true">DefaultFolderBack.png</texture>
             <aspectratio>scale</aspectratio>
           </control>
           <control type="image" description="Thumb">
@@ -43,7 +43,7 @@
             <posy>3</posy>
             <width>222</width>
             <height>333</height>
-            <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+            <texture background="true">$VAR[Thumb]</texture>
             <aspectratio>scale</aspectratio>
           </control>
           <control type="image">
@@ -70,7 +70,7 @@
             <posy>3</posy>
             <width>222</width>
             <height>333</height>
-            <texture background="true">DefaultFolderBack.png</texture>
+            <texture colordiffuse="$VAR[IconColor]" background="true">DefaultFolderBack.png</texture>
             <aspectratio>scale</aspectratio>
           </control>
           <control type="image" description="Thumb">
@@ -79,7 +79,7 @@
             <posy>3</posy>
             <width>222</width>
             <height>333</height>
-            <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+            <texture background="true">$VAR[Thumb]</texture>
             <aspectratio>scale</aspectratio>
           </control>
           <control type="image">
@@ -141,12 +141,13 @@
           <include>Genre500Commons</include>
           <label>$INFO[ListItem.Genre]</label>
         </control>
-				<control type="textbox" description="Plot">
+		<control type="textbox" description="Plot">
+		  <visible>!ListItem.IsParentFolder</visible>
           <top>290</top>
           <posx>0</posx>
           <width>900</width>
           <height>170</height>
-					<align>left</align>
+		  <align>left</align>
           <label>$VAR[Plots]</label>
         </control>
       </control>

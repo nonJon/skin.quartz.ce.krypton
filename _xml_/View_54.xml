@@ -27,7 +27,7 @@
                         <width>495</width>
                         <height>729</height>
                         <include>Icon_Fade</include>
-                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                        <texture colordiffuse="$VAR[IconColor]" background="true">$VAR[Thumb]</texture>
                         <aspectratio aligny="bottom">scale</aspectratio>
                     </control>
                     <control description="Thumb" type="image">
@@ -162,6 +162,17 @@
                         <texture flipy="true" diffuse="img/Reflection0.png" background="true">$INFO[ListItem.Property(fanart_image)]</texture> 
                     </control>
                     <control description="Thumb" type="image">
+						<visible>ListItem.IsParentFolder</visible>
+                        <posx>180</posx>
+                        <posy>0</posy>
+                        <width>495</width>
+                        <height>729</height>
+                        <include>Icon_Fade</include>
+                        <texture colordiffuse="$VAR[IconColor]" background="true">DefaultFolderBack.png</texture>
+						<aspectratio aligny="bottom">scale</aspectratio>
+                    </control>
+                    <control description="Thumb" type="image">
+						<visible>!ListItem.IsParentFolder</visible>
                         <posx>0</posx>
                         <posy>0</posy>
                         <width>756</width>
@@ -179,6 +190,7 @@
                     </control>
                 </control>
                 <control description="Media info Top" type="group">
+					<visible>!ListItem.IsParentFolder</visible>
                     <visible>container.content(tvshows) | container.content(seasons) | container.content(episodes)</visible>
                     <posx>0</posx>
                     <posy>702</posy>
@@ -210,6 +222,7 @@
                     </control>
                 </control>
                 <control description="Media Info Bottom" type="group">
+					<visible>!ListItem.IsParentFolder</visible>
                     <visible>container.content(tvshows) | container.content(seasons) | container.content(episodes)</visible>
                     <posx>0</posx>
                     <posy>891</posy>

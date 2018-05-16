@@ -100,7 +100,7 @@
               <posy>24</posy>
               <width>197</width>
               <height>294</height>
-              <texture background="true">DefaultFolderBack.png</texture>
+              <texture colordiffuse="$VAR[IconColor]" background="true">DefaultFolderBack.png</texture>
               <aspectratio>scale</aspectratio>
             </control>
             <control type="image">
@@ -109,7 +109,7 @@
               <posy>24</posy>
               <width>197</width>
               <height>294</height>
-              <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+              <texture background="true">$VAR[Thumb]</texture>
               <aspectratio>scale</aspectratio>
             </control>
             <control type="group">
@@ -152,7 +152,7 @@
               <posy>24</posy>
               <width>197</width>
               <height>294</height>
-              <texture background="true">DefaultFolderBack.png</texture>
+              <texture colordiffuse="$VAR[IconColor]" background="true">DefaultFolderBack.png</texture>
               <aspectratio>scale</aspectratio>
             </control>
             <control type="image">
@@ -161,7 +161,7 @@
               <posy>24</posy>
               <width>197</width>
               <height>294</height>
-              <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+              <texture background="true">$VAR[Thumb]</texture>
               <aspectratio>scale</aspectratio>
             </control>
             <control type="label">

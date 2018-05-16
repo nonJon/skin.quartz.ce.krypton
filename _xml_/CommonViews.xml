@@ -61,7 +61,7 @@
 				<width>621</width>
 				<height>720</height>
 				<include>Icon_Fade</include>
-				<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+				<texture colordiffuse="$VAR[IconColor]" background="true">$VAR[Thumb]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="12">img/ThumbBorder.png</bordertexture>
 				<bordersize>9</bordersize>
@@ -79,7 +79,7 @@
 				<width>756</width>
 				<height>540</height>
 				<include>Icon_Fade</include>
-				<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+				<texture colordiffuse="$VAR[IconColor]" background="true">$VAR[Thumb]</texture>
 				<bordertexture border="12">img/ThumbBorder.png</bordertexture>
 				<bordersize>9</bordersize>
 				<aspectratio aligny="bottom">keep</aspectratio>
@@ -95,7 +95,7 @@
 				<width>621</width>
 				<height>720</height>
 				<include>Icon_Fade</include>
-				<texture background="true">$VAR[Thumb]</texture>
+				<texture colordiffuse="$VAR[IconColor]" background="true">$VAR[Thumb]</texture>
 				<bordertexture border="12">img/ThumbBorder.png</bordertexture>
 				<bordersize>9</bordersize>
 				<aspectratio aligny="bottom">keep</aspectratio>
@@ -103,13 +103,13 @@
 		</control>
 	</include>
 	<include name="DefaultSquareThumbs">
-		<control type="image" description="Thumb">
+		<control type="image" description="Thumb"> 
 			<posx>180</posx>
 			<posy>240</posy>
 			<width>621</width>
 			<height>720</height>
 			<include>Icon_Fade</include>
-			<texture background="true">$VAR[Thumb]</texture>
+			<texture colordiffuse="$VAR[IconColor]" background="true">$VAR[Thumb]</texture>
 			<bordertexture border="12">img/ThumbBorder.png</bordertexture>
 			<bordersize>9</bordersize>
 			<aspectratio aligny="bottom">keep</aspectratio>
@@ -710,7 +710,7 @@
 					<posy>9</posy>
 					<height>93</height>
 					<width>93</width>
-					<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+					<texture fallback="DefaultFolder.png" background="true">$VAR[Thumb]</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 			</control>
@@ -739,7 +739,7 @@
 				<posy>9</posy>
 				<height>93</height>
 				<width>93</width>
-				<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+				<texture fallback="DefaultFolder.png" background="true">$VAR[Thumb]</texture>
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="label" description="Main Label">

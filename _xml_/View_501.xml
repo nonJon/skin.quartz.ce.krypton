@@ -36,7 +36,7 @@
             <height>450</height>
             <width>300</width>
             <aspectratio>scale</aspectratio>
-            <texture background="true">DefaultFolderBack.png</texture>
+            <texture colordiffuse="$VAR[IconColor]" background="true">DefaultFolderBack.png</texture>
           </control>
           <control type="image" description="Thumb">
 		    <visible>!ListItem.IsParentFolder</visible>
@@ -45,7 +45,7 @@
             <height>450</height>
             <width>300</width>
             <aspectratio>scale</aspectratio>
-            <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+            <texture background="true">$VAR[Thumb]</texture>
           </control>
         </itemlayout>
         <focusedlayout condition="Container.content(movies) | Container.content(tvshows) | Container.content(seasons)" width="330" height="480">
@@ -64,7 +64,7 @@
             <height>450</height>
             <width>300</width>
             <aspectratio>scale</aspectratio>
-            <texture background="true">DefaultFolderBack.png</texture>
+            <texture colordiffuse="$VAR[IconColor]" background="true">DefaultFolderBack.png</texture>
           </control>
           <control type="image" description="Thumb">
 		    <visible>!ListItem.IsParentFolder</visible>
@@ -73,7 +73,7 @@
             <height>450</height>
             <width>300</width>
             <aspectratio>scale</aspectratio>
-            <texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Thumb]</texture>
+            <texture background="true">$VAR[Thumb]</texture>
           </control>
         </focusedlayout>
       </control>
@@ -96,17 +96,20 @@
           <label>$INFO[ListItem.Label]</label>
         </control>
         <control type="label" description="Media details">
+		  <visible>!ListItem.IsParentFolder</visible>
           <top>54</top>
           <width>1200</width>
           <font>size22</font>
           <label>$INFO[ListItem.Genre]</label>
         </control>
         <control type="label" description="Media details">
+		  <visible>!ListItem.IsParentFolder</visible>
           <top>102</top>
           <width>1200</width>
           <label>$VAR[TopLabel]</label>
         </control>
         <control type="textbox" description="Movies Plot">
+		  <visible>!ListItem.IsParentFolder</visible>
           <posy>174</posy>
           <width>1200</width>
           <height>210</height>
