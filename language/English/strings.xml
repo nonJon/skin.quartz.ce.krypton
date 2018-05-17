@@ -71,8 +71,8 @@
   <string id="31116">Choose what action to perform when exiting KODI.</string>
   <string id="31117">Reset above settings to default</string>
   <string id="31118">Resets only the displayed settings to skin defaults.</string>
-  <string id="31119">Hide unwatched progress indicators</string>  
-  <string id="31120">Hide the icons that indicate whether media content has been consumed.</string>
+  <string id="31119">Show unwatched/progress indicators</string>  
+  <string id="31120">Show icons that indicate whether media is unwatched or in-progress.</string>
   <string id="31121">Hide background art</string>  
   <string id="31122">Do not display artwork in the background of various views (not recommended).</string>
   <string id="31123">Background art visibility</string>
@@ -119,6 +119,8 @@
   <string id="31167">Do not display background art in fullscreen music visualizer.</string>
   <string id="31168">Cache library art</string>
   <string id="31169">Run this utility to ensure that recently scraped artwork is cached by KODI to render as efficiently as possible.  Note: KODI's built-in Web server (Settings / Services) must be enabled and using the default port and credentials for this utility to function.</string>
+  <string id="31170">Show watched content indicators</string>  
+  <string id="31171">Show icons that indicate when media has been watched.</string>
   
   
   

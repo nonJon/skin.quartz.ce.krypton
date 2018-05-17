@@ -10,15 +10,15 @@
 			<visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
 			<animation effect="fade" delay="100" time="300">Visible</animation>
 			<animation effect="fade" time="0">Hidden</animation>
-			<include>View_50</include>
-			<include>View_51</include>
-			<include>View_52</include>
-			<include>View_53</include>
-			<include>View_54</include>
+			<include>View_50</include>    <!--list-->
+			<include>View_51</include>    <!--big list-->
+			<include>View_52</include>    <!--mediainfo-->
+			<include>View_53</include>    <!--icons-->
+			<include>View_54</include>    <!--mediainfo 2-->
 			<include>View_55</include>
-			<include>View_500</include>
-			<include>View_501</include>
-			<include>View_502</include>
+			<include>View_500</include>   <!--fanart 3-->
+			<include>View_501</include>   <!--big icons-->
+			<include>View_502</include>   <!--panel-->
 			<include>View_510</include>
 		</control>
 		<control type="button" id="9001">
@@ -116,11 +116,10 @@
 					<texturenofocus>-</texturenofocus>
 					<include>9000Buttons</include>
 				</control>
-				<control type="togglebutton" id="14" description="Toggle Watched">
+				<control type="button" id="10" description="Toggle Watched">
 					<include>9000Buttons</include>
-					<label>$LOCALIZE[535]: $LOCALIZE[16100]</label>
-					<altlabel>$LOCALIZE[535]: $LOCALIZE[16101]</altlabel>
-				</control>
+					<label>$LOCALIZE[20367]</label>
+				</control> 
 				<control type="button" id="3" description="Sort">
 					<include>9000Buttons</include>
 				</control>

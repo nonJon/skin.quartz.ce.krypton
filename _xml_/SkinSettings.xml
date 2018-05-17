@@ -169,11 +169,18 @@
 				<onleft>3000</onleft>
 				<pagecontrol>3001</pagecontrol>
 				<scrolltime tween="sine" easing="inout">280</scrolltime>
-				<control type="radiobutton" id="3300" description="Watched progress indicators">
+				<control type="radiobutton" id="3300" description="unWatched progress indicators">
 					<include>SkinSettingsButton</include>
 					<label>$LOCALIZE[31119]</label>
-					<onclick>Skin.ToggleSetting(HideUnwatched)</onclick>
-					<selected>Skin.HasSetting(HideUnwatched)</selected>
+					<onclick>Skin.ToggleSetting(_ShowUnwatched)</onclick>
+					<selected>Skin.HasSetting(_ShowUnwatched)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3307" description="Watched progress indicators">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31170]</label>
+					<onclick>Skin.ToggleSetting(_ShowWatched)</onclick>
+					<selected>Skin.HasSetting(_ShowWatched)</selected>
 					<radioposx>1210</radioposx>
 				</control>
 				<control type="radiobutton" id="3301" description="Hide fanart">
@@ -387,7 +394,8 @@
 				<control type="button" id="3320" description="Reset section">
 					<include>SkinSettingsButton</include>
 					<label>$LOCALIZE[31117]</label>
-					<onclick>Skin.Reset(HideUnwatched)</onclick>
+					<onclick>Skin.Reset(_ShowUnwatched)</onclick>
+					<onclick>Skin.Reset(_ShowWatched)</onclick>
 					<onclick>Skin.Reset(HideFanart)</onclick>
 					<onclick>Skin.Reset(FanartVisibility)</onclick>
 					<onclick>Skin.Reset(MenuOff)</onclick>

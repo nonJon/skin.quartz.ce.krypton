@@ -161,10 +161,15 @@
 		<value condition="Container.HasFocus(311)">$INFO[Container(311).ListItem.Label]</value>
 		<value>$LOCALIZE[305]</value>
 	</variable>
-	<variable name="Overlay" description="Overlay image">
-		<value condition="Skin.HasSetting(HideUnwatched)">-</value>
-		<value condition="ListItem.IsResumable">$INFO[ListItem.Overlay,overlay/]</value>
-		<value>$INFO[ListItem.Overlay]</value>
+	<variable name="Overlay" description="Overlay watched/unwatched indicators">
+		<value condition="Skin.HasSetting(_ShowUnwatched) + ListItem.IsResumable">$INFO[ListItem.Overlay,overlay/1/]</value>
+		<value condition="Skin.HasSetting(_ShowUnwatched) + Skin.HasSetting(_ShowWatched) 
+			+ !ListItem.IsResumable">$INFO[ListItem.Overlay,overlay/2/]</value>
+		<value condition="Skin.HasSetting(_ShowUnwatched) + !Skin.HasSetting(_ShowWatched)  
+			+ !ListItem.IsResumable">$INFO[ListItem.Overlay,overlay/3/]</value>
+		<value condition="!Skin.HasSetting(_ShowUnwatched) + Skin.HasSetting(_ShowWatched)  
+			+ !ListItem.IsResumable">$INFO[ListItem.Overlay,overlay/4/]</value>
+		<value>-</value>
 	</variable>
 	<variable name="WeatherFooter" description="Weather plus footer labels">
 		<value condition="String.IsEmpty(Window.Property(Weather.CurrentView))">$LOCALIZE[31904]</value>
@@ -271,6 +276,7 @@
 		<value condition="Control.HasFocus(3302)">$LOCALIZE[31124]</value>
 		<value condition="Control.HasFocus(3304)">$LOCALIZE[31159]</value>
 		<value condition="Control.HasFocus(3306)">$LOCALIZE[31161]</value>
+		<value condition="Control.HasFocus(3307)">$LOCALIZE[31171]</value>
 		<value condition="Control.HasFocus(3320)">$LOCALIZE[31118]</value>
 		<value condition="Control.HasFocus(3400)">$LOCALIZE[31127]</value>
 		<value condition="Control.HasFocus(3401)">$LOCALIZE[31129]</value>
