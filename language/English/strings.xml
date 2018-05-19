@@ -65,7 +65,7 @@
   <string id="31110">Allows option to scroll through content a page at a time.</string>
   <string id="31111">Show clock</string>
   <string id="31112">Display current time in the upper-right-hand corner of the screen.</string>
-  <string id="31113">Disable options dialogs</string>
+  <string id="31113">Disable options menus</string>
   <string id="31114">Prevent access to certain menus for altering the look and feel of Quartz.</string>
   <string id="31115">KODI 'Quit' button function</string>
   <string id="31116">Choose what action to perform when exiting KODI.</string>
@@ -91,7 +91,7 @@
   <string id="31136">Restore skin settings</string>
   <string id="31140">Restore previously saved Quartz skin settings.</string>
   <string id="31141">Reset ALL skin settings to default values</string>
-  <string id="31142">What this means is Old Testament... real Wrath-of-God type stuff! Fire and brimstone coming down from the skies! Rivers and seas boiling! Forty years of darkness! Earthquakes, volcanoes! The dead rising from the grave! Human sacrifice, dogs and cats living together, mass hysteria!</string>
+  <string id="31142">Skin settings in all categories will be reset.</string>
   <string id="31143">Skin name:</string>
   <string id="31144">Skin version:</string>
   <string id="31145">Color theme:</string>
@@ -118,9 +118,23 @@
   <string id="31166">Hide fanart in music player</string>
   <string id="31167">Do not display background art in fullscreen music visualizer.</string>
   <string id="31168">Cache library art</string>
-  <string id="31169">Run this utility to ensure that recently scraped artwork is cached by KODI to render as efficiently as possible.  Note: KODI's built-in Web server (Settings / Services) must be enabled and using the default port and credentials for this utility to function.</string>
+  <string id="31169">Cache recently scraped artwork so KODI renders it as efficiently as possible.  Note: KODI's built-in Web server (Settings / Services) must be enabled and using default settings for this utility to function.</string>
   <string id="31170">Show watched content indicators</string>  
   <string id="31171">Show icons that indicate when media has been watched.</string>
+  <string id="31172">List</string>
+  <string id="31173">Big list</string>
+  <string id="31174">Media info</string>
+  <string id="31175">Media info 2</string>
+  <string id="31176">Big icons</string>
+  <string id="31177">Icons</string>
+  <string id="31178">Panel</string>
+  <string id="31179">Fanart 3</string>
+  <string id="31180">Wide</string>
+  <string id="31181">Menus</string>
+  <string id="31182">Enable forced views</string>
+  <string id="31183">seconds</string>
+  <string id="31184">Auto close OSD (0 to disable auto close)</string>
+  <string id="31185">Enable onscreen debug grid</string>
   
   
   

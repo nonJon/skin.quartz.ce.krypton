@@ -59,27 +59,32 @@
 				</control>
 			</focusedlayout>
 			<content>
-				<item id="3101">
+				<item id="3101" description="General">
 					<label>$LOCALIZE[31100]</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="3103">
-					<label>$LOCALIZE[31101]</label>
-					<onclick>noop</onclick>
-				</item>
-				<item id="3104">
+				<item id="3104" description="Homepage">
 					<label>$LOCALIZE[31102]</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="3107">
+				<item id="3103" description="Menus">
+					<label>$LOCALIZE[31181]</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="3107" description="Player">
 					<label>$LOCALIZE[16003]</label>
-          <onclick>noop</onclick>
-        </item>
-				<item id="3105">
+					<onclick>noop</onclick>
+				</item>
+				<item id="3108" description="Views">
+					<visible>false</visible>
+					<label>$LOCALIZE[31101]</label>
+					<onclick>noop</onclick>
+				</item>
+				<item id="3105" description="Advanced">
 					<label>$LOCALIZE[31104]</label>
 					<onclick>noop</onclick>
 				</item>
-				<item id="3106">
+				<item id="3106" description="About">
 					<label>$LOCALIZE[31105]</label>
 					<onclick>noop</onclick>
 				</item>
@@ -90,7 +95,7 @@
 			<posy>165</posy>
 			<width>1380</width>
 			<height>912</height>
-			<control type="grouplist" id="3020" description="Category General">
+			<control type="grouplist" id="3020" description="General">
 				<visible>Container(3000).HasFocus(3101)</visible>
 				<width>1280</width>
 				<height>900</height>
@@ -111,21 +116,44 @@
 					<selected>Skin.HasSetting(Scrollbars_Active)</selected>
 					<radioposx>1210</radioposx>
 				</control>
-				<control type="radiobutton" id="3202" description="Show Clock">
+				<control type="radiobutton" id="3202" description="Hide fanart">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31121]</label>
+					<onclick>Skin.ToggleSetting(HideFanart)</onclick>
+					<selected>Skin.HasSetting(HideFanart)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="button" id="3203" description="Fanart visibility">
+					<visible>!Skin.HasSetting(HideFanart)</visible>
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31123]</label>
+					<label2>$INFO[Skin.String(FanartVisibility)]</label2>
+					<onclick>Skin.SetNumeric(FanartVisibility,207)</onclick>
+				</control>
+
+				<control type="radiobutton" id="3204" description="unWatched progress indicators">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31119]</label>
+					<onclick>Skin.ToggleSetting(_ShowUnwatched)</onclick>
+					<selected>Skin.HasSetting(_ShowUnwatched)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3205" description="Watched progress indicators">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31170]</label>
+					<onclick>Skin.ToggleSetting(_ShowWatched)</onclick>
+					<selected>Skin.HasSetting(_ShowWatched)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3206" description="Show Clock">
 					<include>SkinSettingsButton</include>
 					<label>$LOCALIZE[31111]</label>
 					<onclick>Skin.ToggleSetting(ShowClock)</onclick>
 					<selected>Skin.HasSetting(ShowClock)</selected>
 					<radioposx>1210</radioposx>
 				</control>
-				<control type="radiobutton" id="3203" description="Options dialog">
-					<include>SkinSettingsButton</include>
-					<label>$LOCALIZE[31113]</label>
-					<onclick>Skin.ToggleSetting(ViewOptions_Hide)</onclick>
-					<selected>Skin.HasSetting(ViewOptions_Hide)</selected>
-					<radioposx>1210</radioposx>
-				</control>
-				<control type="button" id="3204" description="Quit button function">
+
+				<control type="button" id="3207" description="Quit button function">
 					<include>SkinSettingsButton</include>
 					<label>$LOCALIZE[31115]</label>
 					<label2>$VAR[QuitLabel2]</label2>
@@ -138,64 +166,125 @@
 					<onclick>Skin.Reset(Scrollbars_Active)</onclick>
 					<onclick>Skin.Reset(ShowClock)</onclick>
 					<onclick>Skin.Reset(ViewOptions_Hide)</onclick>
+					<onclick>Skin.Reset(HideFanart)</onclick>
+					<onclick>Skin.Reset(_ShowUnwatched)</onclick>
+					<onclick>Skin.Reset(_ShowWatched)</onclick>
+					<onclick>Skin.Reset(FanartVisibility)</onclick>
 					<onclick>Skin.Reset(shutdown)</onclick>
 				</control>
 			</control>
-			<!--<control type="grouplist" id="3011" description="Category Add-ons">
-        <visible>Container(3000).HasFocus(3102)</visible>
-        <width>892</width>
-        <height>900</height>
-        <onleft>3000</onleft>
-        <pagecontrol>3001</pagecontrol>
-        <scrolltime tween="sine" easing="inout">280</scrolltime>
-        <control type="button" id="3202" description="Lyrics">
-          <include>SkinSettingsButton</include>
-          <label>$LOCALIZE[24020] $LOCALIZE[24013] $LOCALIZE[24000]</label>
-          <label2>$INFO[Skin.String(LyricPath)]</label2>
-          <onclick>Addon.SetAddon(dummy, kodi.python.pluginsource)</onclick>
-		  <altclick>Skin.SetAddon(script.cu.lrclyrics)</altclick>
-        </control>
-        <control type="button" id="3215" description="Skin Widgets">
-          <include>SkinSettingsButton</include>
-          <label>backup</label>
-          <onclick>RunScript(special://skin/scripts/script.skin.helper.skinbackup/default.py,action=backup)</onclick>
-        </control>
-      </control>
-	  -->
-			<control type="grouplist" id="3030" description="Category Views">
+			<control type="grouplist" id="3080" description="Views">
+				<visible>Container(3000).HasFocus(3108)</visible>
+				<width>1280</width>
+				<height>900</height>
+				<onleft>3000</onleft>
+				<pagecontrol>3001</pagecontrol>
+				<scrolltime tween="sine" easing="inout">280</scrolltime>
+				<control type="button" id="3800" description="Forced views no addon">
+					<visible>!System.HasAddon(script.skin.helper.service)</visible>
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31182]</label>
+					<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+				</control>
+				<control type="radiobutton" id="3810" description="Forced views has addon">
+					<visible>System.HasAddon(script.skin.helper.service)</visible>
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31182]</label>
+					<onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
+					<selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="button" id="3801" description="Movies">
+					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+					<include>SkinSettingsButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=movies)</onclick>
+					<label>  $LOCALIZE[342]</label>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.movies.label)]$INFO[Skin.String(SkinHelper.ForcedViews.movies), (,)]</label2>
+				</control>
+				<control type="button" id="3803" description="Movie sets">
+					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+					<include>SkinSettingsButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=setmovies)</onclick>
+					<label>    $LOCALIZE[20338] $LOCALIZE[36911]</label>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.setmovies.label)]$INFO[Skin.String(SkinHelper.ForcedViews.setmovies), (,)]</label2>
+				</control>
+				<control type="button" id="3804" description="TV shows">
+					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+					<include>SkinSettingsButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=tvshows)</onclick>
+					<label>  $LOCALIZE[20343]</label>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.tvshows.label)]$INFO[Skin.String(SkinHelper.ForcedViews.tvshhows), (,)]</label2>
+				</control>
+				<control type="button" id="3805" description="Seasons">
+					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+					<include>SkinSettingsButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=seasons)</onclick>
+					<label>    $LOCALIZE[33054]</label>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.seasons.label)]$INFO[Skin.String(SkinHelper.ForcedViews.seasons), (,)]</label2>
+				</control>
+				<control type="button" id="3806" description="Episodes">
+					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+					<include>SkinSettingsButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=episodes)</onclick>
+					<label>    $LOCALIZE[20360]</label>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.episodes.label)]$INFO[Skin.String(SkinHelper.ForcedViews.episodes), (,)]</label2>
+				</control>
+				<control type="button" id="3807" description="Artists">
+					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+					<include>SkinSettingsButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=artists)</onclick>
+					<label>  $LOCALIZE[133] ($LOCALIZE[36914])</label>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.artists.label)]$INFO[Skin.String(SkinHelper.ForcedViews.artists), (,)]</label2>
+				</control>
+				<control type="button" id="3808" description="Albums">
+					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+					<include>SkinSettingsButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=albums)</onclick>
+					<label>    $LOCALIZE[132]</label>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.albums.label)]$INFO[Skin.String(SkinHelper.ForcedViews.albums), (,)]</label2>
+				</control>
+				<control type="button" id="3809" description="Songs">
+					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+					<include>SkinSettingsButton</include>
+					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=songs)</onclick>
+					<label>    $LOCALIZE[134]</label>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.songs.label)]$INFO[Skin.String(SkinHelper.ForcedViews.songs), (,)]</label2>
+				</control>
+				<control type="button" id="3820" description="Reset section">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31117]</label>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.Enabled)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.movies.label)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.movies)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.setmovies.label)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.setmovies)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.tvshows.label)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.tvshows)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.seasons.label)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.seasons)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.episodes.label)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.episodes)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.artists.label)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.artists)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.albums.label)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.albums)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.songs.label)</onclick>
+					<onclick>Skin.Reset(SkinHelper.ForcedViews.songs)</onclick>
+				</control>
+			</control>
+			<control type="grouplist" id="3030" description="Menus">
 				<visible>Container(3000).HasFocus(3103)</visible>
 				<width>1280</width>
 				<height>900</height>
 				<onleft>3000</onleft>
 				<pagecontrol>3001</pagecontrol>
 				<scrolltime tween="sine" easing="inout">280</scrolltime>
-				<control type="radiobutton" id="3300" description="unWatched progress indicators">
+				<control type="radiobutton" id="3302" description="Options dialog">
 					<include>SkinSettingsButton</include>
-					<label>$LOCALIZE[31119]</label>
-					<onclick>Skin.ToggleSetting(_ShowUnwatched)</onclick>
-					<selected>Skin.HasSetting(_ShowUnwatched)</selected>
+					<label>$LOCALIZE[31113]</label>
+					<onclick>Skin.ToggleSetting(ViewOptions_Hide)</onclick>
+					<selected>Skin.HasSetting(ViewOptions_Hide)</selected>
 					<radioposx>1210</radioposx>
-				</control>
-				<control type="radiobutton" id="3307" description="Watched progress indicators">
-					<include>SkinSettingsButton</include>
-					<label>$LOCALIZE[31170]</label>
-					<onclick>Skin.ToggleSetting(_ShowWatched)</onclick>
-					<selected>Skin.HasSetting(_ShowWatched)</selected>
-					<radioposx>1210</radioposx>
-				</control>
-				<control type="radiobutton" id="3301" description="Hide fanart">
-					<include>SkinSettingsButton</include>
-					<label>$LOCALIZE[31121]</label>
-					<onclick>Skin.ToggleSetting(HideFanart)</onclick>
-					<selected>Skin.HasSetting(HideFanart)</selected>
-					<radioposx>1210</radioposx>
-				</control>
-				<control type="button" id="3302" description="Fanart visibility">
-					<visible>!Skin.HasSetting(HideFanart)</visible>
-					<include>SkinSettingsButton</include>
-					<label>$LOCALIZE[31123]</label>
-					<label2>$INFO[Skin.String(FanartVisibility)]</label2>
-					<onclick>Skin.SetNumeric(FanartVisibility,207)</onclick>
 				</control>
 				<control type="group" id="3303" description="Menu transparency">
 					<height>80</height>
@@ -294,7 +383,7 @@
 						</content>
 					</control>
 				</control>
-				<control type="group" id="3305" description="Menu transparency">
+				<control type="group" id="3305" description="OSD transparency">
 					<height>80</height>
 					<width>1280</width>
 					<control type="list" id="3306">
@@ -394,10 +483,7 @@
 				<control type="button" id="3320" description="Reset section">
 					<include>SkinSettingsButton</include>
 					<label>$LOCALIZE[31117]</label>
-					<onclick>Skin.Reset(_ShowUnwatched)</onclick>
-					<onclick>Skin.Reset(_ShowWatched)</onclick>
-					<onclick>Skin.Reset(HideFanart)</onclick>
-					<onclick>Skin.Reset(FanartVisibility)</onclick>
+					<onclick>Skin.Reset(ViewOptions_Hide)</onclick>
 					<onclick>Skin.Reset(MenuOff)</onclick>
 					<onclick>Skin.Reset(MenuLow)</onclick>
 					<onclick>Skin.Reset(MenuMedLow)</onclick>
@@ -410,7 +496,7 @@
 					<onclick>Skin.Reset(OSDHigh)</onclick>
 				</control>
 			</control>
-			<control type="grouplist" id="3040" description="Category Homepage">
+			<control type="grouplist" id="3040" description="Homepage">
 				<visible>Container(3000).HasFocus(3104)</visible>
 				<width>1280</width>
 				<height>900</height>
@@ -438,13 +524,13 @@
 				<control type="button" id="3403" description="Custom BG path">
 					<visible>Skin.HasSetting(UseCustomBackground) + !Skin.HasSetting(HideFanart)</visible>
 					<include>SkinSettingsButton</include>
-					<label>- $LOCALIZE[31156]</label>
+					<label>  $LOCALIZE[31156]</label>
 					<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
 					<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
 					<enable>Skin.HasSetting(UseCustomBackground)</enable>
 				</control>
 			</control>
-			<control type="grouplist" id="3070" description="Category Player">
+			<control type="grouplist" id="3070" description="Player">
 				<visible>Container(3000).HasFocus(3107)</visible>
 				<width>1280</width>
 				<height>900</height>
@@ -465,6 +551,13 @@
 					<selected>Skin.HasSetting(_HideMusicPlayerFanart)</selected>
 					<radioposx>1210</radioposx>
 				</control>
+				<control type="button" id="3702">
+					<visible>false</visible>
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31184]</label>
+					<label2>$INFO[skin.string(SkinHelper.AutoCloseVideoOSD)] $LOCALIZE[31183]</label2>		
+					<onclick>Skin.SetNumeric(SkinHelper.AutoCloseVideoOSD)</onclick>
+				</control>
 				<control type="button" id="3720" description="Reset section">
 					<include>SkinSettingsButton</include>
 					<label>$LOCALIZE[31117]</label>
@@ -472,7 +565,7 @@
 					<onclick>Skin.Reset(_FullScreenMusic)</onclick>
 				</control>
 			</control>
-			<control type="grouplist" id="3050" description="Category Advanced">
+			<control type="grouplist" id="3050" description="Advanced">
 				<visible>Container(3000).HasFocus(3105)</visible>
 				<width>1280</width>
 				<height>900</height>
@@ -484,6 +577,13 @@
 					<label>$LOCALIZE[31130]</label>
 					<onclick>Skin.ToggleSetting(DebugInfo)</onclick>
 					<selected>Skin.HasSetting(DebugInfo)</selected>
+					<radioposx>1210</radioposx>
+				</control>
+				<control type="radiobutton" id="3506" description="Debug grid">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[31185]</label>
+					<onclick>Skin.ToggleSetting(_DebugGrid)</onclick>
+					<selected>Skin.HasSetting(_DebugGrid)</selected>
 					<radioposx>1210</radioposx>
 				</control>
 				<control type="radiobutton" id="3501" description="Debug loggin">
@@ -518,7 +618,7 @@
 					<icon>DefaultIconWarning.png</icon>
 				</control>
 			</control>
-			<control type="grouplist" id="3060" description="Category About">
+			<control type="grouplist" id="3060" description="About">
 				<visible>Container(3000).HasFocus(3106)</visible>
 				<width>1200</width>
 				<height>1000</height>
@@ -568,10 +668,30 @@
 					</control>
 				</control>
 			</control>
+		<!--<control type="grouplist" id="3011" description="Category Add-ons">
+				<visible>Container(3000).HasFocus(3102)</visible>
+				<width>892</width>
+				<height>900</height>
+				<onleft>3000</onleft>
+				<pagecontrol>3001</pagecontrol>
+				<scrolltime tween="sine" easing="inout">280</scrolltime>
+				<control type="button" id="3202" description="Lyrics">
+					<include>SkinSettingsButton</include>
+					<label>$LOCALIZE[24020] $LOCALIZE[24013] $LOCALIZE[24000]</label>
+					<label2>$INFO[Skin.String(LyricPath)]</label2>
+					<onclick>Addon.SetAddon(dummy, kodi.python.pluginsource)</onclick>
+					<altclick>Skin.SetAddon(script.cu.lrclyrics)</altclick>
+				</control>
+				<control type="button" id="3215" description="Skin Widgets">
+					<include>SkinSettingsButton</include>
+					<label>backup</label>
+					<onclick>RunScript(special://skin/scripts/script.skin.helper.skinbackup/default.py,action=backup)</onclick>
+					</control>
+			</control> -->
 		</control>
 		<control type="textbox">
 			<left>560</left>
-			<top>910</top>
+			<top>960</top>
 			<width>1300</width>
 			<height>150</height>
 			<font>size20</font>

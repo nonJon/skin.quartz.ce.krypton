@@ -3,6 +3,14 @@
 	<zorder>2</zorder>
 	<visible>!Window.IsVisible(startup)</visible>
 	<controls>
+		<control type="image"><!-- Global debug grid -->
+			<visible>Skin.HasSetting(_DebugGrid)</visible>
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<texture>debuggrid1080.png</texture>
+		</control>
 		<control type="group"><!-- Window/Dialog debug -->
 			<visible>Skin.HasSetting(DebugInfo)</visible>
 			<control type="grouplist">

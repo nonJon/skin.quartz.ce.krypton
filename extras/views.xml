@@ -1,0 +1,11 @@
+<views>
+    <view id="List" value="50" languageid="31172" type="all,!albums,!songs"/>
+	<view id="Big List" value="51" languageid="31173" type="all,!artists"/>
+	<view id="Media info" value="52" languageid="31174" type="all,!artists,!albums"/>
+	<view id="Media info 2" value="54" languageid="31175" type="all,!artists,!albums,!songs"/>
+	<view id="Big icons" value="501" languageid="31176" type="all,!episodes,!artists"/>
+	<view id="Icons" value="53" languageid="31177" type="all,!artists,!songs,!episodes"/>
+	<view id="Panel" value="502" languageid="31178" type="all,!artists,!albums,!songs,!episodes"/>
+	<view id="Fanart 3" value="500" languageid="31179" type="all"/>
+	<view id="Wide" value="55" languageid="31180" type="tvshows"/>
+</views>
