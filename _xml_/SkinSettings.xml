@@ -76,7 +76,7 @@
 					<onclick>noop</onclick>
 				</item>
 				<item id="3108" description="Views">
-					<visible>false</visible>
+					<visible>true</visible>
 					<label>$LOCALIZE[31101]</label>
 					<onclick>noop</onclick>
 				</item>
