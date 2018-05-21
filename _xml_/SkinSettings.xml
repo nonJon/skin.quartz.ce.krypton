@@ -213,7 +213,7 @@
 					<include>SkinSettingsButton</include>
 					<onclick>RunScript(script.skin.helper.service,action=SETFORCEDVIEW,contenttype=tvshows)</onclick>
 					<label>  $LOCALIZE[20343]</label>
-					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.tvshows.label)]$INFO[Skin.String(SkinHelper.ForcedViews.tvshhows), (,)]</label2>
+					<label2>$INFO[Skin.String(SkinHelper.ForcedViews.tvshows.label)]$INFO[Skin.String(SkinHelper.ForcedViews.tvshows), (,)]</label2>
 				</control>
 				<control type="button" id="3805" description="Seasons">
 					<enable>System.HasAddon(script.skin.helper.service) + Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
