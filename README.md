@@ -1,9 +1,8 @@
-# quartz
+# Quartz 5 CE
 
-Quartz skin for KODI 17
 
-The most stable, feature-complete version of Quartz available anywhere - guaranteed or your money back! :p
+Quartz 5 skin for KODI 17 (Krypton)
 
-The link below is your best resource for news and information about this skin.
+Follow the link below for the latest news and information about this classic skin for KODI.
 
 https://forum.kodi.tv/showthread.php?tid=329990
